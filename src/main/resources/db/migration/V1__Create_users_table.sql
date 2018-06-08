@@ -1,0 +1,50 @@
+DROP TABLE IF EXISTS USERS;
+DROP TABLE IF EXISTS FRIENDS;
+DROP TABLE IF EXISTS POSTS;
+DROP TABLE IF EXISTS COMMENTS;
+
+create table USERS (
+    ID serial PRIMARY KEY,
+    USERNAME varchar(100) NOT NULL UNIQUE,
+    FIRST_NAME varchar(100),
+    LAST_NAME varchar(100),
+    EMAIL varchar(100),
+    LOCATION varchar(100),
+    ABOUT_ME varchar(500),
+    PASSWORD varchar(100),
+    TIME_ADDED TIMESTAMP default CURRENT_TIMESTAMP
+);
+
+create table FRIENDS (
+    ID serial PRIMARY KEY,
+    STATUS integer,
+    FRIEND_SENT_REQUEST integer,
+    FRIEND_RECEIVED_REQUEST integer,
+    SENT_REQUEST_USERNAME varchar(100),
+    RECEIVED_REQUEST_USERNAME varchar(100),
+    TIME_ADDED TIMESTAMP default CURRENT_TIMESTAMP,
+    URI varchar(100),
+);
+
+create table POSTS (
+    ID serial PRIMARY KEY,
+    TITLE varchar(50),
+    POSTER_ID integer,
+    POSTER_USERNAME varchar(100),
+    POST_TEXT varchar(500),
+    NUMBER_OF_LIKES integer DEFAULT 0,
+    NUMBER_OF_COMMENTS integer DEFAULT 0,
+    ABLE_TO_VIEW integer DEFAULT 0,
+    URI varchar(100),
+    TIME_ADDED TIMESTAMP default CURRENT_TIMESTAMP,
+);
+
+create table COMMENTS (
+    ID serial PRIMARY KEY,
+    COMMENTER_ID integer,
+    POST_ID integer,
+    COMMENTER_USERNAME varchar(100),
+    COMMENT_TEXT varchar(500),
+    NUMBER_OF_LIKES integer DEFAULT 0,
+    TIME_ADDED TIMESTAMP default CURRENT_TIMESTAMP,
+)
