@@ -1,0 +1,1541 @@
+# source: http://localhost:4466
+# timestamp: Mon Jun 11 2018 19:43:51 GMT-0400 (EDT)
+
+type AggregateComment {
+  count: Int!
+}
+
+type AggregateFriend {
+  count: Int!
+}
+
+type AggregatePost {
+  count: Int!
+}
+
+type AggregateUser {
+  count: Int!
+}
+
+type BatchPayload {
+  """The number of nodes that have been affected by the Batch operation."""
+  count: Long!
+}
+
+type Comment {
+  commentId: ID!
+  commenter(where: UserWhereInput): User!
+  post(where: PostWhereInput): Post!
+  commentText: String!
+  numberOfLikes: Int
+}
+
+"""A connection to a list of items."""
+type CommentConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [CommentEdge]!
+  aggregate: AggregateComment!
+}
+
+input CommentCreateInput {
+  commentId: ID!
+  commentText: String!
+  numberOfLikes: Int
+  commenter: UserCreateOneWithoutCommentsInput!
+  post: PostCreateOneInput!
+}
+
+input CommentCreateManyWithoutCommenterInput {
+  create: [CommentCreateWithoutCommenterInput!]
+}
+
+input CommentCreateWithoutCommenterInput {
+  commentId: ID!
+  commentText: String!
+  numberOfLikes: Int
+  post: PostCreateOneInput!
+}
+
+"""An edge in a connection."""
+type CommentEdge {
+  """The item at the end of the edge."""
+  node: Comment!
+
+  """A cursor for use in pagination."""
+  cursor: String!
+}
+
+enum CommentOrderByInput {
+  commentId_ASC
+  commentId_DESC
+  commentText_ASC
+  commentText_DESC
+  numberOfLikes_ASC
+  numberOfLikes_DESC
+  id_ASC
+  id_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type CommentPreviousValues {
+  commentId: ID!
+  commentText: String!
+  numberOfLikes: Int
+}
+
+type CommentSubscriptionPayload {
+  mutation: MutationType!
+  node: Comment
+  updatedFields: [String!]
+  previousValues: CommentPreviousValues
+}
+
+input CommentSubscriptionWhereInput {
+  """Logical AND on all given filters."""
+  AND: [CommentSubscriptionWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [CommentSubscriptionWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [CommentSubscriptionWhereInput!]
+
+  """
+  The subscription event gets dispatched when it's listed in mutation_in
+  """
+  mutation_in: [MutationType!]
+
+  """
+  The subscription event gets only dispatched when one of the updated fields names is included in this list
+  """
+  updatedFields_contains: String
+
+  """
+  The subscription event gets only dispatched when all of the field names included in this list have been updated
+  """
+  updatedFields_contains_every: [String!]
+
+  """
+  The subscription event gets only dispatched when some of the field names included in this list have been updated
+  """
+  updatedFields_contains_some: [String!]
+  node: CommentWhereInput
+}
+
+input CommentUpdateInput {
+  commentId: ID
+  commentText: String
+  numberOfLikes: Int
+  commenter: UserUpdateOneWithoutCommentsInput
+  post: PostUpdateOneInput
+}
+
+input CommentUpdateManyWithoutCommenterInput {
+  create: [CommentCreateWithoutCommenterInput!]
+}
+
+input CommentWhereInput {
+  """Logical AND on all given filters."""
+  AND: [CommentWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [CommentWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [CommentWhereInput!]
+  commentId: ID
+
+  """All values that are not equal to given value."""
+  commentId_not: ID
+
+  """All values that are contained in given list."""
+  commentId_in: [ID!]
+
+  """All values that are not contained in given list."""
+  commentId_not_in: [ID!]
+
+  """All values less than the given value."""
+  commentId_lt: ID
+
+  """All values less than or equal the given value."""
+  commentId_lte: ID
+
+  """All values greater than the given value."""
+  commentId_gt: ID
+
+  """All values greater than or equal the given value."""
+  commentId_gte: ID
+
+  """All values containing the given string."""
+  commentId_contains: ID
+
+  """All values not containing the given string."""
+  commentId_not_contains: ID
+
+  """All values starting with the given string."""
+  commentId_starts_with: ID
+
+  """All values not starting with the given string."""
+  commentId_not_starts_with: ID
+
+  """All values ending with the given string."""
+  commentId_ends_with: ID
+
+  """All values not ending with the given string."""
+  commentId_not_ends_with: ID
+  commentText: String
+
+  """All values that are not equal to given value."""
+  commentText_not: String
+
+  """All values that are contained in given list."""
+  commentText_in: [String!]
+
+  """All values that are not contained in given list."""
+  commentText_not_in: [String!]
+
+  """All values less than the given value."""
+  commentText_lt: String
+
+  """All values less than or equal the given value."""
+  commentText_lte: String
+
+  """All values greater than the given value."""
+  commentText_gt: String
+
+  """All values greater than or equal the given value."""
+  commentText_gte: String
+
+  """All values containing the given string."""
+  commentText_contains: String
+
+  """All values not containing the given string."""
+  commentText_not_contains: String
+
+  """All values starting with the given string."""
+  commentText_starts_with: String
+
+  """All values not starting with the given string."""
+  commentText_not_starts_with: String
+
+  """All values ending with the given string."""
+  commentText_ends_with: String
+
+  """All values not ending with the given string."""
+  commentText_not_ends_with: String
+  numberOfLikes: Int
+
+  """All values that are not equal to given value."""
+  numberOfLikes_not: Int
+
+  """All values that are contained in given list."""
+  numberOfLikes_in: [Int!]
+
+  """All values that are not contained in given list."""
+  numberOfLikes_not_in: [Int!]
+
+  """All values less than the given value."""
+  numberOfLikes_lt: Int
+
+  """All values less than or equal the given value."""
+  numberOfLikes_lte: Int
+
+  """All values greater than the given value."""
+  numberOfLikes_gt: Int
+
+  """All values greater than or equal the given value."""
+  numberOfLikes_gte: Int
+  commenter: UserWhereInput
+  post: PostWhereInput
+}
+
+type Friend {
+  friendId: ID!
+  status: Int!
+  sentRequest(where: UserWhereInput): User!
+  receivedRequest(where: UserWhereInput): User!
+}
+
+"""A connection to a list of items."""
+type FriendConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [FriendEdge]!
+  aggregate: AggregateFriend!
+}
+
+input FriendCreateInput {
+  friendId: ID!
+  status: Int!
+  sentRequest: UserCreateOneWithoutSentFriendInput!
+  receivedRequest: UserCreateOneWithoutReceivedFriendInput!
+}
+
+input FriendCreateManyInput {
+  create: [FriendCreateInput!]
+}
+
+input FriendCreateManyWithoutReceivedRequestInput {
+  create: [FriendCreateWithoutReceivedRequestInput!]
+}
+
+input FriendCreateManyWithoutSentRequestInput {
+  create: [FriendCreateWithoutSentRequestInput!]
+}
+
+input FriendCreateWithoutReceivedRequestInput {
+  friendId: ID!
+  status: Int!
+  sentRequest: UserCreateOneWithoutSentFriendInput!
+}
+
+input FriendCreateWithoutSentRequestInput {
+  friendId: ID!
+  status: Int!
+  receivedRequest: UserCreateOneWithoutReceivedFriendInput!
+}
+
+"""An edge in a connection."""
+type FriendEdge {
+  """The item at the end of the edge."""
+  node: Friend!
+
+  """A cursor for use in pagination."""
+  cursor: String!
+}
+
+enum FriendOrderByInput {
+  friendId_ASC
+  friendId_DESC
+  status_ASC
+  status_DESC
+  id_ASC
+  id_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type FriendPreviousValues {
+  friendId: ID!
+  status: Int!
+}
+
+type FriendSubscriptionPayload {
+  mutation: MutationType!
+  node: Friend
+  updatedFields: [String!]
+  previousValues: FriendPreviousValues
+}
+
+input FriendSubscriptionWhereInput {
+  """Logical AND on all given filters."""
+  AND: [FriendSubscriptionWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [FriendSubscriptionWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [FriendSubscriptionWhereInput!]
+
+  """
+  The subscription event gets dispatched when it's listed in mutation_in
+  """
+  mutation_in: [MutationType!]
+
+  """
+  The subscription event gets only dispatched when one of the updated fields names is included in this list
+  """
+  updatedFields_contains: String
+
+  """
+  The subscription event gets only dispatched when all of the field names included in this list have been updated
+  """
+  updatedFields_contains_every: [String!]
+
+  """
+  The subscription event gets only dispatched when some of the field names included in this list have been updated
+  """
+  updatedFields_contains_some: [String!]
+  node: FriendWhereInput
+}
+
+input FriendUpdateInput {
+  friendId: ID
+  status: Int
+  sentRequest: UserUpdateOneWithoutSentFriendInput
+  receivedRequest: UserUpdateOneWithoutReceivedFriendInput
+}
+
+input FriendUpdateManyInput {
+  create: [FriendCreateInput!]
+}
+
+input FriendUpdateManyWithoutReceivedRequestInput {
+  create: [FriendCreateWithoutReceivedRequestInput!]
+}
+
+input FriendUpdateManyWithoutSentRequestInput {
+  create: [FriendCreateWithoutSentRequestInput!]
+}
+
+input FriendWhereInput {
+  """Logical AND on all given filters."""
+  AND: [FriendWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [FriendWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [FriendWhereInput!]
+  friendId: ID
+
+  """All values that are not equal to given value."""
+  friendId_not: ID
+
+  """All values that are contained in given list."""
+  friendId_in: [ID!]
+
+  """All values that are not contained in given list."""
+  friendId_not_in: [ID!]
+
+  """All values less than the given value."""
+  friendId_lt: ID
+
+  """All values less than or equal the given value."""
+  friendId_lte: ID
+
+  """All values greater than the given value."""
+  friendId_gt: ID
+
+  """All values greater than or equal the given value."""
+  friendId_gte: ID
+
+  """All values containing the given string."""
+  friendId_contains: ID
+
+  """All values not containing the given string."""
+  friendId_not_contains: ID
+
+  """All values starting with the given string."""
+  friendId_starts_with: ID
+
+  """All values not starting with the given string."""
+  friendId_not_starts_with: ID
+
+  """All values ending with the given string."""
+  friendId_ends_with: ID
+
+  """All values not ending with the given string."""
+  friendId_not_ends_with: ID
+  status: Int
+
+  """All values that are not equal to given value."""
+  status_not: Int
+
+  """All values that are contained in given list."""
+  status_in: [Int!]
+
+  """All values that are not contained in given list."""
+  status_not_in: [Int!]
+
+  """All values less than the given value."""
+  status_lt: Int
+
+  """All values less than or equal the given value."""
+  status_lte: Int
+
+  """All values greater than the given value."""
+  status_gt: Int
+
+  """All values greater than or equal the given value."""
+  status_gte: Int
+  sentRequest: UserWhereInput
+  receivedRequest: UserWhereInput
+}
+
+"""
+The `Long` scalar type represents non-fractional signed whole numeric values.
+Long can represent values between -(2^63) and 2^63 - 1.
+"""
+scalar Long
+
+type Mutation {
+  createUser(data: UserCreateInput!): User!
+  createFriend(data: FriendCreateInput!): Friend!
+  createPost(data: PostCreateInput!): Post!
+  createComment(data: CommentCreateInput!): Comment!
+  updateManyUsers(data: UserUpdateInput!, where: UserWhereInput): BatchPayload!
+  updateManyFriends(data: FriendUpdateInput!, where: FriendWhereInput): BatchPayload!
+  updateManyPosts(data: PostUpdateInput!, where: PostWhereInput): BatchPayload!
+  updateManyComments(data: CommentUpdateInput!, where: CommentWhereInput): BatchPayload!
+  deleteManyUsers(where: UserWhereInput): BatchPayload!
+  deleteManyFriends(where: FriendWhereInput): BatchPayload!
+  deleteManyPosts(where: PostWhereInput): BatchPayload!
+  deleteManyComments(where: CommentWhereInput): BatchPayload!
+}
+
+enum MutationType {
+  CREATED
+  UPDATED
+  DELETED
+}
+
+"""An object with an ID"""
+interface Node {
+  """The id of the object."""
+  id: ID!
+}
+
+"""Information about pagination in a connection."""
+type PageInfo {
+  """When paginating forwards, are there more items?"""
+  hasNextPage: Boolean!
+
+  """When paginating backwards, are there more items?"""
+  hasPreviousPage: Boolean!
+
+  """When paginating backwards, the cursor to continue."""
+  startCursor: String
+
+  """When paginating forwards, the cursor to continue."""
+  endCursor: String
+}
+
+type Post {
+  postId: ID!
+  title: String!
+  postText: String!
+  poster(where: UserWhereInput): User!
+  numberOfLikes: Int
+  numberOfComments: Int
+  restriction: Int
+}
+
+"""A connection to a list of items."""
+type PostConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [PostEdge]!
+  aggregate: AggregatePost!
+}
+
+input PostCreateInput {
+  postId: ID!
+  title: String!
+  postText: String!
+  numberOfLikes: Int
+  numberOfComments: Int
+  restriction: Int
+  poster: UserCreateOneWithoutPostsInput!
+}
+
+input PostCreateManyWithoutPosterInput {
+  create: [PostCreateWithoutPosterInput!]
+}
+
+input PostCreateOneInput {
+  create: PostCreateInput
+}
+
+input PostCreateWithoutPosterInput {
+  postId: ID!
+  title: String!
+  postText: String!
+  numberOfLikes: Int
+  numberOfComments: Int
+  restriction: Int
+}
+
+"""An edge in a connection."""
+type PostEdge {
+  """The item at the end of the edge."""
+  node: Post!
+
+  """A cursor for use in pagination."""
+  cursor: String!
+}
+
+enum PostOrderByInput {
+  postId_ASC
+  postId_DESC
+  title_ASC
+  title_DESC
+  postText_ASC
+  postText_DESC
+  numberOfLikes_ASC
+  numberOfLikes_DESC
+  numberOfComments_ASC
+  numberOfComments_DESC
+  restriction_ASC
+  restriction_DESC
+  id_ASC
+  id_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type PostPreviousValues {
+  postId: ID!
+  title: String!
+  postText: String!
+  numberOfLikes: Int
+  numberOfComments: Int
+  restriction: Int
+}
+
+type PostSubscriptionPayload {
+  mutation: MutationType!
+  node: Post
+  updatedFields: [String!]
+  previousValues: PostPreviousValues
+}
+
+input PostSubscriptionWhereInput {
+  """Logical AND on all given filters."""
+  AND: [PostSubscriptionWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [PostSubscriptionWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [PostSubscriptionWhereInput!]
+
+  """
+  The subscription event gets dispatched when it's listed in mutation_in
+  """
+  mutation_in: [MutationType!]
+
+  """
+  The subscription event gets only dispatched when one of the updated fields names is included in this list
+  """
+  updatedFields_contains: String
+
+  """
+  The subscription event gets only dispatched when all of the field names included in this list have been updated
+  """
+  updatedFields_contains_every: [String!]
+
+  """
+  The subscription event gets only dispatched when some of the field names included in this list have been updated
+  """
+  updatedFields_contains_some: [String!]
+  node: PostWhereInput
+}
+
+input PostUpdateDataInput {
+  postId: ID
+  title: String
+  postText: String
+  numberOfLikes: Int
+  numberOfComments: Int
+  restriction: Int
+  poster: UserUpdateOneWithoutPostsInput
+}
+
+input PostUpdateInput {
+  postId: ID
+  title: String
+  postText: String
+  numberOfLikes: Int
+  numberOfComments: Int
+  restriction: Int
+  poster: UserUpdateOneWithoutPostsInput
+}
+
+input PostUpdateManyWithoutPosterInput {
+  create: [PostCreateWithoutPosterInput!]
+}
+
+input PostUpdateOneInput {
+  create: PostCreateInput
+  delete: Boolean
+  update: PostUpdateDataInput
+  upsert: PostUpsertNestedInput
+}
+
+input PostUpsertNestedInput {
+  update: PostUpdateDataInput!
+  create: PostCreateInput!
+}
+
+input PostWhereInput {
+  """Logical AND on all given filters."""
+  AND: [PostWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [PostWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [PostWhereInput!]
+  postId: ID
+
+  """All values that are not equal to given value."""
+  postId_not: ID
+
+  """All values that are contained in given list."""
+  postId_in: [ID!]
+
+  """All values that are not contained in given list."""
+  postId_not_in: [ID!]
+
+  """All values less than the given value."""
+  postId_lt: ID
+
+  """All values less than or equal the given value."""
+  postId_lte: ID
+
+  """All values greater than the given value."""
+  postId_gt: ID
+
+  """All values greater than or equal the given value."""
+  postId_gte: ID
+
+  """All values containing the given string."""
+  postId_contains: ID
+
+  """All values not containing the given string."""
+  postId_not_contains: ID
+
+  """All values starting with the given string."""
+  postId_starts_with: ID
+
+  """All values not starting with the given string."""
+  postId_not_starts_with: ID
+
+  """All values ending with the given string."""
+  postId_ends_with: ID
+
+  """All values not ending with the given string."""
+  postId_not_ends_with: ID
+  title: String
+
+  """All values that are not equal to given value."""
+  title_not: String
+
+  """All values that are contained in given list."""
+  title_in: [String!]
+
+  """All values that are not contained in given list."""
+  title_not_in: [String!]
+
+  """All values less than the given value."""
+  title_lt: String
+
+  """All values less than or equal the given value."""
+  title_lte: String
+
+  """All values greater than the given value."""
+  title_gt: String
+
+  """All values greater than or equal the given value."""
+  title_gte: String
+
+  """All values containing the given string."""
+  title_contains: String
+
+  """All values not containing the given string."""
+  title_not_contains: String
+
+  """All values starting with the given string."""
+  title_starts_with: String
+
+  """All values not starting with the given string."""
+  title_not_starts_with: String
+
+  """All values ending with the given string."""
+  title_ends_with: String
+
+  """All values not ending with the given string."""
+  title_not_ends_with: String
+  postText: String
+
+  """All values that are not equal to given value."""
+  postText_not: String
+
+  """All values that are contained in given list."""
+  postText_in: [String!]
+
+  """All values that are not contained in given list."""
+  postText_not_in: [String!]
+
+  """All values less than the given value."""
+  postText_lt: String
+
+  """All values less than or equal the given value."""
+  postText_lte: String
+
+  """All values greater than the given value."""
+  postText_gt: String
+
+  """All values greater than or equal the given value."""
+  postText_gte: String
+
+  """All values containing the given string."""
+  postText_contains: String
+
+  """All values not containing the given string."""
+  postText_not_contains: String
+
+  """All values starting with the given string."""
+  postText_starts_with: String
+
+  """All values not starting with the given string."""
+  postText_not_starts_with: String
+
+  """All values ending with the given string."""
+  postText_ends_with: String
+
+  """All values not ending with the given string."""
+  postText_not_ends_with: String
+  numberOfLikes: Int
+
+  """All values that are not equal to given value."""
+  numberOfLikes_not: Int
+
+  """All values that are contained in given list."""
+  numberOfLikes_in: [Int!]
+
+  """All values that are not contained in given list."""
+  numberOfLikes_not_in: [Int!]
+
+  """All values less than the given value."""
+  numberOfLikes_lt: Int
+
+  """All values less than or equal the given value."""
+  numberOfLikes_lte: Int
+
+  """All values greater than the given value."""
+  numberOfLikes_gt: Int
+
+  """All values greater than or equal the given value."""
+  numberOfLikes_gte: Int
+  numberOfComments: Int
+
+  """All values that are not equal to given value."""
+  numberOfComments_not: Int
+
+  """All values that are contained in given list."""
+  numberOfComments_in: [Int!]
+
+  """All values that are not contained in given list."""
+  numberOfComments_not_in: [Int!]
+
+  """All values less than the given value."""
+  numberOfComments_lt: Int
+
+  """All values less than or equal the given value."""
+  numberOfComments_lte: Int
+
+  """All values greater than the given value."""
+  numberOfComments_gt: Int
+
+  """All values greater than or equal the given value."""
+  numberOfComments_gte: Int
+  restriction: Int
+
+  """All values that are not equal to given value."""
+  restriction_not: Int
+
+  """All values that are contained in given list."""
+  restriction_in: [Int!]
+
+  """All values that are not contained in given list."""
+  restriction_not_in: [Int!]
+
+  """All values less than the given value."""
+  restriction_lt: Int
+
+  """All values less than or equal the given value."""
+  restriction_lte: Int
+
+  """All values greater than the given value."""
+  restriction_gt: Int
+
+  """All values greater than or equal the given value."""
+  restriction_gte: Int
+  poster: UserWhereInput
+}
+
+type Query {
+  users(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [User]!
+  friends(where: FriendWhereInput, orderBy: FriendOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Friend]!
+  posts(where: PostWhereInput, orderBy: PostOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Post]!
+  comments(where: CommentWhereInput, orderBy: CommentOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Comment]!
+  usersConnection(where: UserWhereInput, orderBy: UserOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): UserConnection!
+  friendsConnection(where: FriendWhereInput, orderBy: FriendOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): FriendConnection!
+  postsConnection(where: PostWhereInput, orderBy: PostOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): PostConnection!
+  commentsConnection(where: CommentWhereInput, orderBy: CommentOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): CommentConnection!
+
+  """Fetches an object given its ID"""
+  node(
+    """The ID of an object"""
+    id: ID!
+  ): Node
+}
+
+type Subscription {
+  user(where: UserSubscriptionWhereInput): UserSubscriptionPayload
+  friend(where: FriendSubscriptionWhereInput): FriendSubscriptionPayload
+  post(where: PostSubscriptionWhereInput): PostSubscriptionPayload
+  comment(where: CommentSubscriptionWhereInput): CommentSubscriptionPayload
+}
+
+type User {
+  userId: ID!
+  username: String!
+  email: String!
+  firstName: String!
+  lastName: String!
+  aboutMe: String
+  password: String!
+  posts(where: PostWhereInput, orderBy: PostOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Post!]
+  comments(where: CommentWhereInput, orderBy: CommentOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Comment!]
+  pendingFriends(where: FriendWhereInput, orderBy: FriendOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Friend!]
+  rejectedFriends(where: FriendWhereInput, orderBy: FriendOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Friend!]
+  acceptedFriends(where: FriendWhereInput, orderBy: FriendOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Friend!]
+  sentFriend(where: FriendWhereInput, orderBy: FriendOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Friend!]
+  receivedFriend(where: FriendWhereInput, orderBy: FriendOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Friend!]
+}
+
+"""A connection to a list of items."""
+type UserConnection {
+  """Information to aid in pagination."""
+  pageInfo: PageInfo!
+
+  """A list of edges."""
+  edges: [UserEdge]!
+  aggregate: AggregateUser!
+}
+
+input UserCreateInput {
+  userId: ID!
+  username: String!
+  email: String!
+  firstName: String!
+  lastName: String!
+  aboutMe: String
+  password: String!
+  posts: PostCreateManyWithoutPosterInput
+  comments: CommentCreateManyWithoutCommenterInput
+  pendingFriends: FriendCreateManyInput
+  rejectedFriends: FriendCreateManyInput
+  acceptedFriends: FriendCreateManyInput
+  sentFriend: FriendCreateManyWithoutSentRequestInput
+  receivedFriend: FriendCreateManyWithoutReceivedRequestInput
+}
+
+input UserCreateOneWithoutCommentsInput {
+  create: UserCreateWithoutCommentsInput
+}
+
+input UserCreateOneWithoutPostsInput {
+  create: UserCreateWithoutPostsInput
+}
+
+input UserCreateOneWithoutReceivedFriendInput {
+  create: UserCreateWithoutReceivedFriendInput
+}
+
+input UserCreateOneWithoutSentFriendInput {
+  create: UserCreateWithoutSentFriendInput
+}
+
+input UserCreateWithoutCommentsInput {
+  userId: ID!
+  username: String!
+  email: String!
+  firstName: String!
+  lastName: String!
+  aboutMe: String
+  password: String!
+  posts: PostCreateManyWithoutPosterInput
+  pendingFriends: FriendCreateManyInput
+  rejectedFriends: FriendCreateManyInput
+  acceptedFriends: FriendCreateManyInput
+  sentFriend: FriendCreateManyWithoutSentRequestInput
+  receivedFriend: FriendCreateManyWithoutReceivedRequestInput
+}
+
+input UserCreateWithoutPostsInput {
+  userId: ID!
+  username: String!
+  email: String!
+  firstName: String!
+  lastName: String!
+  aboutMe: String
+  password: String!
+  comments: CommentCreateManyWithoutCommenterInput
+  pendingFriends: FriendCreateManyInput
+  rejectedFriends: FriendCreateManyInput
+  acceptedFriends: FriendCreateManyInput
+  sentFriend: FriendCreateManyWithoutSentRequestInput
+  receivedFriend: FriendCreateManyWithoutReceivedRequestInput
+}
+
+input UserCreateWithoutReceivedFriendInput {
+  userId: ID!
+  username: String!
+  email: String!
+  firstName: String!
+  lastName: String!
+  aboutMe: String
+  password: String!
+  posts: PostCreateManyWithoutPosterInput
+  comments: CommentCreateManyWithoutCommenterInput
+  pendingFriends: FriendCreateManyInput
+  rejectedFriends: FriendCreateManyInput
+  acceptedFriends: FriendCreateManyInput
+  sentFriend: FriendCreateManyWithoutSentRequestInput
+}
+
+input UserCreateWithoutSentFriendInput {
+  userId: ID!
+  username: String!
+  email: String!
+  firstName: String!
+  lastName: String!
+  aboutMe: String
+  password: String!
+  posts: PostCreateManyWithoutPosterInput
+  comments: CommentCreateManyWithoutCommenterInput
+  pendingFriends: FriendCreateManyInput
+  rejectedFriends: FriendCreateManyInput
+  acceptedFriends: FriendCreateManyInput
+  receivedFriend: FriendCreateManyWithoutReceivedRequestInput
+}
+
+"""An edge in a connection."""
+type UserEdge {
+  """The item at the end of the edge."""
+  node: User!
+
+  """A cursor for use in pagination."""
+  cursor: String!
+}
+
+enum UserOrderByInput {
+  userId_ASC
+  userId_DESC
+  username_ASC
+  username_DESC
+  email_ASC
+  email_DESC
+  firstName_ASC
+  firstName_DESC
+  lastName_ASC
+  lastName_DESC
+  aboutMe_ASC
+  aboutMe_DESC
+  password_ASC
+  password_DESC
+  id_ASC
+  id_DESC
+  updatedAt_ASC
+  updatedAt_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
+
+type UserPreviousValues {
+  userId: ID!
+  username: String!
+  email: String!
+  firstName: String!
+  lastName: String!
+  aboutMe: String
+  password: String!
+}
+
+type UserSubscriptionPayload {
+  mutation: MutationType!
+  node: User
+  updatedFields: [String!]
+  previousValues: UserPreviousValues
+}
+
+input UserSubscriptionWhereInput {
+  """Logical AND on all given filters."""
+  AND: [UserSubscriptionWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [UserSubscriptionWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [UserSubscriptionWhereInput!]
+
+  """
+  The subscription event gets dispatched when it's listed in mutation_in
+  """
+  mutation_in: [MutationType!]
+
+  """
+  The subscription event gets only dispatched when one of the updated fields names is included in this list
+  """
+  updatedFields_contains: String
+
+  """
+  The subscription event gets only dispatched when all of the field names included in this list have been updated
+  """
+  updatedFields_contains_every: [String!]
+
+  """
+  The subscription event gets only dispatched when some of the field names included in this list have been updated
+  """
+  updatedFields_contains_some: [String!]
+  node: UserWhereInput
+}
+
+input UserUpdateInput {
+  userId: ID
+  username: String
+  email: String
+  firstName: String
+  lastName: String
+  aboutMe: String
+  password: String
+  posts: PostUpdateManyWithoutPosterInput
+  comments: CommentUpdateManyWithoutCommenterInput
+  pendingFriends: FriendUpdateManyInput
+  rejectedFriends: FriendUpdateManyInput
+  acceptedFriends: FriendUpdateManyInput
+  sentFriend: FriendUpdateManyWithoutSentRequestInput
+  receivedFriend: FriendUpdateManyWithoutReceivedRequestInput
+}
+
+input UserUpdateOneWithoutCommentsInput {
+  create: UserCreateWithoutCommentsInput
+  delete: Boolean
+  update: UserUpdateWithoutCommentsDataInput
+  upsert: UserUpsertWithoutCommentsInput
+}
+
+input UserUpdateOneWithoutPostsInput {
+  create: UserCreateWithoutPostsInput
+  delete: Boolean
+  update: UserUpdateWithoutPostsDataInput
+  upsert: UserUpsertWithoutPostsInput
+}
+
+input UserUpdateOneWithoutReceivedFriendInput {
+  create: UserCreateWithoutReceivedFriendInput
+  delete: Boolean
+  update: UserUpdateWithoutReceivedFriendDataInput
+  upsert: UserUpsertWithoutReceivedFriendInput
+}
+
+input UserUpdateOneWithoutSentFriendInput {
+  create: UserCreateWithoutSentFriendInput
+  delete: Boolean
+  update: UserUpdateWithoutSentFriendDataInput
+  upsert: UserUpsertWithoutSentFriendInput
+}
+
+input UserUpdateWithoutCommentsDataInput {
+  userId: ID
+  username: String
+  email: String
+  firstName: String
+  lastName: String
+  aboutMe: String
+  password: String
+  posts: PostUpdateManyWithoutPosterInput
+  pendingFriends: FriendUpdateManyInput
+  rejectedFriends: FriendUpdateManyInput
+  acceptedFriends: FriendUpdateManyInput
+  sentFriend: FriendUpdateManyWithoutSentRequestInput
+  receivedFriend: FriendUpdateManyWithoutReceivedRequestInput
+}
+
+input UserUpdateWithoutPostsDataInput {
+  userId: ID
+  username: String
+  email: String
+  firstName: String
+  lastName: String
+  aboutMe: String
+  password: String
+  comments: CommentUpdateManyWithoutCommenterInput
+  pendingFriends: FriendUpdateManyInput
+  rejectedFriends: FriendUpdateManyInput
+  acceptedFriends: FriendUpdateManyInput
+  sentFriend: FriendUpdateManyWithoutSentRequestInput
+  receivedFriend: FriendUpdateManyWithoutReceivedRequestInput
+}
+
+input UserUpdateWithoutReceivedFriendDataInput {
+  userId: ID
+  username: String
+  email: String
+  firstName: String
+  lastName: String
+  aboutMe: String
+  password: String
+  posts: PostUpdateManyWithoutPosterInput
+  comments: CommentUpdateManyWithoutCommenterInput
+  pendingFriends: FriendUpdateManyInput
+  rejectedFriends: FriendUpdateManyInput
+  acceptedFriends: FriendUpdateManyInput
+  sentFriend: FriendUpdateManyWithoutSentRequestInput
+}
+
+input UserUpdateWithoutSentFriendDataInput {
+  userId: ID
+  username: String
+  email: String
+  firstName: String
+  lastName: String
+  aboutMe: String
+  password: String
+  posts: PostUpdateManyWithoutPosterInput
+  comments: CommentUpdateManyWithoutCommenterInput
+  pendingFriends: FriendUpdateManyInput
+  rejectedFriends: FriendUpdateManyInput
+  acceptedFriends: FriendUpdateManyInput
+  receivedFriend: FriendUpdateManyWithoutReceivedRequestInput
+}
+
+input UserUpsertWithoutCommentsInput {
+  update: UserUpdateWithoutCommentsDataInput!
+  create: UserCreateWithoutCommentsInput!
+}
+
+input UserUpsertWithoutPostsInput {
+  update: UserUpdateWithoutPostsDataInput!
+  create: UserCreateWithoutPostsInput!
+}
+
+input UserUpsertWithoutReceivedFriendInput {
+  update: UserUpdateWithoutReceivedFriendDataInput!
+  create: UserCreateWithoutReceivedFriendInput!
+}
+
+input UserUpsertWithoutSentFriendInput {
+  update: UserUpdateWithoutSentFriendDataInput!
+  create: UserCreateWithoutSentFriendInput!
+}
+
+input UserWhereInput {
+  """Logical AND on all given filters."""
+  AND: [UserWhereInput!]
+
+  """Logical OR on all given filters."""
+  OR: [UserWhereInput!]
+
+  """Logical NOT on all given filters combined by AND."""
+  NOT: [UserWhereInput!]
+  userId: ID
+
+  """All values that are not equal to given value."""
+  userId_not: ID
+
+  """All values that are contained in given list."""
+  userId_in: [ID!]
+
+  """All values that are not contained in given list."""
+  userId_not_in: [ID!]
+
+  """All values less than the given value."""
+  userId_lt: ID
+
+  """All values less than or equal the given value."""
+  userId_lte: ID
+
+  """All values greater than the given value."""
+  userId_gt: ID
+
+  """All values greater than or equal the given value."""
+  userId_gte: ID
+
+  """All values containing the given string."""
+  userId_contains: ID
+
+  """All values not containing the given string."""
+  userId_not_contains: ID
+
+  """All values starting with the given string."""
+  userId_starts_with: ID
+
+  """All values not starting with the given string."""
+  userId_not_starts_with: ID
+
+  """All values ending with the given string."""
+  userId_ends_with: ID
+
+  """All values not ending with the given string."""
+  userId_not_ends_with: ID
+  username: String
+
+  """All values that are not equal to given value."""
+  username_not: String
+
+  """All values that are contained in given list."""
+  username_in: [String!]
+
+  """All values that are not contained in given list."""
+  username_not_in: [String!]
+
+  """All values less than the given value."""
+  username_lt: String
+
+  """All values less than or equal the given value."""
+  username_lte: String
+
+  """All values greater than the given value."""
+  username_gt: String
+
+  """All values greater than or equal the given value."""
+  username_gte: String
+
+  """All values containing the given string."""
+  username_contains: String
+
+  """All values not containing the given string."""
+  username_not_contains: String
+
+  """All values starting with the given string."""
+  username_starts_with: String
+
+  """All values not starting with the given string."""
+  username_not_starts_with: String
+
+  """All values ending with the given string."""
+  username_ends_with: String
+
+  """All values not ending with the given string."""
+  username_not_ends_with: String
+  email: String
+
+  """All values that are not equal to given value."""
+  email_not: String
+
+  """All values that are contained in given list."""
+  email_in: [String!]
+
+  """All values that are not contained in given list."""
+  email_not_in: [String!]
+
+  """All values less than the given value."""
+  email_lt: String
+
+  """All values less than or equal the given value."""
+  email_lte: String
+
+  """All values greater than the given value."""
+  email_gt: String
+
+  """All values greater than or equal the given value."""
+  email_gte: String
+
+  """All values containing the given string."""
+  email_contains: String
+
+  """All values not containing the given string."""
+  email_not_contains: String
+
+  """All values starting with the given string."""
+  email_starts_with: String
+
+  """All values not starting with the given string."""
+  email_not_starts_with: String
+
+  """All values ending with the given string."""
+  email_ends_with: String
+
+  """All values not ending with the given string."""
+  email_not_ends_with: String
+  firstName: String
+
+  """All values that are not equal to given value."""
+  firstName_not: String
+
+  """All values that are contained in given list."""
+  firstName_in: [String!]
+
+  """All values that are not contained in given list."""
+  firstName_not_in: [String!]
+
+  """All values less than the given value."""
+  firstName_lt: String
+
+  """All values less than or equal the given value."""
+  firstName_lte: String
+
+  """All values greater than the given value."""
+  firstName_gt: String
+
+  """All values greater than or equal the given value."""
+  firstName_gte: String
+
+  """All values containing the given string."""
+  firstName_contains: String
+
+  """All values not containing the given string."""
+  firstName_not_contains: String
+
+  """All values starting with the given string."""
+  firstName_starts_with: String
+
+  """All values not starting with the given string."""
+  firstName_not_starts_with: String
+
+  """All values ending with the given string."""
+  firstName_ends_with: String
+
+  """All values not ending with the given string."""
+  firstName_not_ends_with: String
+  lastName: String
+
+  """All values that are not equal to given value."""
+  lastName_not: String
+
+  """All values that are contained in given list."""
+  lastName_in: [String!]
+
+  """All values that are not contained in given list."""
+  lastName_not_in: [String!]
+
+  """All values less than the given value."""
+  lastName_lt: String
+
+  """All values less than or equal the given value."""
+  lastName_lte: String
+
+  """All values greater than the given value."""
+  lastName_gt: String
+
+  """All values greater than or equal the given value."""
+  lastName_gte: String
+
+  """All values containing the given string."""
+  lastName_contains: String
+
+  """All values not containing the given string."""
+  lastName_not_contains: String
+
+  """All values starting with the given string."""
+  lastName_starts_with: String
+
+  """All values not starting with the given string."""
+  lastName_not_starts_with: String
+
+  """All values ending with the given string."""
+  lastName_ends_with: String
+
+  """All values not ending with the given string."""
+  lastName_not_ends_with: String
+  aboutMe: String
+
+  """All values that are not equal to given value."""
+  aboutMe_not: String
+
+  """All values that are contained in given list."""
+  aboutMe_in: [String!]
+
+  """All values that are not contained in given list."""
+  aboutMe_not_in: [String!]
+
+  """All values less than the given value."""
+  aboutMe_lt: String
+
+  """All values less than or equal the given value."""
+  aboutMe_lte: String
+
+  """All values greater than the given value."""
+  aboutMe_gt: String
+
+  """All values greater than or equal the given value."""
+  aboutMe_gte: String
+
+  """All values containing the given string."""
+  aboutMe_contains: String
+
+  """All values not containing the given string."""
+  aboutMe_not_contains: String
+
+  """All values starting with the given string."""
+  aboutMe_starts_with: String
+
+  """All values not starting with the given string."""
+  aboutMe_not_starts_with: String
+
+  """All values ending with the given string."""
+  aboutMe_ends_with: String
+
+  """All values not ending with the given string."""
+  aboutMe_not_ends_with: String
+  password: String
+
+  """All values that are not equal to given value."""
+  password_not: String
+
+  """All values that are contained in given list."""
+  password_in: [String!]
+
+  """All values that are not contained in given list."""
+  password_not_in: [String!]
+
+  """All values less than the given value."""
+  password_lt: String
+
+  """All values less than or equal the given value."""
+  password_lte: String
+
+  """All values greater than the given value."""
+  password_gt: String
+
+  """All values greater than or equal the given value."""
+  password_gte: String
+
+  """All values containing the given string."""
+  password_contains: String
+
+  """All values not containing the given string."""
+  password_not_contains: String
+
+  """All values starting with the given string."""
+  password_starts_with: String
+
+  """All values not starting with the given string."""
+  password_not_starts_with: String
+
+  """All values ending with the given string."""
+  password_ends_with: String
+
+  """All values not ending with the given string."""
+  password_not_ends_with: String
+  posts_every: PostWhereInput
+  posts_some: PostWhereInput
+  posts_none: PostWhereInput
+  comments_every: CommentWhereInput
+  comments_some: CommentWhereInput
+  comments_none: CommentWhereInput
+  pendingFriends_every: FriendWhereInput
+  pendingFriends_some: FriendWhereInput
+  pendingFriends_none: FriendWhereInput
+  rejectedFriends_every: FriendWhereInput
+  rejectedFriends_some: FriendWhereInput
+  rejectedFriends_none: FriendWhereInput
+  acceptedFriends_every: FriendWhereInput
+  acceptedFriends_some: FriendWhereInput
+  acceptedFriends_none: FriendWhereInput
+  sentFriend_every: FriendWhereInput
+  sentFriend_some: FriendWhereInput
+  sentFriend_none: FriendWhereInput
+  receivedFriend_every: FriendWhereInput
+  receivedFriend_some: FriendWhereInput
+  receivedFriend_none: FriendWhereInput
+}

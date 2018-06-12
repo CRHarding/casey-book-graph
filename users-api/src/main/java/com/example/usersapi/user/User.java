@@ -1,4 +1,4 @@
-package com.example.users.user;
+package com.example.usersapi.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
@@ -9,23 +9,25 @@ import javax.persistence.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
 @Entity
+@Data
 @Table(name = "USERS")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "POSTER_ID")
-    private int posterId;
-
-    @Column(name = "FRIEND_SENT_REQUEST")
-    private int friendSentRequest;
-
-    @Column(name = "FRIEND_RECEIVED_REQUEST")
-    private int friendReceivedRequest;
+//    @OneToMany(mappedBy = "posterId", cascade=CascadeType.ALL)
+//    @JsonIgnoreProperties("posterId")
+//    private Set<Post> posts = new HashSet<> ();
+//
+//    @OneToMany(mappedBy = "friendSentRequest", cascade=CascadeType.ALL)
+//    @JsonIgnoreProperties("friendSentRequest")
+//    private Set<Friend> sentRequest = new HashSet<> ();
+//
+//    @OneToMany(mappedBy = "friendReceivedRequest", cascade=CascadeType.ALL)
+//    @JsonIgnoreProperties("friendReceivedRequest")
+//    private Set<Friend> receivedRequest = new HashSet<> ();
 
     @Column(name = "USERNAME")
     private String username;

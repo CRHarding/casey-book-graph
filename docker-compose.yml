@@ -9,7 +9,7 @@ services:
     volumes:
       - ./eureka-server:/eureka-server
     depends_on:
-      - postgresdev
+      - prisma
     command: './gradlew bootRun'
     environment:
       - GRADLE_USER_HOME=cache
@@ -22,20 +22,35 @@ services:
     volumes:
       - ./api-gateway:/api-gateway
     depends_on:
-      - postgresdev
+      - prisma
       - eureka
     command: './gradlew bootRun'
     environment:
       - GRADLE_USER_HOME=cache
       - SPRING_PROFILES_ACTIVE=dev
-  postgresdev:
+  postgres:
+    container_name: prisma-db
     image: postgres:9.5-alpine
-    ports:
-     - '5432:5432'
     environment:
      - POSTGRES_PASSWORD=password
      - POSTGRES_USER=postgres
      - POSTGRES_DB=pgdev
+  prisma:
+    image: prismagraphql/prisma:1.8
+    restart: always
+    ports:
+    - "4466:4466"
+    environment:
+      PRISMA_CONFIG: |
+        port: 4466
+        databases:
+          default:
+            connector: postgres
+            host: postgres
+            port: 5432
+            user: postgres
+            password: password
+            migrations: true
   users-api:
     image: anapsix/alpine-java:8_jdk_unlimited
     ports:
@@ -44,51 +59,58 @@ services:
     volumes:
       - ./users-api:/users-api
     depends_on:
-      - postgresdev
+      - prisma
       - eureka
     command: './gradlew bootRun'
     environment:
       - GRADLE_USER_HOME=cache
       - SPRING_PROFILES_ACTIVE=dev
-  comments-api:
-    image: anapsix/alpine-java:8_jdk_unlimited
-    ports:
-      - '8082:8082'
-    working_dir: /comments-api
-    volumes:
-      - ./comments-api:/comments-api
-    depends_on:
-      - postgresdev
-      - eureka
-    command: './gradlew bootRun'
-    environment:
-      - GRADLE_USER_HOME=cache
-      - SPRING_PROFILES_ACTIVE=dev
-  friends-api:
-    image: anapsix/alpine-java:8_jdk_unlimited
-    ports:
-      - '8083:8083'
-    working_dir: /friends-api
-    volumes:
-      - ./friends-api:/friends-api
-    depends_on:
-      - postgresdev
-      - eureka
-    command: './gradlew bootRun'
-    environment:
-      - GRADLE_USER_HOME=cache
-      - SPRING_PROFILES_ACTIVE=dev
-  posts-api:
-    image: anapsix/alpine-java:8_jdk_unlimited
-    ports:
-      - '8084:8084'
-    working_dir: /posts-api
-    volumes:
-      - ./posts-api:/posts-api
-    depends_on:
-      - postgresdev
-      - eureka
-    command: './gradlew bootRun'
-    environment:
-      - GRADLE_USER_HOME=cache
-      - SPRING_PROFILES_ACTIVE=dev
+volumes:
+  postgres:
+
+
+
+
+
+#  comments-api:
+#    image: anapsix/alpine-java:8_jdk_unlimited
+#    ports:
+#      - '8082:8082'
+#    working_dir: /comments-api
+#    volumes:
+#      - ./comments-api:/comments-api
+#    depends_on:
+#      - postgresdev
+#      - eureka
+#    command: './gradlew bootRun'
+#    environment:
+#      - GRADLE_USER_HOME=cache
+#      - SPRING_PROFILES_ACTIVE=dev
+#  friends-api:
+#    image: anapsix/alpine-java:8_jdk_unlimited
+#    ports:
+#      - '8083:8083'
+#    working_dir: /friends-api
+#    volumes:
+#      - ./friends-api:/friends-api
+#    depends_on:
+#      - postgresdev
+#      - eureka
+#    command: './gradlew bootRun'
+#    environment:
+#      - GRADLE_USER_HOME=cache
+#      - SPRING_PROFILES_ACTIVE=dev
+#  posts-api:
+#    image: anapsix/alpine-java:8_jdk_unlimited
+#    ports:
+#      - '8084:8084'
+#    working_dir: /posts-api
+#    volumes:
+#      - ./posts-api:/posts-api
+#    depends_on:
+#      - postgresdev
+#      - eureka
+#    command: './gradlew bootRun'
+#    environment:
+#      - GRADLE_USER_HOME=cache
+#      - SPRING_PROFILES_ACTIVE=dev

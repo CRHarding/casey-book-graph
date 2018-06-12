@@ -1,0 +1,161 @@
+# import User from './generated/prisma.graphql'
+# import Friend from './generated/prisma.graphql'
+# import Post from './generated/prisma.graphql'
+# import Comment from './generated/prisma.graphql'
+
+type Mutation {
+    createUser(input: AddUserInput!): AddUserPayload!
+    deleteUser(input: RemoveUserInput!): RemoveUserPayload!
+    updateUser(input: UpdateUserInput!): UpdateUserPayload!
+    createFriend(input: AddFriendInput!): AddFriendPayload!
+    updateFriend(input: UpdateFriendInput!): UpdateFriendPayload!
+    createPost(input: AddPostInput!): AddPostPayload!
+    updatePost(input: UpdatePostInput!): UpdatePostPayload!
+    createComment(input: AddCommentInput!): AddCommentPayload!
+    updateComment(input: UpdateCommentInput!): UpdateCommentPayload!
+}
+
+input CreateUserInput {
+    firstName: String!
+    lastName: String!
+    username: String!
+    email: String!
+    password: String!
+    location: String
+    aboutMe: String
+    posts: [Post]
+    comments: [Comment]
+    pendingFriends: [Friend]
+    rejectedFriends: [Friend]
+    acceptedFriends: [Friend]
+}
+
+type CreateUserPayload {
+    user: User!
+}
+
+input UpdateUserInput {
+    userId: ID!
+    firstName: String!
+    lastName: String!
+    username: String!
+    password: String!
+    location: String
+    aboutMe: String
+    posts: [Post]
+    comments: [Comment]
+    posts: [Post]
+    pendingFriends: [Friend]
+    rejectedFriends: [Friend]
+    acceptedFriends: [Friend]
+}
+
+type UpdateUserPayload {
+    user: User!
+}
+
+input DeleteUserInput {
+    userId: Int!
+}
+
+type DeleteUserPayload {
+    user: User!
+}
+
+input CreateFriendInput {
+    friendId: ID!
+    status: Int!
+    sentRequest: User!
+    receivedRequest: User!
+}
+
+type CreateFriendPayload {
+    friend: Friend!
+}
+
+input UpdateFriendInput {
+    friendId: ID!
+    status: Int!
+    sentRequest: User!
+    receivedRequest: User!
+}
+
+type UpdateFriendPayload {
+    friend: Friend!
+}
+
+input DeleteFriendInput {
+    friend: Friend!
+}
+
+type DeleteFriendPayload {
+    friend: Friend!
+}
+
+input CreatePostInput {
+    postId: ID!
+    title: String!
+    postText: String!
+    poster: User!
+    numberOfLikes: Int
+    numberOfComments: Int
+    restriction: Int
+}
+
+type CreatePostPayload {
+    post: Post!
+}
+
+input UpdatePostInput {
+    postId: ID!
+    title: String!
+    postText: String!
+    numberOfLikes: Int
+    numberOfComments: Int
+    restriction: Int
+}
+
+type UpdatePostPayload {
+    post: Post!
+}
+
+input DeletePostInput {
+    post: Post!
+}
+
+type DeletePostPayload {
+    post: Post!
+}
+
+input CreateCommentInput {
+    commentId: ID!
+    commenter: User!
+    post: Post!
+    commentText: String!
+    numberOfLikes: Int
+}
+
+type CreateCommentPayload {
+    comment: Comment!
+}
+
+input UpdateCommentInput {
+    commentId: ID!
+    commentId: ID!
+    commenter: User!
+    post: Post!
+    commentText: String!
+    numberOfLikes: Int
+}
+
+type UpdateCommentPayload {
+    comment: Comment!
+}
+
+input DeleteCommentInput {
+    comment: Comment!
+}
+
+type DeleteCommentPayload {
+    comment: Comment!
+}

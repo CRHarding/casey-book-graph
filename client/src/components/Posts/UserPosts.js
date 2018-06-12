@@ -13,29 +13,30 @@ const styles = theme => ({
 });
 
 const UserPosts = props => {
-  const user = props.user;
+  // const user = props.user;
   const userPosts = props.posts;
-  const friend = props.friend;
-  const isUser = props.isUser;
-
+  // const friend = props.friend;
+  // const isUser = props.isUser;
   return (
     <Grid item xs>
-      {userPosts.map((post, key) => {
-        if (post) {
-          return (
-            <SinglePost
-              post={post}
-              key={key}
-              user={user}
-              friend={friend}
-              isUser={isUser}
-              manageDelete={props.manageDelete}
-            />
-          );
-        } else {
-          return null;
-        }
-      })}
+      {userPosts
+        ? userPosts.map((post, key) => {
+            if (post) {
+              return (
+                <SinglePost
+                  post={post}
+                  key={key}
+                  // user={user}
+                  // friend={friend}
+                  // isUser={isUser}
+                  // manageDelete={props.manageDelete}
+                />
+              );
+            } else {
+              return null;
+            }
+          })
+        : ''}
     </Grid>
   );
 };

@@ -1,0 +1,41 @@
+type User {
+    userId: ID!
+    username: String!
+    email: String!
+    firstName: String!
+    lastName: String!
+    aboutMe: String
+    password: String!
+    posts: [Post!]!
+    comments: [Comment!]!
+    pendingFriends: [Friend!]! @relation(name: "PendingFriends")
+    rejectedFriends: [Friend!]! @relation(name: "RejectedFriends")
+    acceptedFriends: [Friend!]! @relation(name: "AcceptedFriends")
+    sentFriend: [Friend!]! @relation(name: "SentFriend")
+    receivedFriend: [Friend!]! @relation(name: "ReceivedFriend")
+}
+
+type Friend {
+    friendId: ID!
+    status: Int!
+    sentRequest: User! @relation(name: "SentFriend")
+    receivedRequest: User! @relation(name: "ReceivedFriend")
+}
+
+type Post {
+    postId: ID!
+    title: String!
+    postText: String!
+    poster: User!
+    numberOfLikes: Int
+    numberOfComments: Int
+    restriction: Int
+}
+
+type Comment {
+    commentId: ID!
+    commenter: User!
+    post: Post!
+    commentText: String!
+    numberOfLikes: Int
+}

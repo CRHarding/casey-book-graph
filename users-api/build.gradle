@@ -34,9 +34,10 @@ dependencies {
 	compile 'org.springframework.cloud:spring-cloud-starter-eureka'
 	compile 'org.springframework.boot:spring-boot-starter-web'
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
-
 	compile 'org.flywaydb:flyway-core'
-	runtime 'org.postgresql:postgresql'
+	compile("org.springframework.boot:spring-boot-starter-actuator")
+	compile 'com.graphql-java:graphql-java-tools:5.1.0'
+
 	compileOnly 'org.projectlombok:lombok'
 
 	compile('org.springframework.boot:spring-boot-starter')

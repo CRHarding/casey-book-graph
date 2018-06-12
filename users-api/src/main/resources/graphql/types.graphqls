@@ -1,0 +1,19 @@
+type Query {
+    users: [User]
+    user(id: Int!): User
+}
+
+type User {
+    userId: ID!
+    username: String!
+    email: String!
+    firstName: String!
+    lastName: String!
+    aboutMe: String
+    password: String!
+    posts: [Post]
+    comments: [Comment]
+    pendingFriends: [Friend]
+    rejectedFriends: [Friend]
+    acceptedFriends: [Friend]
+}

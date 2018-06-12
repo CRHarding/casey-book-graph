@@ -43,8 +43,9 @@ class LoginForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const newUser = {
-      userName: this.state.userName,
+    const UserCreateInput = {
+      userId: 1,
+      username: this.state.userName,
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       email: this.state.email,
@@ -52,13 +53,9 @@ class LoginForm extends Component {
       password: this.state.password,
     };
 
-    UserServices.addUser(newUser)
-      .then(user => {
-        console.log('success in add user signup form--->', user);
-      })
-      .catch(err => {
-        console.log('error in add user signup form--->', err);
-      });
+    console.log(UserCreateInput);
+
+    this.props.createUser(UserCreateInput);
   }
 
   handleChange = name => event => {
