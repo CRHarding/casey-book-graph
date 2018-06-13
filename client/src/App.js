@@ -33,7 +33,7 @@ import Posts from './components/Posts/AllPosts';
 import Grid from '@material-ui/core/Grid';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4466',
+  uri: 'http://localhost:8080/api',
 });
 
 const POSTS = gql`

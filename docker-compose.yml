@@ -29,12 +29,13 @@ services:
       - GRADLE_USER_HOME=cache
       - SPRING_PROFILES_ACTIVE=dev
   postgres:
-    container_name: prisma-db
     image: postgres:9.5-alpine
+    restart: always
     environment:
      - POSTGRES_PASSWORD=password
-     - POSTGRES_USER=postgres
-     - POSTGRES_DB=pgdev
+     - POSTGRES_USER=caseyrharding
+    volumes:
+    - postgres:/var/lib/postgresql/data
   prisma:
     image: prismagraphql/prisma:1.8
     restart: always
@@ -48,13 +49,13 @@ services:
             connector: postgres
             host: postgres
             port: 5432
-            user: postgres
+            user: caseyrharding
             password: password
             migrations: true
   users-api:
     image: anapsix/alpine-java:8_jdk_unlimited
     ports:
-      - '8081:8081'
+      - '8085:8085'
     working_dir: /users-api
     volumes:
       - ./users-api:/users-api
