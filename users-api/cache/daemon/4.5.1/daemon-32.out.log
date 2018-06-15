@@ -1,100 +1,602 @@
-13:43:14.843 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [-XX:+HeapDumpOnOutOfMemoryError, -Xmx1024m, -Dfile.encoding=UTF-8, -Duser.country, -Duser.language=en, -Duser.variant]
-13:43:15.117 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=1cf39561-5c15-4aad-b0e5-ed25516d2831,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/users-api/cache/daemon,pid=32,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
-13:43:15.160 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface eth0
-13:43:15.163 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
-13:43:15.166 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? true
-13:43:15.169 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /172.18.0.5
-13:43:15.171 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote multicast interface eth0
-13:43:15.175 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
-13:43:15.177 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
-13:43:15.180 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? false
-13:43:15.183 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
-13:43:15.189 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [d71c87e4-fc10-4160-acc9-204383d10ff0 port:36881, addresses:[/127.0.0.1]].
-13:43:15.199 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Fri Jun 15 13:43:15 GMT 2018, with address: [d71c87e4-fc10-4160-acc9-204383d10ff0 port:36881, addresses:[/127.0.0.1]]
-13:43:15.212 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [d71c87e4-fc10-4160-acc9-204383d10ff0 port:36881, addresses:[/127.0.0.1]]
-13:43:15.215 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=1cf39561-5c15-4aad-b0e5-ed25516d2831,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/users-api/cache/daemon,pid=32,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
-13:43:15.219 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [d71c87e4-fc10-4160-acc9-204383d10ff0 port:36881, addresses:[/127.0.0.1]], context: DefaultDaemonContext[uid=1cf39561-5c15-4aad-b0e5-ed25516d2831,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/users-api/cache/daemon,pid=32,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
-13:43:15.246 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
-13:43:15.257 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
-13:43:15.338 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
-13:43:15.345 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
-13:43:15.356 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
-13:43:15.391 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:34670 to /127.0.0.1:36881.
-13:43:15.399 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
-13:43:15.424 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
-13:43:15.428 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
-13:43:15.707 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: received class org.gradle.launcher.daemon.protocol.Build
-13:43:15.710 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 15: Received non-IO message from client: Build{id=0ed6e94b-bfe4-4b26-be0b-2e7bd21bf87e.1, currentDir=/users-api}
-13:43:15.713 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=0ed6e94b-bfe4-4b26-be0b-2e7bd21bf87e.1, currentDir=/users-api}.
-13:43:15.716 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=0ed6e94b-bfe4-4b26-be0b-2e7bd21bf87e.1, currentDir=/users-api} with connection: socket connection from /127.0.0.1:36881 to /127.0.0.1:34670.
-13:43:15.722 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=0ed6e94b-bfe4-4b26-be0b-2e7bd21bf87e.1, currentDir=/users-api}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:36881 to /127.0.0.1:34670] after 0.0 minutes of idle
-13:43:15.726 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [d71c87e4-fc10-4160-acc9-204383d10ff0 port:36881, addresses:[/127.0.0.1]]
-13:43:15.729 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [d71c87e4-fc10-4160-acc9-204383d10ff0 port:36881, addresses:[/127.0.0.1]]
-13:43:15.744 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
-13:43:15.750 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
-13:43:15.767 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
-13:43:15.771 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
-13:43:15.776 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
-13:43:15.780 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=0ed6e94b-bfe4-4b26-be0b-2e7bd21bf87e.1, currentDir=/users-api}. Dispatching build started information...
-13:43:15.788 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
-13:43:15.834 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/jdk/bin, JAVA_JCE=unlimited, SPRING_PROFILES_ACTIVE=dev, JAVA_HOME=/opt/jdk, OLDPWD=/users-api, GLIBC_VERSION=2.27-r0, LANG=C.UTF-8, JAVA_VERSION_MAJOR=8, GRADLE_USER_HOME=cache, HOSTNAME=e04cccb4478d, GLIBC_REPO=https://github.com/sgerrand/alpine-pkg-glibc, JAVA_VERSION_MINOR=172, PWD=/users-api, JAVA_PACKAGE=jdk, JAVA_VERSION_BUILD=11, HOME=/root, SHLVL=1}
-13:43:15.866 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: received class org.gradle.launcher.daemon.protocol.CloseInput
-13:43:15.872 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 15: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@52568f2a
-13:43:15.890 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
-13:43:15.897 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 32). The daemon log file: /users-api/cache/daemon/4.5.1/daemon-32.out.log
-13:43:15.920 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon [memory: 954.7 MB]
-13:43:15.928 [INFO] [org.gradle.launcher.daemon.server.exec.ForwardClientInput] Closing daemon's stdin at end of input.
-13:43:15.931 [INFO] [org.gradle.launcher.daemon.server.exec.ForwardClientInput] The daemon will no longer process any standard input.
-13:43:15.953 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
-13:43:15.971 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=1cf39561-5c15-4aad-b0e5-ed25516d2831,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/users-api/cache/daemon,pid=32,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+15:22:00.510 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [-XX:+HeapDumpOnOutOfMemoryError, -Xmx1024m, -Dfile.encoding=UTF-8, -Duser.country, -Duser.language=en, -Duser.variant]
+15:22:00.728 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=26f4e68f-6ccb-4be2-bc3e-7a17e7e9a68f,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/users-api/cache/daemon,pid=32,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+15:22:00.778 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface eth0
+15:22:00.800 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+15:22:00.803 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? true
+15:22:00.805 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /172.18.0.5
+15:22:00.808 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote multicast interface eth0
+15:22:00.811 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
+15:22:00.814 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+15:22:00.816 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? false
+15:22:00.819 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+15:22:00.826 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [50246a65-0cf3-4c89-a383-e0190b2e8de8 port:44887, addresses:[/127.0.0.1]].
+15:22:00.840 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Fri Jun 15 15:22:00 GMT 2018, with address: [50246a65-0cf3-4c89-a383-e0190b2e8de8 port:44887, addresses:[/127.0.0.1]]
+15:22:00.843 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [50246a65-0cf3-4c89-a383-e0190b2e8de8 port:44887, addresses:[/127.0.0.1]]
+15:22:00.845 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=26f4e68f-6ccb-4be2-bc3e-7a17e7e9a68f,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/users-api/cache/daemon,pid=32,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+15:22:00.849 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [50246a65-0cf3-4c89-a383-e0190b2e8de8 port:44887, addresses:[/127.0.0.1]], context: DefaultDaemonContext[uid=26f4e68f-6ccb-4be2-bc3e-7a17e7e9a68f,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/users-api/cache/daemon,pid=32,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+15:22:00.880 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+15:22:00.892 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+15:22:00.928 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+15:22:00.933 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+15:22:00.946 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+15:22:00.964 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+15:22:00.979 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:39334 to /127.0.0.1:44887.
+15:22:00.980 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+15:22:00.993 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+15:22:01.312 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: received class org.gradle.launcher.daemon.protocol.Build
+15:22:01.349 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 15: Received non-IO message from client: Build{id=1ee372c7-642a-435e-9db8-cca17c32dbbb.1, currentDir=/users-api}
+15:22:01.352 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=1ee372c7-642a-435e-9db8-cca17c32dbbb.1, currentDir=/users-api}.
+15:22:01.355 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=1ee372c7-642a-435e-9db8-cca17c32dbbb.1, currentDir=/users-api} with connection: socket connection from /127.0.0.1:44887 to /127.0.0.1:39334.
+15:22:01.363 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=1ee372c7-642a-435e-9db8-cca17c32dbbb.1, currentDir=/users-api}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:44887 to /127.0.0.1:39334] after 0.0 minutes of idle
+15:22:01.366 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [50246a65-0cf3-4c89-a383-e0190b2e8de8 port:44887, addresses:[/127.0.0.1]]
+15:22:01.369 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [50246a65-0cf3-4c89-a383-e0190b2e8de8 port:44887, addresses:[/127.0.0.1]]
+15:22:01.376 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+15:22:01.381 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+15:22:01.392 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+15:22:01.396 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+15:22:01.398 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+15:22:01.400 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=1ee372c7-642a-435e-9db8-cca17c32dbbb.1, currentDir=/users-api}. Dispatching build started information...
+15:22:01.413 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
+15:22:01.456 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/jdk/bin, JAVA_JCE=unlimited, SPRING_PROFILES_ACTIVE=dev, JAVA_HOME=/opt/jdk, OLDPWD=/users-api, GLIBC_VERSION=2.27-r0, LANG=C.UTF-8, JAVA_VERSION_MAJOR=8, GRADLE_USER_HOME=cache, HOSTNAME=92518e3eb63f, GLIBC_REPO=https://github.com/sgerrand/alpine-pkg-glibc, JAVA_VERSION_MINOR=172, PWD=/users-api, JAVA_PACKAGE=jdk, JAVA_VERSION_BUILD=11, HOME=/root, SHLVL=1}
+15:22:01.493 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+15:22:01.502 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 32). The daemon log file: /users-api/cache/daemon/4.5.1/daemon-32.out.log
+15:22:01.508 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon [memory: 954.7 MB]
+15:22:01.550 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+15:22:01.556 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=26f4e68f-6ccb-4be2-bc3e-7a17e7e9a68f,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/users-api/cache/daemon,pid=32,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+15:22:01.557 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: received class org.gradle.launcher.daemon.protocol.CloseInput
+15:22:01.564 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 15: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@1fcbc148
+15:22:01.569 [INFO] [org.gradle.launcher.daemon.server.exec.ForwardClientInput] Closing daemon's stdin at end of input.
+15:22:01.576 [INFO] [org.gradle.launcher.daemon.server.exec.ForwardClientInput] The daemon will no longer process any standard input.
 :compileKotlin
-:compileJava/users-api/src/main/java/com/example/usersapi/service/UsersService.java:30: error: cannot find symbol
-        ExecutionResult executionResult = graphql.execute(query, (Object) null, variables);
-                                          ^
-  symbol:   variable graphql
-  location: class UsersService
-/users-api/src/main/java/com/example/usersapi/service/UsersService.java:34: error: cannot find symbol
-            log.error("Errors: {}", executionResult.getErrors());
-            ^
-  symbol:   variable log
-  location: class UsersService
-Note: Some input files use unchecked or unsafe operations.
+:compileJavaNote: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-2 errors
- FAILED
 
-FAILURE: Build failed with an exception.
+:processResources UP-TO-DATE
+:classes
+:bootRun
+2018-06-15 15:22:47.068  INFO 77 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@5af3afd9: startup date [Fri Jun 15 15:22:47 GMT 2018]; root of context hierarchy
+2018-06-15 15:22:48.433  INFO 77 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-06-15 15:22:48.617  INFO 77 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$782e1713] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 
-* What went wrong:
-Execution failed for task ':compileJava'.
-> Compilation failed; see the compiler error output for details.
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+[32m :: Spring Boot :: [39m      [2m (v1.5.8.RELEASE)[0;39m
 
-* Try:
-Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+[2m2018-06-15 15:22:49.890[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.example.usersapi.UsersApi           [0;39m [2m:[0;39m The following profiles are active: dev
+[2m2018-06-15 15:22:49.983[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mationConfigEmbeddedWebApplicationContext[0;39m [2m:[0;39m Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@fd8294b: startup date [Fri Jun 15 15:22:49 GMT 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@5af3afd9
+[2m2018-06-15 15:22:55.958[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.cloud.context.scope.GenericScope    [0;39m [2m:[0;39m BeanFactory id=30dfbf05-c92c-35c6-87d7-42b12999b75e
+[2m2018-06-15 15:22:56.117[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mf.a.AutowiredAnnotationBeanPostProcessor[0;39m [2m:[0;39m JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2m2018-06-15 15:22:57.010[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5c141416] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-06-15 15:22:57.576[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$8e40ba57] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-06-15 15:22:57.624[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mtrationDelegate$BeanPostProcessorChecker[0;39m [2m:[0;39m Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$782e1713] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[2m2018-06-15 15:22:59.364[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.b.c.e.t.TomcatEmbeddedServletContainer[0;39m [2m:[0;39m Tomcat initialized with port(s): 8085 (http)
+[2m2018-06-15 15:22:59.425[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.apache.catalina.core.StandardService  [0;39m [2m:[0;39m Starting service [Tomcat]
+[2m2018-06-15 15:22:59.436[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.apache.catalina.core.StandardEngine [0;39m [2m:[0;39m Starting Servlet Engine: Apache Tomcat/8.5.23
+[2m2018-06-15 15:23:00.560[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring embedded WebApplicationContext
+[2m2018-06-15 15:23:00.561[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.web.context.ContextLoader           [0;39m [2m:[0;39m Root WebApplicationContext: initialization completed in 10578 ms
+[2m2018-06-15 15:23:02.144[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.ServletRegistrationBean [0;39m [2m:[0;39m Mapping servlet: 'dispatcherServlet' to [/]
+[2m2018-06-15 15:23:02.185[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.FilterRegistrationBean  [0;39m [2m:[0;39m Mapping filter: 'metricsFilter' to: [/*]
+[2m2018-06-15 15:23:02.186[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.FilterRegistrationBean  [0;39m [2m:[0;39m Mapping filter: 'characterEncodingFilter' to: [/*]
+[2m2018-06-15 15:23:02.186[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.FilterRegistrationBean  [0;39m [2m:[0;39m Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+[2m2018-06-15 15:23:02.186[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.FilterRegistrationBean  [0;39m [2m:[0;39m Mapping filter: 'httpPutFormContentFilter' to: [/*]
+[2m2018-06-15 15:23:02.186[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.FilterRegistrationBean  [0;39m [2m:[0;39m Mapping filter: 'requestContextFilter' to: [/*]
+[2m2018-06-15 15:23:02.186[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.FilterRegistrationBean  [0;39m [2m:[0;39m Mapping filter: 'webRequestLoggingFilter' to: [/*]
+[2m2018-06-15 15:23:02.187[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[ost-startStop-1][0;39m [36mo.s.b.w.servlet.FilterRegistrationBean  [0;39m [2m:[0;39m Mapping filter: 'applicationContextIdFilter' to: [/*]
+[2m2018-06-15 15:23:03.138[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.f.core.internal.util.VersionPrinter   [0;39m [2m:[0;39m Flyway 3.2.1 by Boxfuse
+[2m2018-06-15 15:23:03.626[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.f.c.i.dbsupport.DbSupportFactory      [0;39m [2m:[0;39m Database: jdbc:postgresql://postgresdev:5432/pgdev (PostgreSQL 10.4)
+[2m2018-06-15 15:23:03.847[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.f.core.internal.command.DbValidate    [0;39m [2m:[0;39m Validated 1 migration (execution time 00:00.049s)
+[2m2018-06-15 15:23:03.893[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.f.c.i.metadatatable.MetaDataTableImpl [0;39m [2m:[0;39m Creating Metadata table: "public"."schema_version"
+[2m2018-06-15 15:23:03.961[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.f.core.internal.command.DbMigrate     [0;39m [2m:[0;39m Current version of schema "public": << Empty Schema >>
+[2m2018-06-15 15:23:03.963[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.f.core.internal.command.DbMigrate     [0;39m [2m:[0;39m Migrating schema "public" to version 1 - Create users table
+[2m2018-06-15 15:23:04.003[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.f.c.internal.dbsupport.JdbcTemplate   [0;39m [2m:[0;39m DB: table "users" does not exist, skipping
+[2m2018-06-15 15:23:04.006[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.f.c.internal.dbsupport.JdbcTemplate   [0;39m [2m:[0;39m DB: table "friends" does not exist, skipping
+[2m2018-06-15 15:23:04.012[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.f.c.internal.dbsupport.JdbcTemplate   [0;39m [2m:[0;39m DB: table "posts" does not exist, skipping
+[2m2018-06-15 15:23:04.016[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.f.c.internal.dbsupport.JdbcTemplate   [0;39m [2m:[0;39m DB: table "comments" does not exist, skipping
+[2m2018-06-15 15:23:04.102[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.f.core.internal.command.DbMigrate     [0;39m [2m:[0;39m Successfully applied 1 migration to schema "public" (execution time 00:00.216s).
+[2m2018-06-15 15:23:04.103[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.f.c.i.c.SqlScriptFlywayCallback       [0;39m [2m:[0;39m Executing SQL callback: afterMigrate
+[2m2018-06-15 15:23:04.632[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Building JPA container EntityManagerFactory for persistence unit 'default'
+[2m2018-06-15 15:23:04.664[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.jpa.internal.util.LogHelper [0;39m [2m:[0;39m HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+[2m2018-06-15 15:23:04.945[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.Version                   [0;39m [2m:[0;39m HHH000412: Hibernate Core {5.0.12.Final}
+[2m2018-06-15 15:23:04.949[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000206: hibernate.properties not found
+[2m2018-06-15 15:23:04.957[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.cfg.Environment           [0;39m [2m:[0;39m HHH000021: Bytecode provider name : javassist
+[2m2018-06-15 15:23:05.150[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.hibernate.annotations.common.Version  [0;39m [2m:[0;39m HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[2m2018-06-15 15:23:05.727[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.dialect.Dialect           [0;39m [2m:[0;39m HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+[2m2018-06-15 15:23:06.036[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.h.e.j.e.i.LobCreatorBuilderImpl       [0;39m [2m:[0;39m HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[2m2018-06-15 15:23:06.041[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36morg.hibernate.type.BasicTypeRegistry    [0;39m [2m:[0;39m HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7af327e3
+[2m2018-06-15 15:23:07.266[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mj.LocalContainerEntityManagerFactoryBean[0;39m [2m:[0;39m Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2m2018-06-15 15:23:08.638[0;39m [33m WARN[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m No URLs will be polled as dynamic configuration sources.
+[2m2018-06-15 15:23:08.638[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2m2018-06-15 15:23:08.653[0;39m [33m WARN[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m No URLs will be polled as dynamic configuration sources.
+[2m2018-06-15 15:23:08.654[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.c.sources.URLConfigurationSource    [0;39m [2m:[0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[2m2018-06-15 15:23:09.178[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerAdapter[0;39m [2m:[0;39m Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@fd8294b: startup date [Fri Jun 15 15:22:49 GMT 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@5af3afd9
+[2m2018-06-15 15:23:09.446[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/graphql],methods=[POST]}" onto public java.lang.Object com.example.usersapi.controller.GraphQLController.handle(java.util.Map)
+[2m2018-06-15 15:23:09.449[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[2m2018-06-15 15:23:09.450[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.w.s.m.m.a.RequestMappingHandlerMapping[0;39m [2m:[0;39m Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[2m2018-06-15 15:23:09.497[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.w.s.handler.SimpleUrlHandlerMapping [0;39m [2m:[0;39m Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2018-06-15 15:23:09.497[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.w.s.handler.SimpleUrlHandlerMapping [0;39m [2m:[0;39m Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2018-06-15 15:23:09.567[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.w.s.handler.SimpleUrlHandlerMapping [0;39m [2m:[0;39m Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[2m2018-06-15 15:23:09.658[0;39m [33m WARN[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36m.t.AbstractTemplateResolverConfiguration[0;39m [2m:[0;39m Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+[2m2018-06-15 15:23:11.292[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+[2m2018-06-15 15:23:11.292[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-15 15:23:11.294[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-15 15:23:11.299[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-15 15:23:11.301[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-15 15:23:11.302[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
+[2m2018-06-15 15:23:11.304[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+[2m2018-06-15 15:23:11.305[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-15 15:23:11.306[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/service-registry/instance-status],methods=[GET]}" onto public org.springframework.http.ResponseEntity org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.getStatus()
+[2m2018-06-15 15:23:11.310[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/service-registry/instance-status],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.setStatus(java.lang.String)
+[2m2018-06-15 15:23:11.312[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+[2m2018-06-15 15:23:11.317[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-15 15:23:11.319[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-15 15:23:11.321[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
+[2m2018-06-15 15:23:11.322[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/flyway || /flyway.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-15 15:23:11.325[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-15 15:23:11.326[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-15 15:23:11.328[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+[2m2018-06-15 15:23:11.329[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+[2m2018-06-15 15:23:11.332[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/features || /features.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-15 15:23:11.333[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
+[2m2018-06-15 15:23:11.341[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
+[2m2018-06-15 15:23:11.342[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
+[2m2018-06-15 15:23:11.343[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-15 15:23:11.344[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.b.a.e.mvc.EndpointHandlerMapping    [0;39m [2m:[0;39m Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+[2m2018-06-15 15:23:11.865[0;39m [33m WARN[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36marterDeprecationWarningAutoConfiguration[0;39m [2m:[0;39m spring-cloud-starter-eureka is deprecated as of Spring Cloud Netflix 1.4.0, please migrate to spring-cloud-starter-netflix-eureka
+[2m2018-06-15 15:23:11.932[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Registering beans for JMX exposure on startup
+[2m2018-06-15 15:23:11.958[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'environmentManager' has been autodetected for JMX exposure
+[2m2018-06-15 15:23:11.963[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+[2m2018-06-15 15:23:11.965[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+[2m2018-06-15 15:23:11.968[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'serviceRegistryEndpoint' has been autodetected for JMX exposure
+[2m2018-06-15 15:23:11.973[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Bean with name 'refreshScope' has been autodetected for JMX exposure
+[2m2018-06-15 15:23:11.984[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+[2m2018-06-15 15:23:12.045[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'serviceRegistryEndpoint': registering with JMX server as MBean [org.springframework.cloud.client.serviceregistry.endpoint:name=serviceRegistryEndpoint,type=ServiceRegistryEndpoint]
+[2m2018-06-15 15:23:12.064[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+[2m2018-06-15 15:23:12.349[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=fd8294b,type=ConfigurationPropertiesRebinder]
+[2m2018-06-15 15:23:12.358[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.j.e.a.AnnotationMBeanExporter       [0;39m [2m:[0;39m Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
+[2m2018-06-15 15:23:12.515[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.c.support.DefaultLifecycleProcessor [0;39m [2m:[0;39m Starting beans in phase 0
+[2m2018-06-15 15:23:12.532[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.c.n.eureka.InstanceInfoFactory      [0;39m [2m:[0;39m Setting initial instance status as: STARTING
+[2m2018-06-15 15:23:12.645[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Initializing Eureka in region us-east-1
+[2m2018-06-15 15:23:13.076[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using JSON encoding codec LegacyJacksonJson
+[2m2018-06-15 15:23:13.076[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using JSON decoding codec LegacyJacksonJson
+[2m2018-06-15 15:23:13.326[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using XML encoding codec XStreamXml
+[2m2018-06-15 15:23:13.326[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.provider.DiscoveryJerseyProvider  [0;39m [2m:[0;39m Using XML decoding codec XStreamXml
+[2m2018-06-15 15:23:13.672[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
+[2m2018-06-15 15:23:13.714[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Disable delta property : false
+[2m2018-06-15 15:23:13.714[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Single vip registry refresh property : null
+[2m2018-06-15 15:23:13.714[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Force full registry fetch : false
+[2m2018-06-15 15:23:13.714[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application is null : false
+[2m2018-06-15 15:23:13.714[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Registered Applications size is zero : true
+[2m2018-06-15 15:23:13.714[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application version is -1: true
+[2m2018-06-15 15:23:13.714[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Getting all instance registry info from the eureka server
+[2m2018-06-15 15:23:13.988[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m The response status is 200
+[2m2018-06-15 15:23:13.991[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Starting heartbeat executor: renew interval is: 30
+[2m2018-06-15 15:23:13.994[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mc.n.discovery.InstanceInfoReplicator    [0;39m [2m:[0;39m InstanceInfoReplicator onDemand update allowed rate per min is 4
+[2m2018-06-15 15:23:13.999[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Discovery Client initialized at timestamp 1529076193999 with initial instances count: 0
+[2m2018-06-15 15:23:14.010[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mo.s.c.n.e.s.EurekaServiceRegistry       [0;39m [2m:[0;39m Registering application users-api with eureka with status UP
+[2m2018-06-15 15:23:14.013[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Saw local status change event StatusChangeEvent [timestamp=1529076194012, current=UP, previous=STARTING]
+[2m2018-06-15 15:23:14.024[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[nfoReplicator-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m DiscoveryClient_USERS-API/92518e3eb63f:users-api:8085: registering service...
+[2m2018-06-15 15:23:14.216[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[nfoReplicator-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m DiscoveryClient_USERS-API/92518e3eb63f:users-api:8085 - registration status: 204
+[2m2018-06-15 15:23:14.295[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36ms.b.c.e.t.TomcatEmbeddedServletContainer[0;39m [2m:[0;39m Tomcat started on port(s): 8085 (http)
+[2m2018-06-15 15:23:14.297[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36m.s.c.n.e.s.EurekaAutoServiceRegistration[0;39m [2m:[0;39m Updating port to 8085
+[2m2018-06-15 15:23:14.305[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[           main][0;39m [36mcom.example.usersapi.UsersApi           [0;39m [2m:[0;39m Started UsersApi in 30.745 seconds (JVM running for 33.673)
+[2m2018-06-15 15:23:43.996[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Disable delta property : false
+[2m2018-06-15 15:23:43.997[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Single vip registry refresh property : null
+[2m2018-06-15 15:23:43.997[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Force full registry fetch : false
+[2m2018-06-15 15:23:43.997[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application is null : false
+[2m2018-06-15 15:23:43.997[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Registered Applications size is zero : true
+[2m2018-06-15 15:23:43.997[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Application version is -1: false
+[2m2018-06-15 15:23:43.997[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m Getting all instance registry info from the eureka server
+[2m2018-06-15 15:23:44.066[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[freshExecutor-0][0;39m [36mcom.netflix.discovery.DiscoveryClient   [0;39m [2m:[0;39m The response status is 200
+[2m2018-06-15 15:23:53.585[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[nio-8085-exec-1][0;39m [36mo.a.c.c.C.[Tomcat].[localhost].[/]      [0;39m [2m:[0;39m Initializing Spring FrameworkServlet 'dispatcherServlet'
+[2m2018-06-15 15:23:53.586[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[nio-8085-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m FrameworkServlet 'dispatcherServlet': initialization started
+[2m2018-06-15 15:23:53.617[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[nio-8085-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m FrameworkServlet 'dispatcherServlet': initialization completed in 31 ms
+here--->{query=query {
+	findAllUsers {
+		username
+	}
+}}
+Here in all users!
+[2m2018-06-15 15:23:53.927[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[nio-8085-exec-1][0;39m [36mo.h.h.i.QueryTranslatorFactoryInitiator [0;39m [2m:[0;39m HHH000397: Using ASTQueryTranslatorFactory
+here in executionresult--->graphql.ExecutionResultImpl@55526fe9
+here in data--->{data={findAllUsers=[{username=CRHarding}, {username=RBritt}, {username=Doodeitstom}, {username=SSontag}, {username=SBeauvoir}]}}
+here--->{query=query {
+	findAllUsers {
+		username
+		firstName
+	}
+}}
+Here in all users!
+here in executionresult--->graphql.ExecutionResultImpl@26a6809e
+here in data--->{data={findAllUsers=[{username=CRHarding, firstName=Casey}, {username=RBritt, firstName=Ryan}, {username=Doodeitstom, firstName=Tom}, {username=SSontag, firstName=Susan}, {username=SBeauvoir, firstName=Simone}]}}
+here--->{query=
+    query IntrospectionQuery {
+      __schema {
+        queryType { name }
+        mutationType { name }
+        subscriptionType { name }
+        types {
+          ...FullType
+        }
+        directives {
+          name
+          description
+          locations
+          args {
+            ...InputValue
+          }
+        }
+      }
+    }
 
-* Get more help at https://help.gradle.org
+    fragment FullType on __Type {
+      kind
+      name
+      description
+      fields(includeDeprecated: true) {
+        name
+        description
+        args {
+          ...InputValue
+        }
+        type {
+          ...TypeRef
+        }
+        isDeprecated
+        deprecationReason
+      }
+      inputFields {
+        ...InputValue
+      }
+      interfaces {
+        ...TypeRef
+      }
+      enumValues(includeDeprecated: true) {
+        name
+        description
+        isDeprecated
+        deprecationReason
+      }
+      possibleTypes {
+        ...TypeRef
+      }
+    }
 
-BUILD FAILED in 46s
-2 actionable tasks: 2 executed
-13:43:52.914 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
-13:43:52.934 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
-13:43:52.938 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=0ed6e94b-bfe4-4b26-be0b-2e7bd21bf87e.1, currentDir=/users-api}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:36881 to /127.0.0.1:34670]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@6dd60bbb with state Busy
-13:43:52.951 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=0ed6e94b-bfe4-4b26-be0b-2e7bd21bf87e.1, currentDir=/users-api}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:36881 to /127.0.0.1:34670]
-13:43:52.956 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
-13:43:52.960 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as idle, address: [d71c87e4-fc10-4160-acc9-204383d10ff0 port:36881, addresses:[/127.0.0.1]]
-13:43:52.966 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [d71c87e4-fc10-4160-acc9-204383d10ff0 port:36881, addresses:[/127.0.0.1]]
-13:43:52.978 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
-13:43:52.985 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
-13:43:53.009 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
-13:43:53.014 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
-13:43:53.016 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: Failure[value=org.gradle.initialization.ReportedException: org.gradle.internal.exceptions.LocationAwareException: Execution failed for task ':compileJava'.]
-13:43:53.020 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 14: dispatching class org.gradle.launcher.daemon.protocol.Failure
-13:43:53.092 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=0ed6e94b-bfe4-4b26-be0b-2e7bd21bf87e.1, currentDir=/users-api}
-13:43:53.173 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: received class org.gradle.launcher.daemon.protocol.Finished
-13:43:53.175 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 15: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@4884acc9
-13:43:53.178 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@4884acc9
-13:43:53.181 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 14: stopping connection
-13:43:53.181 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
-13:43:53.187 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: received null
-13:43:53.190 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 15: Received end-of-input from client.
-13:43:53.195 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 14: stopping connection
+    fragment InputValue on __InputValue {
+      name
+      description
+      type { ...TypeRef }
+      defaultValue
+    }
+
+    fragment TypeRef on __Type {
+      kind
+      name
+      ofType {
+        kind
+        name
+        ofType {
+          kind
+          name
+          ofType {
+            kind
+            name
+            ofType {
+              kind
+              name
+              ofType {
+                kind
+                name
+                ofType {
+                  kind
+                  name
+                  ofType {
+                    kind
+                    name
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+here in executionresult--->graphql.ExecutionResultImpl@1e0dc923
+here in data--->{data={__schema={queryType={name=Query}, mutationType={name=Mutation}, subscriptionType=null, types=[{kind=OBJECT, name=Query, description=, fields=[{name=findAllUsers, description=, args=[], type={kind=LIST, name=null, ofType={kind=OBJECT, name=User, ofType=null}}, isDeprecated=false, deprecationReason=null}], inputFields=null, interfaces=[], enumValues=null, possibleTypes=null}, {kind=OBJECT, name=Mutation, description=, fields=[{name=createUser, description=, args=[{name=username, description=, type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=String, ofType=null}}, defaultValue=null}, {name=firstName, description=, type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=String, ofType=null}}, defaultValue=null}, {name=lastName, description=, type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=String, ofType=null}}, defaultValue=null}, {name=email, description=, type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=String, ofType=null}}, defaultValue=null}, {name=aboutMe, description=, type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=String, ofType=null}}, defaultValue=null}, {name=password, description=, type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=String, ofType=null}}, defaultValue=null}], type={kind=OBJECT, name=User, ofType=null}, isDeprecated=false, deprecationReason=null}, {name=save, description=, args=[{name=user, description=, type={kind=NON_NULL, name=null, ofType={kind=OBJECT, name=User, ofType=null}}, defaultValue=null}], type={kind=NON_NULL, name=null, ofType={kind=OBJECT, name=User, ofType=null}}, isDeprecated=false, deprecationReason=null}], inputFields=null, interfaces=[], enumValues=null, possibleTypes=null}, {kind=SCALAR, name=String, description=Built-in String, fields=null, inputFields=null, interfaces=null, enumValues=null, possibleTypes=null}, {kind=OBJECT, name=User, description=, fields=[{name=id, description=, args=[], type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=ID, ofType=null}}, isDeprecated=false, deprecationReason=null}, {name=username, description=, args=[], type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=String, ofType=null}}, isDeprecated=false, deprecationReason=null}, {name=email, description=, args=[], type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=String, ofType=null}}, isDeprecated=false, deprecationReason=null}, {name=firstName, description=, args=[], type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=String, ofType=null}}, isDeprecated=false, deprecationReason=null}, {name=lastName, description=, args=[], type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=String, ofType=null}}, isDeprecated=false, deprecationReason=null}, {name=aboutMe, description=, args=[], type={kind=SCALAR, name=String, ofType=null}, isDeprecated=false, deprecationReason=null}, {name=password, description=, args=[], type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=String, ofType=null}}, isDeprecated=false, deprecationReason=null}], inputFields=null, interfaces=[], enumValues=null, possibleTypes=null}, {kind=SCALAR, name=ID, description=Built-in ID, fields=null, inputFields=null, interfaces=null, enumValues=null, possibleTypes=null}, {kind=OBJECT, name=__Schema, description=A GraphQL Introspection defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, the entry points for query, mutation, and subscription operations., fields=[{name=types, description=A list of all types supported by this server., args=[], type={kind=NON_NULL, name=null, ofType={kind=LIST, name=null, ofType={kind=NON_NULL, name=null, ofType={kind=OBJECT, name=__Type, ofType=null}}}}, isDeprecated=false, deprecationReason=null}, {name=queryType, description=The type that query operations will be rooted at., args=[], type={kind=NON_NULL, name=null, ofType={kind=OBJECT, name=__Type, ofType=null}}, isDeprecated=false, deprecationReason=null}, {name=mutationType, description=If this server supports mutation, the type that mutation operations will be rooted at., args=[], type={kind=OBJECT, name=__Type, ofType=null}, isDeprecated=false, deprecationReason=null}, {name=directives, description='A list of all directives supported by this server., args=[], type={kind=NON_NULL, name=null, ofType={kind=LIST, name=null, ofType={kind=NON_NULL, name=null, ofType={kind=OBJECT, name=__Directive, ofType=null}}}}, isDeprecated=false, deprecationReason=null}, {name=subscriptionType, description='If this server support subscription, the type that subscription operations will be rooted at., args=[], type={kind=OBJECT, name=__Type, ofType=null}, isDeprecated=false, deprecationReason=null}], inputFields=null, interfaces=[], enumValues=null, possibleTypes=null}, {kind=OBJECT, name=__Type, description=null, fields=[{name=kind, description=null, args=[], type={kind=NON_NULL, name=null, ofType={kind=ENUM, name=__TypeKind, ofType=null}}, isDeprecated=false, deprecationReason=null}, {name=name, description=null, args=[], type={kind=SCALAR, name=String, ofType=null}, isDeprecated=false, deprecationReason=null}, {name=description, description=null, args=[], type={kind=SCALAR, name=String, ofType=null}, isDeprecated=false, deprecationReason=null}, {name=fields, description=null, args=[{name=includeDeprecated, description=null, type={kind=SCALAR, name=Boolean, ofType=null}, defaultValue=false}], type={kind=LIST, name=null, ofType={kind=NON_NULL, name=null, ofType={kind=OBJECT, name=__Field, ofType=null}}}, isDeprecated=false, deprecationReason=null}, {name=interfaces, description=null, args=[], type={kind=LIST, name=null, ofType={kind=NON_NULL, name=null, ofType={kind=OBJECT, name=__Type, ofType=null}}}, isDeprecated=false, deprecationReason=null}, {name=possibleTypes, description=null, args=[], type={kind=LIST, name=null, ofType={kind=NON_NULL, name=null, ofType={kind=OBJECT, name=__Type, ofType=null}}}, isDeprecated=false, deprecationReason=null}, {name=enumValues, description=null, args=[{name=includeDeprecated, description=null, type={kind=SCALAR, name=Boolean, ofType=null}, defaultValue=false}], type={kind=LIST, name=null, ofType={kind=NON_NULL, name=null, ofType={kind=OBJECT, name=__EnumValue, ofType=null}}}, isDeprecated=false, deprecationReason=null}, {name=inputFields, description=null, args=[], type={kind=LIST, name=null, ofType={kind=NON_NULL, name=null, ofType={kind=OBJECT, name=__InputValue, ofType=null}}}, isDeprecated=false, deprecationReason=null}, {name=ofType, description=null, args=[], type={kind=OBJECT, name=__Type, ofType=null}, isDeprecated=false, deprecationReason=null}], inputFields=null, interfaces=[], enumValues=null, possibleTypes=null}, {kind=ENUM, name=__TypeKind, description=An enum describing what kind of type a given __Type is, fields=null, inputFields=null, interfaces=null, enumValues=[{name=SCALAR, description=Indicates this type is a scalar., isDeprecated=false, deprecationReason=null}, {name=OBJECT, description=Indicates this type is an object. `fields` and `interfaces` are valid fields., isDeprecated=false, deprecationReason=null}, {name=INTERFACE, description=Indicates this type is an interface. `fields` and `possibleTypes` are valid fields., isDeprecated=false, deprecationReason=null}, {name=UNION, description=Indicates this type is a union. `possibleTypes` is a valid field., isDeprecated=false, deprecationReason=null}, {name=ENUM, description=Indicates this type is an enum. `enumValues` is a valid field., isDeprecated=false, deprecationReason=null}, {name=INPUT_OBJECT, description=Indicates this type is an input object. `inputFields` is a valid field., isDeprecated=false, deprecationReason=null}, {name=LIST, description=Indicates this type is a list. `ofType` is a valid field., isDeprecated=false, deprecationReason=null}, {name=NON_NULL, description=Indicates this type is a non-null. `ofType` is a valid field., isDeprecated=false, deprecationReason=null}], possibleTypes=null}, {kind=OBJECT, name=__Field, description=null, fields=[{name=name, description=null, args=[], type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=String, ofType=null}}, isDeprecated=false, deprecationReason=null}, {name=description, description=null, args=[], type={kind=SCALAR, name=String, ofType=null}, isDeprecated=false, deprecationReason=null}, {name=args, description=null, args=[], type={kind=NON_NULL, name=null, ofType={kind=LIST, name=null, ofType={kind=NON_NULL, name=null, ofType={kind=OBJECT, name=__InputValue, ofType=null}}}}, isDeprecated=false, deprecationReason=null}, {name=type, description=null, args=[], type={kind=NON_NULL, name=null, ofType={kind=OBJECT, name=__Type, ofType=null}}, isDeprecated=false, deprecationReason=null}, {name=isDeprecated, description=null, args=[], type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=Boolean, ofType=null}}, isDeprecated=false, deprecationReason=null}, {name=deprecationReason, description=null, args=[], type={kind=SCALAR, name=String, ofType=null}, isDeprecated=false, deprecationReason=null}], inputFields=null, interfaces=[], enumValues=null, possibleTypes=null}, {kind=OBJECT, name=__InputValue, description=null, fields=[{name=name, description=null, args=[], type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=String, ofType=null}}, isDeprecated=false, deprecationReason=null}, {name=description, description=null, args=[], type={kind=SCALAR, name=String, ofType=null}, isDeprecated=false, deprecationReason=null}, {name=type, description=null, args=[], type={kind=NON_NULL, name=null, ofType={kind=OBJECT, name=__Type, ofType=null}}, isDeprecated=false, deprecationReason=null}, {name=defaultValue, description=null, args=[], type={kind=SCALAR, name=String, ofType=null}, isDeprecated=false, deprecationReason=null}], inputFields=null, interfaces=[], enumValues=null, possibleTypes=null}, {kind=SCALAR, name=Boolean, description=Built-in Boolean, fields=null, inputFields=null, interfaces=null, enumValues=null, possibleTypes=null}, {kind=OBJECT, name=__EnumValue, description=null, fields=[{name=name, description=null, args=[], type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=String, ofType=null}}, isDeprecated=false, deprecationReason=null}, {name=description, description=null, args=[], type={kind=SCALAR, name=String, ofType=null}, isDeprecated=false, deprecationReason=null}, {name=isDeprecated, description=null, args=[], type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=Boolean, ofType=null}}, isDeprecated=false, deprecationReason=null}, {name=deprecationReason, description=null, args=[], type={kind=SCALAR, name=String, ofType=null}, isDeprecated=false, deprecationReason=null}], inputFields=null, interfaces=[], enumValues=null, possibleTypes=null}, {kind=OBJECT, name=__Directive, description=null, fields=[{name=name, description=null, args=[], type={kind=SCALAR, name=String, ofType=null}, isDeprecated=false, deprecationReason=null}, {name=description, description=null, args=[], type={kind=SCALAR, name=String, ofType=null}, isDeprecated=false, deprecationReason=null}, {name=locations, description=null, args=[], type={kind=LIST, name=null, ofType={kind=NON_NULL, name=null, ofType={kind=ENUM, name=__DirectiveLocation, ofType=null}}}, isDeprecated=false, deprecationReason=null}, {name=args, description=null, args=[], type={kind=NON_NULL, name=null, ofType={kind=LIST, name=null, ofType={kind=NON_NULL, name=null, ofType={kind=OBJECT, name=__InputValue, ofType=null}}}}, isDeprecated=false, deprecationReason=null}, {name=onOperation, description=null, args=[], type={kind=SCALAR, name=Boolean, ofType=null}, isDeprecated=true, deprecationReason=Use `locations`.}, {name=onFragment, description=null, args=[], type={kind=SCALAR, name=Boolean, ofType=null}, isDeprecated=true, deprecationReason=Use `locations`.}, {name=onField, description=null, args=[], type={kind=SCALAR, name=Boolean, ofType=null}, isDeprecated=true, deprecationReason=Use `locations`.}], inputFields=null, interfaces=[], enumValues=null, possibleTypes=null}, {kind=ENUM, name=__DirectiveLocation, description=An enum describing valid locations where a directive can be placed, fields=null, inputFields=null, interfaces=null, enumValues=[{name=QUERY, description=Indicates the directive is valid on queries., isDeprecated=false, deprecationReason=null}, {name=MUTATION, description=Indicates the directive is valid on mutations., isDeprecated=false, deprecationReason=null}, {name=FIELD, description=Indicates the directive is valid on fields., isDeprecated=false, deprecationReason=null}, {name=FRAGMENT_DEFINITION, description=Indicates the directive is valid on fragment definitions., isDeprecated=false, deprecationReason=null}, {name=FRAGMENT_SPREAD, description=Indicates the directive is valid on fragment spreads., isDeprecated=false, deprecationReason=null}, {name=INLINE_FRAGMENT, description=Indicates the directive is valid on inline fragments., isDeprecated=false, deprecationReason=null}], possibleTypes=null}], directives=[{name=include, description=Directs the executor to include this field or fragment only when the `if` argument is true, locations=[FIELD, FRAGMENT_SPREAD, INLINE_FRAGMENT], args=[{name=if, description=Included when true., type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=Boolean, ofType=null}}, defaultValue=null}]}, {name=skip, description=Directs the executor to skip this field or fragment when the `if`'argument is true., locations=[FIELD, FRAGMENT_SPREAD, INLINE_FRAGMENT], args=[{name=if, description=Skipped when true., type={kind=NON_NULL, name=null, ofType={kind=SCALAR, name=Boolean, ofType=null}}, defaultValue=null}]}]}}}
+here--->{operationName=null, variables={}, query={
+  findAllUsers {
+    username
+    __typename
+  }
+}
+}
+here--->{operationName=null, variables={}, query={
+  posts {
+    title
+    postText
+    poster {
+      username
+      __typename
+    }
+    __typename
+  }
+}
+}
+Here in all users!
+here in executionresult--->graphql.ExecutionResultImpl@5ea9d225
+here in data--->{data={findAllUsers=[{username=CRHarding, __typename=User}, {username=RBritt, __typename=User}, {username=Doodeitstom, __typename=User}, {username=SSontag, __typename=User}, {username=SBeauvoir, __typename=User}]}}
+here in executionresult--->graphql.ExecutionResultImpl@7f523f2b
+here in data--->{errors=[ValidationError{validationErrorType=FieldUndefined, sourceLocations=[SourceLocation{line=2, column=3}], description='Field posts is undefined'}], data=null}
+[2m2018-06-15 15:28:13.719[0;39m [32m INFO[0;39m [35m77[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
+here--->{operationName=null, variables={}, query={
+  posts {
+    title
+    postText
+    poster {
+      username
+      __typename
+    }
+    __typename
+  }
+}
+}
+here in executionresult--->graphql.ExecutionResultImpl@2788e824
+here in data--->{errors=[ValidationError{validationErrorType=FieldUndefined, sourceLocations=[SourceLocation{line=2, column=3}], description='Field posts is undefined'}], data=null}
+here--->{operationName=null, variables={}, query={
+  findAllUsers {
+    username
+    __typename
+  }
+}
+}
+Here in all users!
+here in executionresult--->graphql.ExecutionResultImpl@165d78a0
+here in data--->{data={findAllUsers=[{username=CRHarding, __typename=User}, {username=RBritt, __typename=User}, {username=Doodeitstom, __typename=User}, {username=SSontag, __typename=User}, {username=SBeauvoir, __typename=User}]}}
+here--->{operationName=null, variables={}, query={
+  findAllUsers {
+    username
+    __typename
+  }
+}
+}
+Here in all users!
+here--->{operationName=null, variables={}, query={
+  posts {
+    title
+    postText
+    poster {
+      username
+      __typename
+    }
+    __typename
+  }
+}
+}
+here in executionresult--->graphql.ExecutionResultImpl@53a45c6b
+here in data--->{errors=[ValidationError{validationErrorType=FieldUndefined, sourceLocations=[SourceLocation{line=2, column=3}], description='Field posts is undefined'}], data=null}
+here in executionresult--->graphql.ExecutionResultImpl@67950d9e
+here in data--->{data={findAllUsers=[{username=CRHarding, __typename=User}, {username=RBritt, __typename=User}, {username=Doodeitstom, __typename=User}, {username=SSontag, __typename=User}, {username=SBeauvoir, __typename=User}]}}
+here--->{operationName=null, variables={}, query={
+  findAllUsers {
+    username
+    __typename
+  }
+}
+}
+Here in all users!
+here--->{operationName=null, variables={}, query={
+  posts {
+    title
+    postText
+    poster {
+      username
+      __typename
+    }
+    __typename
+  }
+}
+}
+here in executionresult--->graphql.ExecutionResultImpl@4d208088
+here in data--->{errors=[ValidationError{validationErrorType=FieldUndefined, sourceLocations=[SourceLocation{line=2, column=3}], description='Field posts is undefined'}], data=null}
+here in executionresult--->graphql.ExecutionResultImpl@7724bef2
+here in data--->{data={findAllUsers=[{username=CRHarding, __typename=User}, {username=RBritt, __typename=User}, {username=Doodeitstom, __typename=User}, {username=SSontag, __typename=User}, {username=SBeauvoir, __typename=User}]}}
+here--->{operationName=null, variables={}, query={
+  findAllUsers {
+    username
+    __typename
+  }
+}
+}
+Here in all users!
+here in executionresult--->graphql.ExecutionResultImpl@3aa071f9
+here in data--->{data={findAllUsers=[{username=CRHarding, __typename=User}, {username=RBritt, __typename=User}, {username=Doodeitstom, __typename=User}, {username=SSontag, __typename=User}, {username=SBeauvoir, __typename=User}]}}
+here--->{operationName=null, variables={}, query={
+  posts {
+    title
+    postText
+    poster {
+      username
+      __typename
+    }
+    __typename
+  }
+}
+}
+here in executionresult--->graphql.ExecutionResultImpl@467f5d10
+here in data--->{errors=[ValidationError{validationErrorType=FieldUndefined, sourceLocations=[SourceLocation{line=2, column=3}], description='Field posts is undefined'}], data=null}
+here--->{operationName=null, variables={}, query={
+  posts {
+    title
+    postText
+    poster {
+      username
+      __typename
+    }
+    __typename
+  }
+}
+}
+here--->{operationName=null, variables={}, query={
+  findAllUsers {
+    username
+    __typename
+  }
+}
+}
+here in executionresult--->graphql.ExecutionResultImpl@3f8fec45
+here in data--->{errors=[ValidationError{validationErrorType=FieldUndefined, sourceLocations=[SourceLocation{line=2, column=3}], description='Field posts is undefined'}], data=null}
+Here in all users!
+here in executionresult--->graphql.ExecutionResultImpl@5edb11a0
+here in data--->{data={findAllUsers=[{username=CRHarding, __typename=User}, {username=RBritt, __typename=User}, {username=Doodeitstom, __typename=User}, {username=SSontag, __typename=User}, {username=SBeauvoir, __typename=User}]}}
+here--->{operationName=null, variables={}, query={
+  posts {
+    title
+    postText
+    poster {
+      username
+      __typename
+    }
+    __typename
+  }
+}
+}
+here in executionresult--->graphql.ExecutionResultImpl@3ac641cd
+here in data--->{errors=[ValidationError{validationErrorType=FieldUndefined, sourceLocations=[SourceLocation{line=2, column=3}], description='Field posts is undefined'}], data=null}
+here--->{operationName=null, variables={}, query={
+  findAllUsers {
+    username
+    __typename
+  }
+}
+}
+Here in all users!
+here in executionresult--->graphql.ExecutionResultImpl@68d50d4a
+here in data--->{data={findAllUsers=[{username=CRHarding, __typename=User}, {username=RBritt, __typename=User}, {username=Doodeitstom, __typename=User}, {username=SSontag, __typename=User}, {username=SBeauvoir, __typename=User}]}}
+here--->{operationName=null, variables={}, query={
+  findAllUsers {
+    username
+    __typename
+  }
+}
+}
+Here in all users!
+here--->{operationName=null, variables={}, query={
+  posts {
+    title
+    postText
+    poster {
+      username
+      __typename
+    }
+    __typename
+  }
+}
+}
+here in executionresult--->graphql.ExecutionResultImpl@584265d5
+here in data--->{errors=[ValidationError{validationErrorType=FieldUndefined, sourceLocations=[SourceLocation{line=2, column=3}], description='Field posts is undefined'}], data=null}
+here in executionresult--->graphql.ExecutionResultImpl@6719e5b7
+here in data--->{data={findAllUsers=[{username=CRHarding, __typename=User}, {username=RBritt, __typename=User}, {username=Doodeitstom, __typename=User}, {username=SSontag, __typename=User}, {username=SBeauvoir, __typename=User}]}}
+here--->{operationName=null, variables={}, query={
+  posts {
+    title
+    postText
+    poster {
+      username
+      __typename
+    }
+    __typename
+  }
+}
+}
+here in executionresult--->graphql.ExecutionResultImpl@7a260e03
+here in data--->{errors=[ValidationError{validationErrorType=FieldUndefined, sourceLocations=[SourceLocation{line=2, column=3}], description='Field posts is undefined'}], data=null}
+here--->{operationName=null, variables={}, query={
+  findAllUsers {
+    username
+    __typename
+  }
+}
+}
+Here in all users!
+here in executionresult--->graphql.ExecutionResultImpl@29e9d2ac
+here in data--->{data={findAllUsers=[{username=CRHarding, __typename=User}, {username=RBritt, __typename=User}, {username=Doodeitstom, __typename=User}, {username=SSontag, __typename=User}, {username=SBeauvoir, __typename=User}]}}
+here--->{operationName=null, variables={}, query={
+  posts {
+    title
+    postText
+    poster {
+      username
+      __typename
+    }
+    __typename
+  }
+}
+}
+here in executionresult--->graphql.ExecutionResultImpl@47114996
+here in data--->{errors=[ValidationError{validationErrorType=FieldUndefined, sourceLocations=[SourceLocation{line=2, column=3}], description='Field posts is undefined'}], data=null}
+here--->{operationName=null, variables={}, query={
+  findAllUsers {
+    username
+    __typename
+  }
+}
+}
+Here in all users!
+here in executionresult--->graphql.ExecutionResultImpl@590d0808
+here in data--->{data={findAllUsers=[{username=CRHarding, __typename=User}, {username=RBritt, __typename=User}, {username=Doodeitstom, __typename=User}, {username=SSontag, __typename=User}, {username=SBeauvoir, __typename=User}]}}
+here--->{operationName=null, variables={}, query={
+  findAllUsers {
+    username
+    firstName
+    __typename
+  }
+}
+}
+Here in all users!
+here in executionresult--->graphql.ExecutionResultImpl@1cdd5086
+here in data--->{data={findAllUsers=[{username=CRHarding, firstName=Casey, __typename=User}, {username=RBritt, firstName=Ryan, __typename=User}, {username=Doodeitstom, firstName=Tom, __typename=User}, {username=SSontag, firstName=Susan, __typename=User}, {username=SBeauvoir, firstName=Simone, __typename=User}]}}
+here--->{operationName=null, variables={}, query={
+  posts {
+    title
+    postText
+    poster {
+      username
+      __typename
+    }
+    __typename
+  }
+}
+}
+here in executionresult--->graphql.ExecutionResultImpl@5788350f
+here in data--->{errors=[ValidationError{validationErrorType=FieldUndefined, sourceLocations=[SourceLocation{line=2, column=3}], description='Field posts is undefined'}], data=null}
+here--->{operationName=null, variables={}, query={
+  posts {
+    title
+    postText
+    poster {
+      username
+      __typename
+    }
+    __typename
+  }
+}
+}
+here in executionresult--->graphql.ExecutionResultImpl@76626d78
+here in data--->{errors=[ValidationError{validationErrorType=FieldUndefined, sourceLocations=[SourceLocation{line=2, column=3}], description='Field posts is undefined'}], data=null}
+here--->{operationName=null, variables={}, query={
+  findAllUsers {
+    username
+    firstName
+    __typename
+  }
+}
+}
+Here in all users!
+here in executionresult--->graphql.ExecutionResultImpl@72681166
+here in data--->{data={findAllUsers=[{username=CRHarding, firstName=Casey, __typename=User}, {username=RBritt, firstName=Ryan, __typename=User}, {username=Doodeitstom, firstName=Tom, __typename=User}, {username=SSontag, firstName=Susan, __typename=User}, {username=SBeauvoir, firstName=Simone, __typename=User}]}}

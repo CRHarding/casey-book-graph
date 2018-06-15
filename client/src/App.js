@@ -25,11 +25,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { ApolloProvider, Query, Mutation } from 'react-apollo';
 import ApolloClient from 'apollo-boost';
+import { HttpLink } from 'apollo-link-http';
 import gql from 'graphql-tag';
 
 import PostForm from './components/Partials/FormPartials/PostForm';
 import SignupForm from './components/Partials/FormPartials/SignupForm';
 import Posts from './components/Posts/AllPosts';
+import AllUsers from './components/Users/AllUsers';
 import Grid from '@material-ui/core/Grid';
 
 const client = new ApolloClient({
@@ -48,11 +50,24 @@ const POSTS = gql`
   }
 `;
 
-const CREATE_USER = gql`
-  mutation CreateUser($user: UserCreateInput!) {
-    createUser(data: $user) {
-      userId
+const USERS = gql`
+  {
+    findAllUsers {
       username
+      firstName
+    }
+  }
+`;
+
+const CREATE_USER = gql`
+  mutation save($user: UserCreateInput!) {
+    save(data: $user) {
+      username
+      firstName
+      lastName
+      email
+      aboutMe
+      password
     }
   }
 `;
@@ -140,6 +155,22 @@ class App extends React.Component {
 
               return <Posts posts={data.posts} />;
             }}
+          </Query>
+          <Query query={USERS}>
+            {({ loading, error, data }) => {
+              if (error) {
+                return <div>Error : (</div>;
+              }
+
+              if (loading) {
+                return <div>Loading...</div>;
+              }
+
+              if (!error && !loading) {
+                return <AllUsers users={data.findAllUsers} />;
+              }
+            }}
+
           </Query>
           <Posts posts={this.state.posts} />
         </Grid>

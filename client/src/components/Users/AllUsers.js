@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SingleUser from './SingleUser';
 import UserServices from '../../services/UserServices';
 
 export default class AllUsers extends Component {
@@ -11,38 +10,33 @@ export default class AllUsers extends Component {
     };
   }
 
-  componentDidMount() {
-    UserServices
-      .getAllUsers()
-      .then(responseUsers => {
-        this.setState({
-          users: responseUsers.data,
-          userDataLoaded: true,
-        });
-      })
-      .catch(err => {
-        console.log('Error in component did mount userprofile users--->', err);
-      });
-  }
+  // componentDidMount() {
+  //   UserServices
+  //     .getAllUsers()
+  //     .then(responseUsers => {
+  //       this.setState({
+  //         users: responseUsers.data,
+  //         userDataLoaded: true,
+  //       });
+  //     })
+  //     .catch(err => {
+  //       console.log('Error in component did mount userprofile users--->', err);
+  //     });
+  // }
 
   renderUsers() {
-    const users = this.state.users;
-    return (
-      <div>
-        {users.map((user, key) => {
-          return (
-            <SingleUser user={user} key={key}/>
-          );
-        })}
-      </div>
-    );
+    return <div />;
   }
 
   render() {
+    const users = this.state.users;
+    console.log(users);
     return (
       <div>
-        {this.state.userDataLoaded ? this.renderUsers() : ''}
+        {users.map((user, key) => {
+          return <p>{user.username}: {user.firstName}</p>;
+        })}{' '}
       </div>
     );
-  };
+  }
 }

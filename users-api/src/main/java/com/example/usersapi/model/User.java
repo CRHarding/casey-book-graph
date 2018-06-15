@@ -64,6 +64,7 @@ import lombok.*;
 
 @Data
 @Entity
+@Table(name="USERS")
 public class User {
 
     @Id

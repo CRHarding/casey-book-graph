@@ -28,11 +28,13 @@ public class UsersService {
             variables = new LinkedHashMap<>();
         }
         ExecutionResult executionResult = graphQL.execute(query, (Object) null, variables);
+        System.out.println("here in executionresult--->" + executionResult);
         Map<String, Object> result = new LinkedHashMap<>();
         if (executionResult.getErrors().size() > 0) {
             result.put("errors", executionResult.getErrors());
         }
         result.put("data", executionResult.getData());
+        System.out.println("here in data--->" + result);
         return result;
     }
 }
