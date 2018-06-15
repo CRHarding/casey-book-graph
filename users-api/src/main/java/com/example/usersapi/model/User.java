@@ -59,13 +59,10 @@
 //
 package com.example.usersapi.model;
 
-//import org.springframework.boot.autoconfigure.domain.EntityScan;
-
 import javax.persistence.*;
 import lombok.*;
 
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 @Entity
 public class User {
 
@@ -73,21 +70,29 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "username")
     private String username;
+    @Column(name = "firstName")
     private String firstName;
+    @Column(name = "lastName")
     private String lastName;
+    @Column(name = "email")
     private String email;
+    @Column(name = "aboutMe")
     private String aboutMe;
+    @Column(name = "password")
     private String password;
 
-//    public User(String username, String firstName, String lastName, String email, String aboutMe, String password) {
-//        this.username = username;
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.email = email;
-//        this.aboutMe = aboutMe;
-//        this.password = password;
-//    }
+    public User(String username, String firstName, String lastName, String email, String aboutMe, String password) {
+        this.username = username;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.aboutMe = aboutMe;
+        this.password = password;
+    }
+
+    public User() {}
 
     public Long getId() {
         return this.id;
@@ -109,20 +114,12 @@ public class User {
         return this.email;
     }
 
-//    public String getLocation() {
-//        return this.location;
-//    }
-
     public String getAboutMe() {
         return this.aboutMe;
     }
 
     public String getPassword() {
         return this.password;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public void setUsername(String username) {

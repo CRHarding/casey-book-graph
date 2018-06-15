@@ -95,7 +95,6 @@ class App extends React.Component {
                   createUser({
                     variables: {
                       user: {
-                        userId,
                         username,
                         firstName,
                         lastName,

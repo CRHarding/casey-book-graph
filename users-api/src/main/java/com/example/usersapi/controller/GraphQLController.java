@@ -132,7 +132,7 @@ public class GraphQLController {
     }
 
     @RequestMapping(value = "/graphql",method = RequestMethod.POST)
-    public Object handle(@RequestBody Map<String,String> query) {
+    public Object handle(@RequestBody Map query) {
         System.out.println("here--->" + query);
         return usersService.resolve(query);
     }
