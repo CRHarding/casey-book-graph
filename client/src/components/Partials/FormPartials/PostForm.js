@@ -41,6 +41,7 @@ class PostForm extends Component {
   componentDidMount() {
     if (this.props.post) {
       this.setState({
+        postId: 1,
         title: this.props.post.title,
         postText: this.props.post.text,
         postId: this.props.post.id,
@@ -58,11 +59,9 @@ class PostForm extends Component {
     event.preventDefault();
 
     const post = {
-      postId: 1,
+      postId: this.state.postId,
       title: this.state.title,
       postText: this.state.postText,
-      postId: this.state.postId,
-      posterUsername: this.state.user.username,
     };
 
     this.props.createPost(post);

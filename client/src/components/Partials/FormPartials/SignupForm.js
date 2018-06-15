@@ -44,7 +44,7 @@ class LoginForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const UserCreateInput = {
-      userId: 1,
+      userId: 3,
       username: this.state.userName,
       firstName: this.state.firstName,
       lastName: this.state.lastName,

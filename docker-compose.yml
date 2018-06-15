@@ -8,8 +8,6 @@ services:
     working_dir: /eureka-server
     volumes:
       - ./eureka-server:/eureka-server
-    depends_on:
-      - prisma
     command: './gradlew bootRun'
     environment:
       - GRADLE_USER_HOME=cache
@@ -22,36 +20,19 @@ services:
     volumes:
       - ./api-gateway:/api-gateway
     depends_on:
-      - prisma
       - eureka
     command: './gradlew bootRun'
     environment:
       - GRADLE_USER_HOME=cache
       - SPRING_PROFILES_ACTIVE=dev
-  postgres:
-    image: postgres:9.5-alpine
-    restart: always
+  postgresdev:
+    image: postgres
+    ports:
+     - "5432:5432"
     environment:
      - POSTGRES_PASSWORD=password
      - POSTGRES_USER=caseyrharding
-    volumes:
-    - postgres:/var/lib/postgresql/data
-  prisma:
-    image: prismagraphql/prisma:1.8
-    restart: always
-    ports:
-    - "4466:4466"
-    environment:
-      PRISMA_CONFIG: |
-        port: 4466
-        databases:
-          default:
-            connector: postgres
-            host: postgres
-            port: 5432
-            user: caseyrharding
-            password: password
-            migrations: true
+     - POSTGRES_DB=pgdev
   users-api:
     image: anapsix/alpine-java:8_jdk_unlimited
     ports:
@@ -60,14 +41,12 @@ services:
     volumes:
       - ./users-api:/users-api
     depends_on:
-      - prisma
       - eureka
+      - postgresdev
     command: './gradlew bootRun'
     environment:
       - GRADLE_USER_HOME=cache
       - SPRING_PROFILES_ACTIVE=dev
-volumes:
-  postgres:
 
 
 

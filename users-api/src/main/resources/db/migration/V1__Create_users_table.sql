@@ -13,11 +13,11 @@ create table USERS (
     ABOUT_ME varchar(500),
     PASSWORD varchar(100),
     TIME_ADDED TIMESTAMP default CURRENT_TIMESTAMP,
-    CONSTRAINT PK_USERS PRIMARY KEY (id)
+    CONSTRAINT PK_USERS PRIMARY KEY (ID)
 );
 
 create table FRIENDS (
-    ID serial PRIMARY KEY,
+    ID SERIAL PRIMARY KEY,
     STATUS integer,
     FRIEND_SENT_REQUEST integer,
     FRIEND_RECEIVED_REQUEST integer,
@@ -31,7 +31,7 @@ create table FRIENDS (
 );
 
 create table POSTS (
-    ID serial PRIMARY KEY,
+    ID SERIAL PRIMARY KEY,
     TITLE varchar(50),
     POSTER_ID integer,
     POST_TEXT varchar(500),
@@ -45,7 +45,7 @@ create table POSTS (
 );
 
 create table COMMENTS (
-    ID serial PRIMARY KEY,
+    ID SERIAL PRIMARY KEY,
     COMMENTER_ID integer,
     POST_ID integer,
     COMMENT_TEXT varchar(500),

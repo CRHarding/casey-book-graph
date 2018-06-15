@@ -33,7 +33,7 @@ import Posts from './components/Posts/AllPosts';
 import Grid from '@material-ui/core/Grid';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:8080/api',
+  uri: 'http://localhost:8080/users-api/graphql',
 });
 
 const POSTS = gql`
@@ -117,7 +117,7 @@ class App extends React.Component {
                   createPost({
                     variables: {
                       post: {
-                        postId,
+                        postId: 1,
                         title,
                         postText,
                         poster: { connect: { id: this.state.user.userId } },

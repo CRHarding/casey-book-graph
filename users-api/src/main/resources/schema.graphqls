@@ -1,0 +1,23 @@
+type User {
+    id: ID!
+    username: String!
+    email: String!
+    firstName: String!
+    lastName: String!
+    aboutMe: String
+    password: String!
+}
+
+type Mutation {
+    createUser(username: String!, firstName: String!, lastName: String!, email: String!, aboutMe: String!, password: String!): User
+    save(user: User!): User!
+}
+
+type Query {
+    findAllUsers: [User]
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
