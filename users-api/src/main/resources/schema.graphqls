@@ -9,8 +9,25 @@ type User {
 }
 
 type Mutation {
-    createUser(username: String!, firstName: String!, lastName: String!, email: String!, aboutMe: String!, password: String!): User
-    save(user: User!): User!
+    createUser(input: AddUserInput!): AddUserPayload
+}
+
+input AddUserInput {
+    username: String!
+    firstName: String!
+    lastName: String!
+    email: String!
+    aboutMe: String!
+    password: String!
+}
+
+type AddUserPayload {
+    username: String!
+    firstName: String!
+    lastName: String!
+    email: String!
+    aboutMe: String!
+    password: String!
 }
 
 type Query {

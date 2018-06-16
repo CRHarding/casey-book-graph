@@ -54,14 +54,13 @@ const USERS = gql`
   {
     findAllUsers {
       username
-      firstName
     }
   }
 `;
 
 const CREATE_USER = gql`
-  mutation save($user: UserCreateInput!) {
-    save(data: $user) {
+  mutation save($user: user) {
+    save(input: $user) {
       username
       firstName
       lastName

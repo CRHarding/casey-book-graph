@@ -36,7 +36,7 @@ dependencies {
     compile 'com.graphql-java:graphql-java-servlet:5.0.1'
 	compileOnly 'org.projectlombok:lombok'
 	compile 'com.graphql-java:graphql-java-servlet:5.0.1'
-	provided group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
+//	provided group: 'javax.servlet', name: 'javax.servlet-api', version: '3.0.1'
 
 	runtime 'org.postgresql:postgresql'
 	runtime 'org.springframework.boot:spring-boot-devtools'

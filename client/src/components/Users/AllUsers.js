@@ -34,7 +34,7 @@ export default class AllUsers extends Component {
     return (
       <div>
         {users.map((user, key) => {
-          return <p>{user.username}: {user.firstName}</p>;
+          return <p>{user.username}: {user.firstName}: {user.password}: {user.aboutMe}</p>;
         })}{' '}
       </div>
     );
