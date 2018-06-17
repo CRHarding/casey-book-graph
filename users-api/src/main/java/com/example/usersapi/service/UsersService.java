@@ -23,8 +23,7 @@ public class UsersService {
         if (variables == null) {
             variables = new LinkedHashMap<>();
         }
-        System.out.println(variables);
-        System.out.println(query);
+
         ExecutionResult executionResult = graphQL.execute(query, (Object) null, variables);
         Map<String, Object> result = new LinkedHashMap<>();
         if (executionResult.getErrors().size() > 0) {

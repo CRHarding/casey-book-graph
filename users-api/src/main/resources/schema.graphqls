@@ -1,32 +1,23 @@
 type User {
-    id: ID!
-    username: String!
-    email: String!
-    firstName: String!
-    lastName: String!
+    id: Long!
+    username: String
+    email: String
+    firstName: String
+    lastName: String
     aboutMe: String
-    password: String!
+    password: String
 }
 
 type Mutation {
-    createUser(input: AddUserInput!): AddUserPayload
+    createUser(input: InputCreateOneUser): User!
 }
 
-input AddUserInput {
+input InputCreateOneUser {
     username: String!
     firstName: String!
     lastName: String!
     email: String!
-    aboutMe: String!
-    password: String!
-}
-
-type AddUserPayload {
-    username: String!
-    firstName: String!
-    lastName: String!
-    email: String!
-    aboutMe: String!
+    aboutMe: String
     password: String!
 }
 

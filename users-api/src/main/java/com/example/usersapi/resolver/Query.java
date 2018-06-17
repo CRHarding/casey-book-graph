@@ -1,6 +1,6 @@
 package com.example.usersapi.resolver;
 
-import com.coxautodev.graphql.tools.GraphQLRootResolver;
+import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import com.google.common.collect.Lists;
 import java.util.Iterator;
 import java.util.Optional;
@@ -13,7 +13,7 @@ import com.example.usersapi.repository.UserRepository;
 import java.util.List;
 
 @Component
-public class Query implements GraphQLRootResolver {
+public class Query implements GraphQLQueryResolver {
     private final UserRepository userRepository;
 
     @Autowired

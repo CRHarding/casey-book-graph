@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class Mutation implements GraphQLMutationResolver {
 
+    @Autowired
     private UserRepository userRepository;
 
-    @Autowired
     public Mutation(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
