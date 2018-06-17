@@ -59,8 +59,8 @@ const USERS = gql`
 `;
 
 const CREATE_USER = gql`
-  mutation save($user: user) {
-    save(input: $user) {
+  mutation createUser($user: InputCreateOneUser) {
+    createUser(input: $user) {
       username
       firstName
       lastName
