@@ -1,5 +1,5 @@
 type User {
-    id: Long!
+    id: ID!
     username: String
     email: String
     firstName: String
@@ -9,7 +9,8 @@ type User {
 }
 
 type Mutation {
-    createUser(input: InputCreateOneUser): User!
+    createUser(input: InputCreateOneUser!): User!
+    deleteUser(input: ID!): User
 }
 
 input InputCreateOneUser {
@@ -19,6 +20,10 @@ input InputCreateOneUser {
     email: String!
     aboutMe: String
     password: String!
+}
+
+input InputDeleteOneUser {
+    id: ID
 }
 
 type Query {

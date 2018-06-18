@@ -1,0 +1,1051 @@
+2018-06-18 17:40:42.127 DEBUG 77 --- [main] o.h.v.i.e.r.DefaultTraversableResolver   : Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2018-06-18 17:40:42.136 DEBUG 77 --- [main] o.h.v.i.e.r.DefaultTraversableResolver   : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2018-06-18 17:40:42.139 DEBUG 77 --- [main] o.h.v.i.e.r.DefaultTraversableResolver   : Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2018-06-18 17:40:42.150 DEBUG 77 --- [main] o.h.v.i.e.r.DefaultTraversableResolver   : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2018-06-18 17:40:42.153 DEBUG 77 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2018-06-18 17:40:42.154 DEBUG 77 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2018-06-18 17:40:42.155 DEBUG 77 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy29
+2018-06-18 17:40:42.156 DEBUG 77 --- [main] o.h.v.internal.xml.ValidationXmlParser   : Trying to load META-INF/validation.xml for XML based Validator configuration.
+2018-06-18 17:40:42.161 DEBUG 77 --- [main] o.h.v.internal.xml.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via user class loader
+2018-06-18 17:40:42.168 DEBUG 77 --- [main] o.h.v.internal.xml.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via TCCL
+2018-06-18 17:40:42.169 DEBUG 77 --- [main] o.h.v.internal.xml.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2018-06-18 17:40:42.170 DEBUG 77 --- [main] o.h.v.internal.xml.ValidationXmlParser   : No META-INF/validation.xml found. Using annotation based configuration only.
+2018-06-18 17:40:47.499 DEBUG 77 --- [main] o.hibernate.jpa.internal.util.LogHelper  : PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: sun.misc.Launcher$AppClassLoader@73d16e93
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: org.apache.tomcat.jdbc.pool.DataSource@1ddc6db2{ConnectionPool[defaultAutoCommit=null; defaultReadOnly=null; defaultTransactionIsolation=-1; defaultCatalog=null; driverClassName=org.postgresql.Driver; maxActive=100; maxIdle=100; minIdle=10; initialSize=10; maxWait=30000; testOnBorrow=true; testOnReturn=false; timeBetweenEvictionRunsMillis=5000; numTestsPerEvictionRun=0; minEvictableIdleTimeMillis=60000; testWhileIdle=false; testOnConnect=false; password=********; url=jdbc:postgresql://postgresdev:5432/pgdev; username=caseyrharding; validationQuery=SELECT 1; validationQueryTimeout=-1; validatorClassName=null; validationInterval=3000; accessToUnderlyingConnectionAllowed=true; removeAbandoned=false; removeAbandonedTimeout=60; logAbandoned=false; connectionProperties=null; initSQL=null; jdbcInterceptors=null; jmxEnabled=true; fairQueue=true; useEquals=true; abandonWhenPercentageFull=0; maxAge=0; useLock=false; dataSource=null; dataSourceJNDI=null; suspectTimeout=0; alternateUsernameAllowed=false; commitOnReturn=false; rollbackOnReturn=false; useDisposableConnectionFacade=true; logValidationErrors=false; propagateInterruptState=false; ignoreExceptionOnPreLoad=false; useStatementFacade=true; }
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/users-api/build/classes/java/main/
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		com.example.usersapi.model.User]
+	Mapping files names []
+	Properties []
+2018-06-18 17:40:47.587 DEBUG 77 --- [main] o.h.i.internal.IntegratorServiceImpl     : Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2018-06-18 17:40:47.638 DEBUG 77 --- [main] o.h.i.internal.IntegratorServiceImpl     : Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2018-06-18 17:40:47.678 DEBUG 77 --- [main] o.h.i.internal.IntegratorServiceImpl     : Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2018-06-18 17:40:47.681 DEBUG 77 --- [main] o.h.i.internal.IntegratorServiceImpl     : Adding Integrator [org.hibernate.jpa.event.spi.JpaIntegrator].
+2018-06-18 17:40:47.914  INFO 77 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2018-06-18 17:40:47.920  INFO 77 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2018-06-18 17:40:47.934  INFO 77 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2018-06-18 17:40:47.994 DEBUG 77 --- [main] o.hibernate.service.spi.ServiceBinding   : Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2018-06-18 17:40:48.096 DEBUG 77 --- [main] o.h.c.internal.RegionFactoryInitiator    : Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2018-06-18 17:40:48.113  INFO 77 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-18 17:40:48.350 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@38029686
+2018-06-18 17:40:48.352 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BooleanType@38029686
+2018-06-18 17:40:48.353 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@38029686
+2018-06-18 17:40:48.356 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@5d124d29
+2018-06-18 17:40:48.367 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.TrueFalseType@7926352f
+2018-06-18 17:40:48.369 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.YesNoType@2fc49538
+2018-06-18 17:40:48.372 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@1cd6b1bd
+2018-06-18 17:40:48.372 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.ByteType@1cd6b1bd
+2018-06-18 17:40:48.373 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@1cd6b1bd
+2018-06-18 17:40:48.376 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.CharacterType@6aa5974e
+2018-06-18 17:40:48.377 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.CharacterType@6aa5974e
+2018-06-18 17:40:48.378 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@6aa5974e
+2018-06-18 17:40:48.393 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@7a388990
+2018-06-18 17:40:48.394 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.ShortType@7a388990
+2018-06-18 17:40:48.395 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.ShortType@7a388990
+2018-06-18 17:40:48.397 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.IntegerType@6839203b
+2018-06-18 17:40:48.398 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.IntegerType@6839203b
+2018-06-18 17:40:48.398 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@6839203b
+2018-06-18 17:40:48.406 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@43935e9c
+2018-06-18 17:40:48.407 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.LongType@43935e9c
+2018-06-18 17:40:48.408 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.LongType@43935e9c
+2018-06-18 17:40:48.411 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@5a090f62
+2018-06-18 17:40:48.412 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.FloatType@5a090f62
+2018-06-18 17:40:48.413 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.FloatType@5a090f62
+2018-06-18 17:40:48.416 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@2b877a54
+2018-06-18 17:40:48.421 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.DoubleType@2b877a54
+2018-06-18 17:40:48.421 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@2b877a54
+2018-06-18 17:40:48.430 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@7c1503a3
+2018-06-18 17:40:48.430 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@7c1503a3
+2018-06-18 17:40:48.432 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BigIntegerType@2e56b4d
+2018-06-18 17:40:48.434 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@2e56b4d
+2018-06-18 17:40:48.436 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.StringType@36ad229b
+2018-06-18 17:40:48.437 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.StringType@36ad229b
+2018-06-18 17:40:48.439 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.StringNVarcharType@60bf494c
+2018-06-18 17:40:48.445 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@50211483
+2018-06-18 17:40:48.447 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.UrlType@45d56062
+2018-06-18 17:40:48.447 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.UrlType@45d56062
+2018-06-18 17:40:48.450 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.DateType@517704
+2018-06-18 17:40:48.451 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.DateType@517704
+2018-06-18 17:40:48.453 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.TimeType@2f9b21d6
+2018-06-18 17:40:48.454 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.TimeType@2f9b21d6
+2018-06-18 17:40:48.458 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.TimestampType@740a0d5e
+2018-06-18 17:40:48.459 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@740a0d5e
+2018-06-18 17:40:48.460 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.TimestampType@740a0d5e
+2018-06-18 17:40:48.467 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@5b2b8d86
+2018-06-18 17:40:48.469 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.CalendarType@19827608
+2018-06-18 17:40:48.470 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@19827608
+2018-06-18 17:40:48.470 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@19827608
+2018-06-18 17:40:48.472 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@c412556
+2018-06-18 17:40:48.474 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.LocaleType@329dc214
+2018-06-18 17:40:48.474 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@329dc214
+2018-06-18 17:40:48.476 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.CurrencyType@5db948c9
+2018-06-18 17:40:48.476 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@5db948c9
+2018-06-18 17:40:48.479 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.TimeZoneType@32507479
+2018-06-18 17:40:48.492 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@32507479
+2018-06-18 17:40:48.516 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.ClassType@7d1c164a
+2018-06-18 17:40:48.517 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.ClassType@7d1c164a
+2018-06-18 17:40:48.525 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@3830b06c
+2018-06-18 17:40:48.528 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@3830b06c
+2018-06-18 17:40:48.536 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@784d9bc
+2018-06-18 17:40:48.538 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BinaryType@13cc0b90
+2018-06-18 17:40:48.539 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BinaryType@13cc0b90
+2018-06-18 17:40:48.546 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BinaryType@13cc0b90
+2018-06-18 17:40:48.548 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@525647f3
+2018-06-18 17:40:48.550 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@525647f3
+2018-06-18 17:40:48.551 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@525647f3
+2018-06-18 17:40:48.558 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.RowVersionType@691541bc
+2018-06-18 17:40:48.562 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.ImageType@77524ca7
+2018-06-18 17:40:48.568 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.CharArrayType@280fafd
+2018-06-18 17:40:48.569 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.CharArrayType@280fafd
+2018-06-18 17:40:48.570 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.CharArrayType@280fafd
+2018-06-18 17:40:48.576 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@5b29ab61
+2018-06-18 17:40:48.578 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@5b29ab61
+2018-06-18 17:40:48.580 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@5b29ab61
+2018-06-18 17:40:48.583 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.TextType@8840c98
+2018-06-18 17:40:48.585 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.NTextType@437c4b25
+2018-06-18 17:40:48.594 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BlobType@13250132
+2018-06-18 17:40:48.595 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@13250132
+2018-06-18 17:40:48.599 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@7d3691e1
+2018-06-18 17:40:48.635 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.ClobType@3c7279a5
+2018-06-18 17:40:48.636 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@3c7279a5
+2018-06-18 17:40:48.647 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.NClobType@26e8ff8c
+2018-06-18 17:40:48.648 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@26e8ff8c
+2018-06-18 17:40:48.649 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@25791d40
+2018-06-18 17:40:48.650 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@17c0274c
+2018-06-18 17:40:48.653 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.SerializableType@250d440
+2018-06-18 17:40:48.657 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.ObjectType@26c8b296
+2018-06-18 17:40:48.660 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@26c8b296
+2018-06-18 17:40:48.666 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@7f27f59b
+2018-06-18 17:40:48.666 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@1c98b4eb
+2018-06-18 17:40:48.667 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@45801322
+2018-06-18 17:40:48.668 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@756b2d90
+2018-06-18 17:40:48.670 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@3520958b
+2018-06-18 17:40:48.670 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@6cc64028
+2018-06-18 17:40:48.673 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@291a4791
+2018-06-18 17:40:48.673 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@5b1e88f
+2018-06-18 17:40:48.709 DEBUG 77 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : Database ->
+       name : PostgreSQL
+    version : 10.4 (Debian 10.4-2.pgdg90+1)
+      major : 10
+      minor : 4
+2018-06-18 17:40:48.714 DEBUG 77 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : Driver ->
+       name : PostgreSQL Native Driver
+    version : PostgreSQL 9.4.1212.jre7
+      major : 9
+      minor : 4
+2018-06-18 17:40:48.721 DEBUG 77 --- [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : JDBC version : 4.0
+2018-06-18 17:40:48.787  INFO 77 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2018-06-18 17:40:49.005 DEBUG 77 --- [main] o.h.e.j.env.spi.IdentifierHelperBuilder  : JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+2018-06-18 17:40:49.041  INFO 77 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+2018-06-18 17:40:49.044 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@53a301f3
+2018-06-18 17:40:49.045 DEBUG 77 --- [main] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.PostgresUUIDType@53a301f3
+2018-06-18 17:40:49.045  INFO 77 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@3830b06c
+2018-06-18 17:40:49.080 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2018-06-18 17:40:49.081 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2018-06-18 17:40:49.083 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2018-06-18 17:40:49.083 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2018-06-18 17:40:49.084 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2018-06-18 17:40:49.087 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2018-06-18 17:40:49.088 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2018-06-18 17:40:49.092 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2018-06-18 17:40:49.094 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2018-06-18 17:40:49.095 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2018-06-18 17:40:49.097 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2018-06-18 17:40:49.098 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2018-06-18 17:40:49.098 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2018-06-18 17:40:49.100 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2018-06-18 17:40:49.101 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory : Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.SequenceGenerator]
+2018-06-18 17:40:49.101 DEBUG 77 --- [main] .i.f.i.DefaultIdentifierGeneratorFactory :     - overriding [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2018-06-18 17:40:49.188 DEBUG 77 --- [main] o.h.boot.model.relational.Namespace      : Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2018-06-18 17:40:49.259 DEBUG 77 --- [main] org.hibernate.cfg.AnnotationBinder       : Binding entity from annotated class: com.example.usersapi.model.User
+2018-06-18 17:40:49.309 DEBUG 77 --- [main] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2018-06-18 17:40:49.325 DEBUG 77 --- [main] o.h.cfg.annotations.EntityBinder         : Import with entity name User
+2018-06-18 17:40:49.335 DEBUG 77 --- [main] o.h.cfg.annotations.EntityBinder         : Bind entity com.example.usersapi.model.User on table users
+2018-06-18 17:40:49.400 DEBUG 77 --- [main] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=id, insertable=true, updatable=true, unique=false}
+2018-06-18 17:40:49.407 DEBUG 77 --- [main] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property id with lazy=false
+2018-06-18 17:40:49.415 DEBUG 77 --- [main] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [com.example.usersapi.model.User:id]
+2018-06-18 17:40:49.420 DEBUG 77 --- [main] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for id
+2018-06-18 17:40:49.425 DEBUG 77 --- [main] o.h.cfg.annotations.PropertyBinder       : Building property id
+2018-06-18 17:40:49.432 DEBUG 77 --- [main] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=about_me, insertable=true, updatable=true, unique=false}
+2018-06-18 17:40:49.434 DEBUG 77 --- [main] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property aboutMe with lazy=false
+2018-06-18 17:40:49.435 DEBUG 77 --- [main] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [com.example.usersapi.model.User:aboutMe]
+2018-06-18 17:40:49.435 DEBUG 77 --- [main] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for aboutMe
+2018-06-18 17:40:49.436 DEBUG 77 --- [main] o.h.cfg.annotations.PropertyBinder       : Building property aboutMe
+2018-06-18 17:40:49.438 DEBUG 77 --- [main] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=email, insertable=true, updatable=true, unique=false}
+2018-06-18 17:40:49.442 DEBUG 77 --- [main] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property email with lazy=false
+2018-06-18 17:40:49.454 DEBUG 77 --- [main] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [com.example.usersapi.model.User:email]
+2018-06-18 17:40:49.457 DEBUG 77 --- [main] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for email
+2018-06-18 17:40:49.458 DEBUG 77 --- [main] o.h.cfg.annotations.PropertyBinder       : Building property email
+2018-06-18 17:40:49.461 DEBUG 77 --- [main] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=first_name, insertable=true, updatable=true, unique=false}
+2018-06-18 17:40:49.462 DEBUG 77 --- [main] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property firstName with lazy=false
+2018-06-18 17:40:49.463 DEBUG 77 --- [main] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [com.example.usersapi.model.User:firstName]
+2018-06-18 17:40:49.463 DEBUG 77 --- [main] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for firstName
+2018-06-18 17:40:49.464 DEBUG 77 --- [main] o.h.cfg.annotations.PropertyBinder       : Building property firstName
+2018-06-18 17:40:49.465 DEBUG 77 --- [main] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=last_name, insertable=true, updatable=true, unique=false}
+2018-06-18 17:40:49.471 DEBUG 77 --- [main] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property lastName with lazy=false
+2018-06-18 17:40:49.472 DEBUG 77 --- [main] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [com.example.usersapi.model.User:lastName]
+2018-06-18 17:40:49.472 DEBUG 77 --- [main] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for lastName
+2018-06-18 17:40:49.473 DEBUG 77 --- [main] o.h.cfg.annotations.PropertyBinder       : Building property lastName
+2018-06-18 17:40:49.474 DEBUG 77 --- [main] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=password, insertable=true, updatable=true, unique=false}
+2018-06-18 17:40:49.477 DEBUG 77 --- [main] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property password with lazy=false
+2018-06-18 17:40:49.478 DEBUG 77 --- [main] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [com.example.usersapi.model.User:password]
+2018-06-18 17:40:49.479 DEBUG 77 --- [main] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for password
+2018-06-18 17:40:49.480 DEBUG 77 --- [main] o.h.cfg.annotations.PropertyBinder       : Building property password
+2018-06-18 17:40:49.480 DEBUG 77 --- [main] org.hibernate.cfg.Ejb3Column             : Binding column: Ejb3Column{table=org.hibernate.mapping.Table(users), mappingColumn=username, insertable=true, updatable=true, unique=false}
+2018-06-18 17:40:49.481 DEBUG 77 --- [main] o.h.cfg.annotations.PropertyBinder       : MetadataSourceProcessor property username with lazy=false
+2018-06-18 17:40:49.481 DEBUG 77 --- [main] o.hibernate.cfg.AbstractPropertyHolder   : Attempting to locate auto-apply AttributeConverter for property [com.example.usersapi.model.User:username]
+2018-06-18 17:40:49.482 DEBUG 77 --- [main] o.h.cfg.annotations.SimpleValueBinder    : building SimpleValue for username
+2018-06-18 17:40:49.483 DEBUG 77 --- [main] o.h.cfg.annotations.PropertyBinder       : Building property username
+2018-06-18 17:40:49.491 DEBUG 77 --- [main] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for id
+2018-06-18 17:40:49.492 DEBUG 77 --- [main] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for aboutMe
+2018-06-18 17:40:49.493 DEBUG 77 --- [main] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for email
+2018-06-18 17:40:49.494 DEBUG 77 --- [main] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for firstName
+2018-06-18 17:40:49.495 DEBUG 77 --- [main] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for lastName
+2018-06-18 17:40:49.495 DEBUG 77 --- [main] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for password
+2018-06-18 17:40:49.496 DEBUG 77 --- [main] o.h.cfg.annotations.SimpleValueBinder    : Starting fillSimpleValue for username
+2018-06-18 17:40:49.500 DEBUG 77 --- [main] org.hibernate.mapping.PrimaryKey         : Forcing column [id] to be non-null as it is part of the primary key for table [users]
+2018-06-18 17:40:49.581 DEBUG 77 --- [main] o.hibernate.internal.SessionFactoryImpl  : Building session factory
+2018-06-18 17:40:49.586 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : SessionFactory name : null
+2018-06-18 17:40:49.587 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Automatic flush during beforeCompletion(): disabled
+2018-06-18 17:40:49.587 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Automatic session close at end of transaction: disabled
+2018-06-18 17:40:49.588 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Statistics: disabled
+2018-06-18 17:40:49.589 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Deleted entity synthetic identifier rollback: disabled
+2018-06-18 17:40:49.589 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Default entity-mode: pojo
+2018-06-18 17:40:49.589 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2018-06-18 17:40:49.590 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Allow initialization of lazy state outside session : disabled
+2018-06-18 17:40:49.595 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Using BatchFetchStyle : LEGACY
+2018-06-18 17:40:49.596 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Default batch fetch size: -1
+2018-06-18 17:40:49.596 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Maximum outer join fetch depth: null
+2018-06-18 17:40:49.597 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Default null ordering: NONE
+2018-06-18 17:40:49.598 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Order SQL updates by primary key: disabled
+2018-06-18 17:40:49.598 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Order SQL inserts for batching: disabled
+2018-06-18 17:40:49.598 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : multi-tenancy strategy : NONE
+2018-06-18 17:40:49.599 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : JTA Track by Thread: enabled
+2018-06-18 17:40:49.599 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Query language substitutions: {}
+2018-06-18 17:40:49.600 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : JPA query language strict compliance: disabled
+2018-06-18 17:40:49.600 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Named query checking : enabled
+2018-06-18 17:40:49.601 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Second-level cache: enabled
+2018-06-18 17:40:49.601 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Second-level query cache: disabled
+2018-06-18 17:40:49.601 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@4ff66917
+2018-06-18 17:40:49.602 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Second-level cache region prefix: null
+2018-06-18 17:40:49.602 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Optimize second-level cache for minimal puts: disabled
+2018-06-18 17:40:49.603 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Structured second-level cache entries: disabled
+2018-06-18 17:40:49.603 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Second-level cache direct-reference entries: disabled
+2018-06-18 17:40:49.604 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Automatic eviction of collection cache: disabled
+2018-06-18 17:40:49.604 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : JDBC batch size: 15
+2018-06-18 17:40:49.605 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : JDBC batch updates for versioned data: enabled
+2018-06-18 17:40:49.605 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Scrollable result sets: enabled
+2018-06-18 17:40:49.605 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Wrap result sets: disabled
+2018-06-18 17:40:49.606 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : JDBC3 getGeneratedKeys(): enabled
+2018-06-18 17:40:49.607 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : JDBC result set fetch size: null
+2018-06-18 17:40:49.607 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Connection release mode: ON_CLOSE
+2018-06-18 17:40:49.607 DEBUG 77 --- [main] org.hibernate.cfg.Settings               : Generate SQL with comments: disabled
+2018-06-18 17:40:49.719 DEBUG 77 --- [main] o.hibernate.internal.SessionFactoryImpl  : Returning a Reference to the SessionFactory
+2018-06-18 17:40:49.724 DEBUG 77 --- [main] o.hibernate.internal.SessionFactoryImpl  : Session factory constructed with filter configurations : {}
+2018-06-18 17:40:49.726 DEBUG 77 --- [main] o.hibernate.internal.SessionFactoryImpl  : Instantiating session factory with properties: {java.vendor=Oracle Corporation, sun.java.launcher=SUN_STANDARD, catalina.base=/tmp/tomcat.7017630522124232085.8085, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, catalina.useNaming=false, hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy, os.name=Linux, sun.boot.class.path=/opt/jdk1.8.0_172/jre/lib/resources.jar:/opt/jdk1.8.0_172/jre/lib/rt.jar:/opt/jdk1.8.0_172/jre/lib/sunrsasign.jar:/opt/jdk1.8.0_172/jre/lib/jsse.jar:/opt/jdk1.8.0_172/jre/lib/jce.jar:/opt/jdk1.8.0_172/jre/lib/charsets.jar:/opt/jdk1.8.0_172/jre/lib/jfr.jar:/opt/jdk1.8.0_172/jre/classes, java.vm.specification.vendor=Oracle Corporation, java.runtime.version=1.8.0_172-b11, user.name=root, javax.persistence.validation.mode=AUTO, user.language=en, sun.boot.library.path=/opt/jdk1.8.0_172/jre/lib/amd64, PID=77, java.version=1.8.0_172, user.timezone=GMT, sun.arch.data.model=64, java.endorsed.dirs=/opt/jdk1.8.0_172/jre/lib/endorsed, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, file.encoding.pkg=sun.io, file.separator=/, java.specification.name=Java Platform API Specification, java.class.version=52.0, com.netflix.servo.DefaultMonitorRegistry.registryClass=com.netflix.servo.BasicMonitorRegistry, user.country=, LOG_FILE=mylogfile.log, java.home=/opt/jdk1.8.0_172/jre, java.vm.info=mixed mode, os.version=4.9.87-linuxkit-aufs, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@334540a0, hibernate.connection.datasource=org.apache.tomcat.jdbc.pool.DataSource@1ddc6db2{ConnectionPool[defaultAutoCommit=null; defaultReadOnly=null; defaultTransactionIsolation=-1; defaultCatalog=null; driverClassName=org.postgresql.Driver; maxActive=100; maxIdle=100; minIdle=10; initialSize=10; maxWait=30000; testOnBorrow=true; testOnReturn=false; timeBetweenEvictionRunsMillis=5000; numTestsPerEvictionRun=0; minEvictableIdleTimeMillis=60000; testWhileIdle=false; testOnConnect=false; password=********; url=jdbc:postgresql://postgresdev:5432/pgdev; username=caseyrharding; validationQuery=SELECT 1; validationQueryTimeout=-1; validatorClassName=null; validationInterval=3000; accessToUnderlyingConnectionAllowed=true; removeAbandoned=false; removeAbandonedTimeout=60; logAbandoned=false; connectionProperties=null; initSQL=null; jdbcInterceptors=null; jmxEnabled=true; fairQueue=true; useEquals=true; abandonWhenPercentageFull=0; maxAge=0; useLock=false; dataSource=null; dataSourceJNDI=null; suspectTimeout=0; alternateUsernameAllowed=false; commitOnReturn=false; rollbackOnReturn=false; useDisposableConnectionFacade=true; logValidationErrors=false; propagateInterruptState=false; ignoreExceptionOnPreLoad=false; useStatementFacade=true; }, path.separator=:, java.vm.version=25.172-b11, org.jboss.logging.provider=slf4j, user.variant=, hibernate.id.new_generator_mappings=false, java.awt.printerjob=sun.print.PSPrinterJob, sun.io.unicode.encoding=UnicodeLittle, awt.toolkit=sun.awt.X11.XToolkit, user.home=/root, java.specification.vendor=Oracle Corporation, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor.url=http://java.oracle.com/, spring.beaninfo.ignore=true, java.vm.vendor=Oracle Corporation, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.ejb.persistenceUnitName=default, java.runtime.name=Java(TM) SE Runtime Environment, sun.java.command=com.example.usersapi.UsersApi, java.class.path=/users-api/build/classes/java/main:/users-api/build/classes/kotlin/main:/users-api/build/resources/main:/users-api/cache/caches/modules-2/files-2.1/com.graphql-java/graphql-java-tools/5.1.0/24fa9d75a2e7b1c6525ba1a9c974253f9eac4dd8/graphql-java-tools-5.1.0.jar:/users-api/cache/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-kotlin/2.9.2/a9cf72ae68a641ade45c400b6cec2d363818f11b/jackson-module-kotlin-2.9.2.jar:/users-api/cache/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.2.21/3159ff5936aa570a90050d385cb717fbb6c1723a/kotlin-reflect-1.2.21.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter-eureka/1.4.0.RELEASE/d786de8c09734870d3e7679db2324cc7564a9df4/spring-cloud-starter-eureka-1.4.0.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-thymeleaf/1.5.8.RELEASE/255b749537ca0fa48adeb0c15cf48734b9ffcf5e/spring-boot-starter-thymeleaf-1.5.8.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client/1.4.0.RELEASE/9d70a14b1898c988259767b3be700fb1469c955a/spring-cloud-starter-netflix-eureka-client-1.4.0.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/1.5.8.RELEASE/7e0dc79e3b47be4539ad3c033639133ae6b7a17e/spring-boot-starter-web-1.5.8.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/1.5.8.RELEASE/55bb5e8aea5707f79ee9888ad75261a7b7df4654/spring-boot-starter-data-jpa-1.5.8.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.flywaydb/flyway-core/3.2.1/88347e9a484152e9b80fbad7648d1b552a8cff78/flyway-core-3.2.1.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-actuator/1.5.8.RELEASE/927c40a1af518dc240dfdf7aaf0a9673c3a127c5/spring-boot-starter-actuator-1.5.8.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.2.21/86407aed2dc197bd5f61d16e759c4ff43678732a/kotlin-stdlib-jdk8-1.2.21.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-aop/1.5.8.RELEASE/9bc9a40e0718726ed48f6becc509b2d186f1ebcc/spring-boot-starter-aop-1.5.8.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-jdbc/1.5.8.RELEASE/fc98631eba9817c920b9ac1c5845214f49637a33/spring-boot-starter-jdbc-1.5.8.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter-netflix-ribbon/1.4.0.RELEASE/cd8fb40e62f8480a5fad90e355a2cb7b3ed382b3/spring-cloud-starter-netflix-ribbon-1.4.0.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter-netflix-archaius/1.4.0.RELEASE/7986096a2f72bc4e60d512fd015a18df68f1a057/spring-cloud-starter-netflix-archaius-1.4.0.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter/1.3.0.RELEASE/4e77ffd84269a271c1bda469e0cd718653ab8bd1/spring-cloud-starter-1.3.0.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/1.5.8.RELEASE/18048efe1f06569022a53cc3fb2fe9c0162935a3/spring-boot-starter-1.5.8.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/com.graphql-java/graphql-java/9.0/cae82c87e6914ee3724ed0af1deb7f753483df2f/graphql-java-9.0.jar:/users-api/cache/caches/modules-2/files-2.1/org.postgresql/postgresql/9.4.1212.jre7/7101612950488be0ff6882bcc27aa0f0a4c202dd/postgresql-9.4.1212.jre7.jar:/users-api/cache/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.2.21/88bfff5aa470143a83b0bc5ec00c0be8cabd7cad/kotlin-stdlib-jdk7-1.2.21.jar:/users-api/cache/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.21/d64187eb2d9d1521be3421aa8c6774a8625cdde8/kotlin-stdlib-1.2.21.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-actuator/1.5.8.RELEASE/aac530fe877ed91c92831019755c49f29b08e6/spring-boot-actuator-1.5.8.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/2.8.10/6ab4b29da1dcc8599b706cb92dabe37a049f0259/jackson-datatype-jdk8-2.8.10.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.eureka/eureka-core/1.7.0/de4764b03847326717cef268b98022f9daaa7087/eureka-core-1.7.0.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.ribbon/ribbon-eureka/2.2.4/21a27ef8be22e85df2b837398004aea907a920fb/ribbon-eureka-2.2.4.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.eureka/eureka-client/1.7.0/1e4a90489cf9863de2b21087dfa443f13be35ae3/eureka-client-1.7.0.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.netflix-commons/netflix-eventbus/0.3.0/3f864adbe81f0849729fcbba3fe693c32be739ea/netflix-eventbus-0.3.0.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.ribbon/ribbon/2.2.4/6cd5aaa08e53e8871df633c94dc814f1c365ba5d/ribbon-2.2.4.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.ribbon/ribbon-httpclient/2.2.4/7abf937cdc019e6137aecf5499e95ea213802255/ribbon-httpclient-2.2.4.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.ribbon/ribbon-transport/2.2.4/84c8b4801225ba52a929fdca41ccc0f2177f3db4/ribbon-transport-2.2.4.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.ribbon/ribbon-loadbalancer/2.2.4/2927d9956875fe0cbe8cd7d8e845b1943d08548c/ribbon-loadbalancer-2.2.4.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.ribbon/ribbon-core/2.2.4/f86e87244899fb0e5afda719aa76b5ce6b87453b/ribbon-core-2.2.4.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.hystrix/hystrix-core/1.5.12/75379b6671fcaa9cec33035df684a68ec7741ca6/hystrix-core-1.5.12.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.archaius/archaius-core/0.7.4/d6b5e5c541452248fd8565ccd0732623c81a30b5/archaius-core-0.7.4.jar:/users-api/cache/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.8.10/f7b83cb2bc4b88d53961e749e1ad32f49ef017b7/jackson-databind-2.8.10.jar:/users-api/cache/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.8.0/45b426f7796b741035581a176744d91090e2e6fb/jackson-annotations-2.8.0.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/1.5.8.RELEASE/cf3b7eb7e192a60ab1dd09e4f8bce82710a5feb0/spring-boot-starter-tomcat-1.5.8.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.hibernate/hibernate-validator/5.3.5.Final/622a9bcef2eed6d41b5b8e0662c36212009e375/hibernate-validator-5.3.5.Final.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.3.12.RELEASE/986e5dcd4435e780f6be64f8185eaa51523cf851/spring-webmvc-4.3.12.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.12.RELEASE/86c29588cca74d0fc848b194cb13fcdfd12bc990/spring-web-4.3.12.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.hibernate/hibernate-entitymanager/5.0.12.Final/302a526f5058290e9cbd719a5caf9f248d344719/hibernate-entitymanager-5.0.12.Final.jar:/users-api/cache/caches/modules-2/files-2.1/org.hibernate/hibernate-core/5.0.12.Final/e58bf1c660e6706d8e2cbb53bae110f574366102/hibernate-core-5.0.12.Final.jar:/users-api/cache/caches/modules-2/files-2.1/javax.transaction/javax.transaction-api/1.2/d81aff979d603edd90dcd8db2abc1f4ce6479e3e/javax.transaction-api-1.2.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/1.11.8.RELEASE/d674b8407de3d2998c106557fd6a6665de2bc217/spring-data-jpa-1.11.8.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework/spring-aspects/4.3.12.RELEASE/b0002bfdd0d58f09fc178afc5f2d0553ff117840/spring-aspects-4.3.12.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.thymeleaf/thymeleaf-spring4/2.1.5.RELEASE/74cb9028e99597b5d71a98e919fd531a7fc290b4/thymeleaf-spring4-2.1.5.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/nz.net.ultraq.thymeleaf/thymeleaf-layout-dialect/1.4.0/8d7810c069ed1534b9631fb1e85c35973546086/thymeleaf-layout-dialect-1.4.0.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-netflix-eureka-client/1.4.0.RELEASE/42725b9b1cf1d1763397461918f8e81d6a28214d/spring-cloud-netflix-eureka-client-1.4.0.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-netflix-core/1.4.0.RELEASE/269f52331438e43210ac7a2ff3a3def16c201316/spring-cloud-netflix-core-1.4.0.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.5.8.RELEASE/e4f2efa4c319f4e3613d94fbccfdb5ccda6873e3/spring-boot-autoconfigure-1.5.8.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.5.8.RELEASE/748ebde51761e12627ad23d064024f342b18f9b4/spring-boot-1.5.8.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/1.5.8.RELEASE/ebc00a0e46753d90431fdcc5e3d6b9fd3bf1564a/spring-boot-starter-logging-1.5.8.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework/spring-context/4.3.12.RELEASE/5e6d26f36636f36b7efec1d6a0c5991284fbd95b/spring-context-4.3.12.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework/spring-aop/4.3.12.RELEASE/b3fef085902993c2ef874c45c7bfd79296d5a5a4/spring-aop-4.3.12.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework/spring-orm/4.3.12.RELEASE/47bbe35a92944aeedf06a388098581272f8db9bd/spring-orm-4.3.12.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework/spring-jdbc/4.3.12.RELEASE/5c840abbdc1a1dfd0f79c4a4c25eac0c98e6af22/spring-jdbc-4.3.12.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/1.13.8.RELEASE/2853e3c38e02d42529f6c8b247d7bace40c25642/spring-data-commons-1.13.8.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework/spring-tx/4.3.12.RELEASE/7147b6839b2bf9db3621b79c73b4dddbe69572b6/spring-tx-4.3.12.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework/spring-beans/4.3.12.RELEASE/547dd432d47d0f01d9ccbedc4b705f9f7c1240a/spring-beans-4.3.12.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework/spring-expression/4.3.12.RELEASE/790f69f6ad7f9da8d4a92c603ad7244c398c8309/spring-expression-4.3.12.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.12.RELEASE/4cebc69478c6d350dbd5af28e3db7d5694f416e3/spring-core-4.3.12.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.17/7a27ea250c5130b2922b86dea63cbb1cc10a660c/snakeyaml-1.17.jar:/users-api/cache/caches/modules-2/files-2.1/org.antlr/antlr4-runtime/4.7.1/946f8aa9daa917dd81a8b818111bec7e288f821a/antlr4-runtime-4.7.1.jar:/users-api/cache/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.25/f8c32b13ff142a513eeb5b6330b1588dcb2c0461/jcl-over-slf4j-1.7.25.jar:/users-api/cache/caches/modules-2/files-2.1/org.thymeleaf/thymeleaf/2.1.5.RELEASE/513bffa3daaac277460c1a0a2dccb228fa40569e/thymeleaf-2.1.5.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.11/ccedfbacef4a6515d2983e3f89ed753d5d4fb665/logback-classic-1.1.11.jar:/users-api/cache/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.25/af5364cd6679bfffb114f0dec8a157aaa283b76/jul-to-slf4j-1.7.25.jar:/users-api/cache/caches/modules-2/files-2.1/org.slf4j/log4j-over-slf4j/1.7.25/a87bb47468f47ee7aabbd54f93e133d4215769c3/log4j-over-slf4j-1.7.25.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.netflix-commons/netflix-infix/0.3.0/acc65969f7367ddd2f1265e0cd7330509ed530dc/netflix-infix-0.3.0.jar:/users-api/cache/caches/modules-2/files-2.1/io.reactivex/rxnetty-contexts/0.4.9/6efe17a25602a5424c18ab975aa9c28b6d6b7f56/rxnetty-contexts-0.4.9.jar:/users-api/cache/caches/modules-2/files-2.1/io.reactivex/rxnetty-servo/0.4.9/b7d6d6e132686c280f16710eaa3e90719f6808f8/rxnetty-servo-0.4.9.jar:/users-api/cache/caches/modules-2/files-2.1/io.reactivex/rxnetty/0.4.9/5aff3c9d6bb9d9066c378bb3d2a4413ed1773bcf/rxnetty-0.4.9.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.servo/servo-core/0.10.1/7461ed61647f9996c88ad822546ffc7851a45e0e/servo-core-0.10.1.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.servo/servo-internal/0.10.1/bb6f9cd7b309189bad01b93a806ba9d6cb5d915a/servo-internal-0.10.1.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.netflix-commons/netflix-commons-util/0.1.1/39e67061780476f207b31465baaed84a91ff659f/netflix-commons-util-0.1.1.jar:/users-api/cache/caches/modules-2/files-2.1/com.netflix.netflix-commons/netflix-statistics/0.1.1/12f6e48253f9cafa0e24d7d232ff504c52143212/netflix-statistics-0.1.1.jar:/users-api/cache/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.25/da76ca59f6a57ee3102f8f9bd9cee742973efa8a/slf4j-api-1.7.25.jar:/users-api/cache/caches/modules-2/files-2.1/com.graphql-java/java-dataloader/2.0.2/1125fcdf0fbe0fad8c27f9dd3f3f08b956d37a76/java-dataloader-2.0.2.jar:/users-api/cache/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.2/323964c36556eb0e6209f65c1cef72b53b461ab8/reactive-streams-1.0.2.jar:/users-api/cache/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.8.10/eb21a035c66ad307e66ec8fce37f5d50fd62d039/jackson-core-2.8.10.jar:/users-api/cache/caches/modules-2/files-2.1/com.esotericsoftware/reflectasm/1.11.3/8b102eed2f12412b254946811111ea48bc03a266/reflectasm-1.11.3.jar:/users-api/cache/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.7/557edd918fd41f9260963583ebf5a61a43a6b423/commons-lang3-3.7.jar:/users-api/cache/caches/modules-2/files-2.1/com.google.inject/guice/4.1.0/eeb69005da379a10071aa4948c48d89250febb07/guice-4.1.0.jar:/users-api/cache/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar:/users-api/cache/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/users-api/cache/caches/modules-2/files-2.1/com.thoughtworks.xstream/xstream/1.4.9/c43f6e6bfa79b56e04a8898a923c3cf7144dd460/xstream-1.4.9.jar:/users-api/cache/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/8.5.23/52f07abcae10dc7e1764304b0877def175c2c833/tomcat-embed-websocket-8.5.23.jar:/users-api/cache/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.23/79261793a47f507890ee08f749b9d81774e4f7f0/tomcat-embed-core-8.5.23.jar:/users-api/cache/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/8.5.23/98d979cde444dffa6d434c8377d0123b2dfa614c/tomcat-embed-el-8.5.23.jar:/users-api/cache/caches/modules-2/files-2.1/javax.validation/validation-api/1.1.0.Final/8613ae82954779d518631e05daa73a6a954817d5/validation-api-1.1.0.Final.jar:/users-api/cache/caches/modules-2/files-2.1/org.hibernate.common/hibernate-commons-annotations/5.0.1.Final/71e1cff3fcb20d3b3af4f3363c3ddb24d33c6879/hibernate-commons-annotations-5.0.1.Final.jar:/users-api/cache/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.3.1.Final/c46217ab74b532568c0ed31dc599db3048bd1b67/jboss-logging-3.3.1.Final.jar:/users-api/cache/caches/modules-2/files-2.1/com.fasterxml/classmate/1.3.4/3d5f48f10bbe4eb7bd862f10c0583be2e0053c6/classmate-1.3.4.jar:/users-api/cache/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.8.11/9807e0e13c8a295f15882721db50fa3d142c44a9/aspectjweaver-1.8.11.jar:/users-api/cache/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-jdbc/8.5.23/6036400a8f2d90dd3ae3a4d09e5136c56002887b/tomcat-jdbc-8.5.23.jar:/users-api/cache/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.1-api/1.0.0.Final/5e731d961297e5a07290bfaf3db1fbc8bbbf405a/hibernate-jpa-2.1-api-1.0.0.Final.jar:/users-api/cache/caches/modules-2/files-2.1/org.javassist/javassist/3.21.0-GA/598244f595db5c5fb713731eddbb1c91a58d959b/javassist-3.21.0-GA.jar:/users-api/cache/caches/modules-2/files-2.1/org.antlr/antlr-runtime/3.4/8f011408269a8e42b8548687e137d8eeb56df4b4/antlr-runtime-3.4.jar:/users-api/cache/caches/modules-2/files-2.1/org.antlr/stringtemplate/3.2.1/59ec8083721eae215c6f3caee944c410d2be34de/stringtemplate-3.2.1.jar:/users-api/cache/caches/modules-2/files-2.1/antlr/antlr/2.7.7/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar:/users-api/cache/caches/modules-2/files-2.1/org.jboss/jandex/2.0.0.Final/3e899258936f94649c777193e1be846387ed54b3/jandex-2.0.0.Final.jar:/users-api/cache/caches/modules-2/files-2.1/dom4j/dom4j/1.6.1/5d3ccc056b6f056dbf0dddfdf43894b9065a8f94/dom4j-1.6.1.jar:/users-api/cache/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.4.12/a43be367110c491787219f1c128b5b5fc54f1e70/groovy-2.4.12.jar:/users-api/cache/caches/modules-2/files-2.1/org.ow2.asm/asm/5.0.4/da08b8cce7bbf903602a25a3a163ae252435795/asm-5.0.4.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-context/1.3.0.RELEASE/e16e5b26ea996511dbcee2bb64d89c54a8191d8a/spring-cloud-context-1.3.0.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-commons/1.3.0.RELEASE/abe03c05157401cab39fb59f5bccb8d74c6b3b0a/spring-cloud-commons-1.3.0.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.security/spring-security-rsa/1.0.3.RELEASE/b0b1ee770597b5de1b51e9a889dfd2dc35d251b0/spring-security-rsa-1.0.3.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.codehaus.jettison/jettison/1.3.7/7d36a59a0577f11b12088b9e215d6860345b9e1d/jettison-1.3.7.jar:/users-api/cache/caches/modules-2/files-2.1/com.sun.jersey.contribs/jersey-apache-client4/1.19.1/e1c45701a003097ace96bed4bc8fb937e9867498/jersey-apache-client4-1.19.1.jar:/users-api/cache/caches/modules-2/files-2.1/com.sun.jersey/jersey-client/1.19.1/2df97ebd4e5c01599584c45caa3aeb563d268eef/jersey-client-1.19.1.jar:/users-api/cache/caches/modules-2/files-2.1/com.sun.jersey/jersey-core/1.19.1/4282d106f2acd5051bd9bc2935ed9a2920c9385/jersey-core-1.19.1.jar:/users-api/cache/caches/modules-2/files-2.1/javax.ws.rs/jsr311-api/1.1.1/59033da2a1afd56af1ac576750a8d0b1830d59e6/jsr311-api-1.1.1.jar:/users-api/cache/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.3/d1577ae15f01ef5438c5afc62162457c00a34713/httpclient-4.5.3.jar:/users-api/cache/caches/modules-2/files-2.1/org.codehaus.woodstox/woodstox-core-asl/4.4.1/84fee5eb1a4a1cefe65b6883c73b3fa83be3c1a1/woodstox-core-asl-4.4.1.jar:/users-api/cache/caches/modules-2/files-2.1/commons-configuration/commons-configuration/1.8/6cce40435bcd8018018f16898de01976b319941a/commons-configuration-1.8.jar:/users-api/cache/caches/modules-2/files-2.1/io.reactivex/rxjava/1.2.0/42bfaf64c94f3848ebf5cf1c2ea4ec9d1b3ac6c8/rxjava-1.2.0.jar:/users-api/cache/caches/modules-2/files-2.1/xmlpull/xmlpull/1.1.3.1/2b8e230d2ab644e4ecaa94db7cdedbc40c805dfa/xmlpull-1.1.3.1.jar:/users-api/cache/caches/modules-2/files-2.1/xpp3/xpp3_min/1.1.4c/19d4e90b43059058f6e056f794f0ea4030d60b86/xpp3_min-1.1.4c.jar:/users-api/cache/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-annotations-api/8.5.23/aaf17df9fe0240e9e9d5375d24d5f177174b73d9/tomcat-annotations-api-8.5.23.jar:/users-api/cache/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-juli/8.5.23/98e7f0610b7b2fb8303f11be0210e3f5a56a7d55/tomcat-juli-8.5.23.jar:/users-api/cache/caches/modules-2/files-2.1/ognl/ognl/3.0.8/37e1aebfde7eb7baebc9ad4f85116ef9009c5fc5/ognl-3.0.8.jar:/users-api/cache/caches/modules-2/files-2.1/org.unbescape/unbescape/1.1.0.RELEASE/ab0db4fe0a6fa89fb8da2a40008a4e63a7f3f5b9/unbescape-1.1.0.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.11/88b8df40340eed549fb07e2613879bf6b006704d/logback-core-1.1.11.jar:/users-api/cache/caches/modules-2/files-2.1/org.springframework.security/spring-security-crypto/4.2.3.RELEASE/a5c850acc91bff1970fe751d7407df81c4bce3cc/spring-security-crypto-4.2.3.RELEASE.jar:/users-api/cache/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.55/6392d8cba22b722c6570d660ca0b3921ff1bae4f/bcpkix-jdk15on-1.55.jar:/users-api/cache/caches/modules-2/files-2.1/stax/stax-api/1.0.1/49c100caf72d658aca8e58bd74a4ba90fa2b0d70/stax-api-1.0.1.jar:/users-api/cache/caches/modules-2/files-2.1/org.apache.commons/commons-math/2.2/4877b85d388275f994a5cfc7eceb73a8045d3006/commons-math-2.2.jar:/users-api/cache/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.8/70539e2a07865bab38b4153da1ce599cf081790a/httpcore-4.4.8.jar:/users-api/cache/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/4b95f4897fa13f2cd904aee711aeafc0c5295cd8/commons-codec-1.10.jar:/users-api/cache/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar:/users-api/cache/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar:/users-api/cache/caches/modules-2/files-2.1/javax.xml.stream/stax-api/1.0-2/d6337b0de8b25e53e81b922352fbea9f9f57ba0b/stax-api-1.0-2.jar:/users-api/cache/caches/modules-2/files-2.1/org.codehaus.woodstox/stax2-api/3.1.4/ac19014b1e6a7c08aad07fe114af792676b685b7/stax2-api-3.1.4.jar:/users-api/cache/caches/modules-2/files-2.1/commons-lang/commons-lang/2.6/ce1edb914c94ebc388f086c6827e8bdeec71ac2/commons-lang-2.6.jar:/users-api/cache/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5/commons-collections-3.2.2.jar:/users-api/cache/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.55/935f2e57a00ec2c489cbd2ad830d4a399708f979/bcprov-jdk15on-1.55.jar:/users-api/cache/caches/modules-2/files-2.1/commons-jxpath/commons-jxpath/1.3/c22d7d0f0f40eb7059a23cfa61773a416768b137/commons-jxpath-1.3.jar:/users-api/cache/caches/modules-2/files-2.1/joda-time/joda-time/2.9.9/f7b520c458572890807d143670c9b24f4de90897/joda-time-2.9.9.jar:/users-api/cache/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.2/3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf/gson-2.8.2.jar:/users-api/cache/caches/modules-2/files-2.1/org.hdrhistogram/HdrHistogram/2.1.9/e4631ce165eb400edecfa32e03d3f1be53dee754/HdrHistogram-2.1.9.jar:/users-api/cache/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.0.27.Final/59b04b31b58942615c0035c61db1167d118ee218/netty-codec-http-4.0.27.Final.jar:/users-api/cache/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.0.27.Final/3da4eda5697a09c9f8e217bc6a0f265b5b5102c5/netty-transport-native-epoll-4.0.27.Final.jar:/users-api/cache/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.22.Final/a3a16b17d5a5ed6f784b0daba95e28d940356109/netty-handler-4.1.22.Final.jar:/users-api/cache/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.22.Final/239c0af275952e70bb4adf7cf8c03d88ddc394c9/netty-codec-4.1.22.Final.jar:/users-api/cache/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.22.Final/3bd455cd9e5e5fb2e08fd9cd0acfa54c079ca989/netty-transport-4.1.22.Final.jar:/users-api/cache/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.22.Final/15e964a2095031364f534a6e21977f5ee9ca32a9/netty-buffer-4.1.22.Final.jar:/users-api/cache/caches/modules-2/files-2.1/io.netty/netty-resolver/4.1.22.Final/b5484d17a97cb57b07d2a1ac092c249e47234c17/netty-resolver-4.1.22.Final.jar:/users-api/cache/caches/modules-2/files-2.1/io.netty/netty-common/4.1.22.Final/56ff4deca53fc791ed59ac2b72eb6718714a4de9/netty-common-4.1.22.Final.jar, hibernate.bytecode.use_reflection_optimizer=false, java.vm.specification.name=Java Virtual Machine Specification, java.vm.specification.version=1.8, catalina.home=/tmp/tomcat.7017630522124232085.8085, sun.cpu.endian=little, sun.os.patch.level=unknown, java.awt.headless=true, java.io.tmpdir=/tmp, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, javax.persistence.sharedCache.mode=UNSPECIFIED, os.arch=amd64, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy, java.ext.dirs=/opt/jdk1.8.0_172/jre/lib/ext:/usr/java/packages/lib/ext, user.dir=/users-api, line.separator=
+, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.transaction.jta.platform=org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform@1f179f51, file.encoding=UTF-8, java.specification.version=1.8}
+2018-06-18 17:40:49.801 DEBUG 77 --- [main] o.h.v.i.e.r.DefaultTraversableResolver   : Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2018-06-18 17:40:49.802 DEBUG 77 --- [main] o.h.v.i.e.r.DefaultTraversableResolver   : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2018-06-18 17:40:49.802 DEBUG 77 --- [main] o.h.v.internal.xml.ValidationXmlParser   : Trying to load META-INF/validation.xml for XML based Validator configuration.
+2018-06-18 17:40:49.803 DEBUG 77 --- [main] o.h.v.internal.xml.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via TCCL
+2018-06-18 17:40:49.806 DEBUG 77 --- [main] o.h.v.internal.xml.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2018-06-18 17:40:49.814 DEBUG 77 --- [main] o.h.v.internal.xml.ValidationXmlParser   : No META-INF/validation.xml found. Using annotation based configuration only.
+2018-06-18 17:40:49.818 DEBUG 77 --- [main] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [com.example.usersapi.model.User] is safe
+2018-06-18 17:40:49.819 DEBUG 77 --- [main] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.usersapi.model.User
+2018-06-18 17:40:49.834 DEBUG 77 --- [main] org.hibernate.secure.spi.JaccIntegrator  : Skipping JACC integration as it was not enabled
+2018-06-18 17:40:49.845 DEBUG 77 --- [main] org.hibernate.engine.spi.CascadeStyles   : External cascade style regsitration [persist : STYLE_PERSIST_SKIPLAZY] overrode base registration [STYLE_PERSIST]
+2018-06-18 17:40:49.954 DEBUG 77 --- [main] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [com.example.usersapi.model.User] is safe
+2018-06-18 17:40:49.955 DEBUG 77 --- [main] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.usersapi.model.User
+2018-06-18 17:40:49.976 DEBUG 77 --- [main] o.h.boot.internal.ClassLoaderAccessImpl  : Not known whether passed class name [com.example.usersapi.model.User] is safe
+2018-06-18 17:40:49.977 DEBUG 77 --- [main] o.h.boot.internal.ClassLoaderAccessImpl  : No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.example.usersapi.model.User
+2018-06-18 17:40:50.062 DEBUG 77 --- [main] o.h.p.entity.AbstractEntityPersister     : Static SQL for entity: com.example.usersapi.model.User
+2018-06-18 17:40:50.063 DEBUG 77 --- [main] o.h.p.entity.AbstractEntityPersister     :  Version select: select id from users where id =?
+2018-06-18 17:40:50.063 DEBUG 77 --- [main] o.h.p.entity.AbstractEntityPersister     :  Snapshot select: select user_.id, user_.about_me as about_me2_0_, user_.email as email3_0_, user_.first_name as first_na4_0_, user_.last_name as last_nam5_0_, user_.password as password6_0_, user_.username as username7_0_ from users user_ where user_.id=?
+2018-06-18 17:40:50.064 DEBUG 77 --- [main] o.h.p.entity.AbstractEntityPersister     :  Insert 0: insert into users (about_me, email, first_name, last_name, password, username, id) values (?, ?, ?, ?, ?, ?, ?)
+2018-06-18 17:40:50.064 DEBUG 77 --- [main] o.h.p.entity.AbstractEntityPersister     :  Update 0: update users set about_me=?, email=?, first_name=?, last_name=?, password=?, username=? where id=?
+2018-06-18 17:40:50.065 DEBUG 77 --- [main] o.h.p.entity.AbstractEntityPersister     :  Delete 0: delete from users where id=?
+2018-06-18 17:40:50.065 DEBUG 77 --- [main] o.h.p.entity.AbstractEntityPersister     :  Identity insert: insert into users (about_me, email, first_name, last_name, password, username) values (?, ?, ?, ?, ?, ?)
+2018-06-18 17:40:50.109 DEBUG 77 --- [main] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@e881e46]
+2018-06-18 17:40:50.117 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : aboutMe
+2018-06-18 17:40:50.118 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : email
+2018-06-18 17:40:50.120 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : firstName
+2018-06-18 17:40:50.122 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : lastName
+2018-06-18 17:40:50.123 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : password
+2018-06-18 17:40:50.123 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : username
+2018-06-18 17:40:50.124 DEBUG 77 --- [main] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2018-06-18 17:40:50.152 DEBUG 77 --- [main] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2018-06-18 17:40:50.158 DEBUG 77 --- [main] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=com.example.usersapi.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.example.usersapi.model.User, querySpaceUid=<gen:0>, path=com.example.usersapi.model.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.usersapi.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2018-06-18 17:40:50.164 DEBUG 77 --- [main] o.h.loader.entity.plan.EntityLoader      : Static select for entity com.example.usersapi.model.User [NONE]: select user0_.id as id1_0_0_, user0_.about_me as about_me2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.last_name as last_nam5_0_0_, user0_.password as password6_0_0_, user0_.username as username7_0_0_ from users user0_ where user0_.id=?
+2018-06-18 17:40:50.165 DEBUG 77 --- [main] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5ee77baf]
+2018-06-18 17:40:50.165 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : aboutMe
+2018-06-18 17:40:50.165 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : email
+2018-06-18 17:40:50.166 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : firstName
+2018-06-18 17:40:50.166 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : lastName
+2018-06-18 17:40:50.166 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : password
+2018-06-18 17:40:50.167 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : username
+2018-06-18 17:40:50.167 DEBUG 77 --- [main] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2018-06-18 17:40:50.168 DEBUG 77 --- [main] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2018-06-18 17:40:50.168 DEBUG 77 --- [main] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=com.example.usersapi.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.example.usersapi.model.User, querySpaceUid=<gen:0>, path=com.example.usersapi.model.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.usersapi.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2018-06-18 17:40:50.169 DEBUG 77 --- [main] o.h.loader.entity.plan.EntityLoader      : Static select for entity com.example.usersapi.model.User [READ]: select user0_.id as id1_0_0_, user0_.about_me as about_me2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.last_name as last_nam5_0_0_, user0_.password as password6_0_0_, user0_.username as username7_0_0_ from users user0_ where user0_.id=?
+2018-06-18 17:40:50.170 DEBUG 77 --- [main] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@25cde5bb]
+2018-06-18 17:40:50.170 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : aboutMe
+2018-06-18 17:40:50.170 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : email
+2018-06-18 17:40:50.171 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : firstName
+2018-06-18 17:40:50.171 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : lastName
+2018-06-18 17:40:50.172 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : password
+2018-06-18 17:40:50.172 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : username
+2018-06-18 17:40:50.173 DEBUG 77 --- [main] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2018-06-18 17:40:50.174 DEBUG 77 --- [main] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2018-06-18 17:40:50.175 DEBUG 77 --- [main] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=com.example.usersapi.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.example.usersapi.model.User, querySpaceUid=<gen:0>, path=com.example.usersapi.model.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.usersapi.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2018-06-18 17:40:50.175 DEBUG 77 --- [main] o.h.loader.entity.plan.EntityLoader      : Static select for entity com.example.usersapi.model.User [UPGRADE]: select user0_.id as id1_0_0_, user0_.about_me as about_me2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.last_name as last_nam5_0_0_, user0_.password as password6_0_0_, user0_.username as username7_0_0_ from users user0_ where user0_.id=? for update
+2018-06-18 17:40:50.176 DEBUG 77 --- [main] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5df64b2a]
+2018-06-18 17:40:50.176 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : aboutMe
+2018-06-18 17:40:50.177 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : email
+2018-06-18 17:40:50.177 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : firstName
+2018-06-18 17:40:50.177 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : lastName
+2018-06-18 17:40:50.178 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : password
+2018-06-18 17:40:50.178 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : username
+2018-06-18 17:40:50.178 DEBUG 77 --- [main] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2018-06-18 17:40:50.179 DEBUG 77 --- [main] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2018-06-18 17:40:50.180 DEBUG 77 --- [main] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=com.example.usersapi.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.example.usersapi.model.User, querySpaceUid=<gen:0>, path=com.example.usersapi.model.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.usersapi.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2018-06-18 17:40:50.180 DEBUG 77 --- [main] o.h.loader.entity.plan.EntityLoader      : Static select for entity com.example.usersapi.model.User [UPGRADE_NOWAIT]: select user0_.id as id1_0_0_, user0_.about_me as about_me2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.last_name as last_nam5_0_0_, user0_.password as password6_0_0_, user0_.username as username7_0_0_ from users user0_ where user0_.id=? for update nowait 
+2018-06-18 17:40:50.180 DEBUG 77 --- [main] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@30d15e4a]
+2018-06-18 17:40:50.181 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : aboutMe
+2018-06-18 17:40:50.182 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : email
+2018-06-18 17:40:50.182 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : firstName
+2018-06-18 17:40:50.183 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : lastName
+2018-06-18 17:40:50.183 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : password
+2018-06-18 17:40:50.184 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : username
+2018-06-18 17:40:50.184 DEBUG 77 --- [main] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2018-06-18 17:40:50.184 DEBUG 77 --- [main] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2018-06-18 17:40:50.185 DEBUG 77 --- [main] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=com.example.usersapi.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.example.usersapi.model.User, querySpaceUid=<gen:0>, path=com.example.usersapi.model.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.usersapi.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2018-06-18 17:40:50.186 DEBUG 77 --- [main] o.h.loader.entity.plan.EntityLoader      : Static select for entity com.example.usersapi.model.User [UPGRADE_SKIPLOCKED]: select user0_.id as id1_0_0_, user0_.about_me as about_me2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.last_name as last_nam5_0_0_, user0_.password as password6_0_0_, user0_.username as username7_0_0_ from users user0_ where user0_.id=? for update
+2018-06-18 17:40:50.186 DEBUG 77 --- [main] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2c678c7b]
+2018-06-18 17:40:50.186 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : aboutMe
+2018-06-18 17:40:50.187 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : email
+2018-06-18 17:40:50.187 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : firstName
+2018-06-18 17:40:50.188 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : lastName
+2018-06-18 17:40:50.188 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : password
+2018-06-18 17:40:50.188 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : username
+2018-06-18 17:40:50.189 DEBUG 77 --- [main] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2018-06-18 17:40:50.189 DEBUG 77 --- [main] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2018-06-18 17:40:50.190 DEBUG 77 --- [main] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=com.example.usersapi.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.example.usersapi.model.User, querySpaceUid=<gen:0>, path=com.example.usersapi.model.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.usersapi.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2018-06-18 17:40:50.191 DEBUG 77 --- [main] o.h.loader.entity.plan.EntityLoader      : Static select for entity com.example.usersapi.model.User [FORCE]: select user0_.id as id1_0_0_, user0_.about_me as about_me2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.last_name as last_nam5_0_0_, user0_.password as password6_0_0_, user0_.username as username7_0_0_ from users user0_ where user0_.id=? for update nowait 
+2018-06-18 17:40:50.191 DEBUG 77 --- [main] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@30c7be6f]
+2018-06-18 17:40:50.192 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : aboutMe
+2018-06-18 17:40:50.193 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : email
+2018-06-18 17:40:50.194 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : firstName
+2018-06-18 17:40:50.194 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : lastName
+2018-06-18 17:40:50.195 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : password
+2018-06-18 17:40:50.195 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : username
+2018-06-18 17:40:50.196 DEBUG 77 --- [main] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2018-06-18 17:40:50.197 DEBUG 77 --- [main] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2018-06-18 17:40:50.197 DEBUG 77 --- [main] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=com.example.usersapi.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.example.usersapi.model.User, querySpaceUid=<gen:0>, path=com.example.usersapi.model.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.usersapi.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2018-06-18 17:40:50.198 DEBUG 77 --- [main] o.h.loader.entity.plan.EntityLoader      : Static select for entity com.example.usersapi.model.User [PESSIMISTIC_READ]: select user0_.id as id1_0_0_, user0_.about_me as about_me2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.last_name as last_nam5_0_0_, user0_.password as password6_0_0_, user0_.username as username7_0_0_ from users user0_ where user0_.id=? for share
+2018-06-18 17:40:50.198 DEBUG 77 --- [main] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5a0f87e5]
+2018-06-18 17:40:50.199 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : aboutMe
+2018-06-18 17:40:50.199 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : email
+2018-06-18 17:40:50.200 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : firstName
+2018-06-18 17:40:50.200 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : lastName
+2018-06-18 17:40:50.202 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : password
+2018-06-18 17:40:50.203 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : username
+2018-06-18 17:40:50.203 DEBUG 77 --- [main] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2018-06-18 17:40:50.204 DEBUG 77 --- [main] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2018-06-18 17:40:50.205 DEBUG 77 --- [main] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=com.example.usersapi.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.example.usersapi.model.User, querySpaceUid=<gen:0>, path=com.example.usersapi.model.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.usersapi.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2018-06-18 17:40:50.206 DEBUG 77 --- [main] o.h.loader.entity.plan.EntityLoader      : Static select for entity com.example.usersapi.model.User [PESSIMISTIC_WRITE]: select user0_.id as id1_0_0_, user0_.about_me as about_me2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.last_name as last_nam5_0_0_, user0_.password as password6_0_0_, user0_.username as username7_0_0_ from users user0_ where user0_.id=? for update
+2018-06-18 17:40:50.206 DEBUG 77 --- [main] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2905b568]
+2018-06-18 17:40:50.207 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : aboutMe
+2018-06-18 17:40:50.207 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : email
+2018-06-18 17:40:50.208 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : firstName
+2018-06-18 17:40:50.208 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : lastName
+2018-06-18 17:40:50.209 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : password
+2018-06-18 17:40:50.209 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : username
+2018-06-18 17:40:50.209 DEBUG 77 --- [main] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2018-06-18 17:40:50.210 DEBUG 77 --- [main] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2018-06-18 17:40:50.211 DEBUG 77 --- [main] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=com.example.usersapi.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.example.usersapi.model.User, querySpaceUid=<gen:0>, path=com.example.usersapi.model.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.usersapi.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2018-06-18 17:40:50.211 DEBUG 77 --- [main] o.h.loader.entity.plan.EntityLoader      : Static select for entity com.example.usersapi.model.User [PESSIMISTIC_FORCE_INCREMENT]: select user0_.id as id1_0_0_, user0_.about_me as about_me2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.last_name as last_nam5_0_0_, user0_.password as password6_0_0_, user0_.username as username7_0_0_ from users user0_ where user0_.id=? for update nowait 
+2018-06-18 17:40:50.211 DEBUG 77 --- [main] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1be8c122]
+2018-06-18 17:40:50.212 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : aboutMe
+2018-06-18 17:40:50.213 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : email
+2018-06-18 17:40:50.213 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : firstName
+2018-06-18 17:40:50.214 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : lastName
+2018-06-18 17:40:50.214 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : password
+2018-06-18 17:40:50.216 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : username
+2018-06-18 17:40:50.217 DEBUG 77 --- [main] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2018-06-18 17:40:50.217 DEBUG 77 --- [main] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2018-06-18 17:40:50.218 DEBUG 77 --- [main] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=com.example.usersapi.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.example.usersapi.model.User, querySpaceUid=<gen:0>, path=com.example.usersapi.model.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.usersapi.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2018-06-18 17:40:50.219 DEBUG 77 --- [main] o.h.loader.entity.plan.EntityLoader      : Static select for entity com.example.usersapi.model.User [OPTIMISTIC]: select user0_.id as id1_0_0_, user0_.about_me as about_me2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.last_name as last_nam5_0_0_, user0_.password as password6_0_0_, user0_.username as username7_0_0_ from users user0_ where user0_.id=?
+2018-06-18 17:40:50.219 DEBUG 77 --- [main] o.h.l.p.b.i.spaces.QuerySpacesImpl       : Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@59a2d756]
+2018-06-18 17:40:50.221 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : aboutMe
+2018-06-18 17:40:50.233 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : email
+2018-06-18 17:40:50.235 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : firstName
+2018-06-18 17:40:50.236 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : lastName
+2018-06-18 17:40:50.237 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : password
+2018-06-18 17:40:50.239 DEBUG 77 --- [main] o.h.p.walking.spi.MetamodelGraphWalker   : Visiting attribute path : username
+2018-06-18 17:40:50.240 DEBUG 77 --- [main] lanBuildingAssociationVisitationStrategy : Building LoadPlan...
+2018-06-18 17:40:50.241 DEBUG 77 --- [main] h.l.p.e.i.LoadQueryJoinAndFetchProcessor : processing queryspace <gen:0>
+2018-06-18 17:40:50.243 DEBUG 77 --- [main] o.h.l.p.build.spi.LoadPlanTreePrinter    : LoadPlan(entity=com.example.usersapi.model.User)
+    - Returns
+       - EntityReturnImpl(entity=com.example.usersapi.model.User, querySpaceUid=<gen:0>, path=com.example.usersapi.model.User)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.example.usersapi.model.User)
+          - SQL table alias mapping - user0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+2018-06-18 17:40:50.243 DEBUG 77 --- [main] o.h.loader.entity.plan.EntityLoader      : Static select for entity com.example.usersapi.model.User [OPTIMISTIC_FORCE_INCREMENT]: select user0_.id as id1_0_0_, user0_.about_me as about_me2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.last_name as last_nam5_0_0_, user0_.password as password6_0_0_, user0_.username as username7_0_0_ from users user0_ where user0_.id=?
+2018-06-18 17:40:50.294 DEBUG 77 --- [main] org.hibernate.loader.Loader              : Static select for action ACTION_MERGE on entity com.example.usersapi.model.User: select user0_.id as id1_0_0_, user0_.about_me as about_me2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.last_name as last_nam5_0_0_, user0_.password as password6_0_0_, user0_.username as username7_0_0_ from users user0_ where user0_.id=?
+2018-06-18 17:40:50.295 DEBUG 77 --- [main] org.hibernate.loader.Loader              : Static select for action ACTION_REFRESH on entity com.example.usersapi.model.User: select user0_.id as id1_0_0_, user0_.about_me as about_me2_0_0_, user0_.email as email3_0_0_, user0_.first_name as first_na4_0_0_, user0_.last_name as last_nam5_0_0_, user0_.password as password6_0_0_, user0_.username as username7_0_0_ from users user0_ where user0_.id=?
+2018-06-18 17:40:50.296 DEBUG 77 --- [main] o.hibernate.internal.SessionFactoryImpl  : Instantiated session factory
+2018-06-18 17:40:50.305 DEBUG 77 --- [main] o.h.internal.NamedQueryRepository        : Checking 0 named HQL queries
+2018-06-18 17:40:50.305 DEBUG 77 --- [main] o.h.internal.NamedQueryRepository        : Checking 0 named SQL queries
+2018-06-18 17:40:50.309 DEBUG 77 --- [main] o.h.internal.SessionFactoryRegistry      : Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@42cc420b
+2018-06-18 17:40:50.310 DEBUG 77 --- [main] o.h.internal.SessionFactoryRegistry      : Registering SessionFactory: 2f9139b8-8f46-41e2-a13f-b7700d55a3f7 (<unnamed>)
+2018-06-18 17:40:50.310 DEBUG 77 --- [main] o.h.internal.SessionFactoryRegistry      : Not binding SessionFactory to JNDI, no JNDI name configured
+2018-06-18 17:40:50.319 DEBUG 77 --- [main] o.h.j.i.schemagen.JpaSchemaGenerator     : No actions specified; doing nothing
+2018-06-18 17:40:50.432 DEBUG 77 --- [main] o.h.j.i.EntityManagerFactoryRegistry     : Initializing EntityManagerFactoryRegistry : org.hibernate.jpa.internal.EntityManagerFactoryRegistry@2c7ad4f3
+2018-06-18 17:40:50.433 DEBUG 77 --- [main] o.h.j.i.EntityManagerFactoryRegistry     : Registering EntityManagerFactory: default 
+2018-06-18 17:40:50.815 DEBUG 77 --- [main] o.h.stat.internal.StatisticsInitiator    : Statistics initialized [enabled=false]
+2018-06-18 17:40:50.967 DEBUG 77 --- [main] o.h.jpa.spi.AbstractEntityManagerImpl    : Mark transaction for rollback
+2018-06-18 17:40:51.019 DEBUG 77 --- [main] o.h.jpa.spi.AbstractEntityManagerImpl    : Mark transaction for rollback
+2018-06-18 17:40:52.043  WARN 77 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-06-18 17:40:52.059  WARN 77 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2018-06-18 17:40:52.102 DEBUG 77 --- [main] o.h.v.i.e.r.DefaultTraversableResolver   : Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2018-06-18 17:40:52.103 DEBUG 77 --- [main] o.h.v.i.e.r.DefaultTraversableResolver   : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2018-06-18 17:40:52.117 DEBUG 77 --- [main] o.h.v.i.e.r.DefaultTraversableResolver   : Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2018-06-18 17:40:52.118 DEBUG 77 --- [main] o.h.v.i.e.r.DefaultTraversableResolver   : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2018-06-18 17:40:52.119 DEBUG 77 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2018-06-18 17:40:52.119 DEBUG 77 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2018-06-18 17:40:52.119 DEBUG 77 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy29
+2018-06-18 17:40:52.120 DEBUG 77 --- [main] o.h.v.internal.xml.ValidationXmlParser   : Trying to load META-INF/validation.xml for XML based Validator configuration.
+2018-06-18 17:40:52.120 DEBUG 77 --- [main] o.h.v.internal.xml.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via user class loader
+2018-06-18 17:40:52.124 DEBUG 77 --- [main] o.h.v.internal.xml.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via TCCL
+2018-06-18 17:40:52.125 DEBUG 77 --- [main] o.h.v.internal.xml.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2018-06-18 17:40:52.126 DEBUG 77 --- [main] o.h.v.internal.xml.ValidationXmlParser   : No META-INF/validation.xml found. Using annotation based configuration only.
+2018-06-18 17:40:53.159  WARN 77 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2018-06-18 17:40:55.612  WARN 77 --- [main] arterDeprecationWarningAutoConfiguration : spring-cloud-starter-eureka is deprecated as of Spring Cloud Netflix 1.4.0, please migrate to spring-cloud-starter-netflix-eureka
+2018-06-18 17:40:55.911 DEBUG 77 --- [main] o.h.v.i.e.r.DefaultTraversableResolver   : Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2018-06-18 17:40:55.913 DEBUG 77 --- [main] o.h.v.i.e.r.DefaultTraversableResolver   : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2018-06-18 17:40:55.914 DEBUG 77 --- [main] o.h.v.i.e.r.DefaultTraversableResolver   : Found javax.persistence.Persistence on classpath containing 'getPersistenceUtil'. Assuming JPA 2 environment. Trying to instantiate JPA aware TraversableResolver
+2018-06-18 17:40:55.914 DEBUG 77 --- [main] o.h.v.i.e.r.DefaultTraversableResolver   : Instantiated JPA aware TraversableResolver of type org.hibernate.validator.internal.engine.resolver.JPATraversableResolver.
+2018-06-18 17:40:55.915 DEBUG 77 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2018-06-18 17:40:55.915 DEBUG 77 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2018-06-18 17:40:55.916 DEBUG 77 --- [main] o.h.v.internal.engine.ConfigurationImpl  : Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy29
+2018-06-18 17:40:55.916 DEBUG 77 --- [main] o.h.v.internal.xml.ValidationXmlParser   : Trying to load META-INF/validation.xml for XML based Validator configuration.
+2018-06-18 17:40:55.917 DEBUG 77 --- [main] o.h.v.internal.xml.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via user class loader
+2018-06-18 17:40:55.918 DEBUG 77 --- [main] o.h.v.internal.xml.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via TCCL
+2018-06-18 17:40:55.919 DEBUG 77 --- [main] o.h.v.internal.xml.ResourceLoaderHelper  : Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2018-06-18 17:40:55.922 DEBUG 77 --- [main] o.h.v.internal.xml.ValidationXmlParser   : No META-INF/validation.xml found. Using annotation based configuration only.
+2018-06-18 17:43:16.105  WARN 77 --- [http-nio-8085-exec-1] g.e.SimpleDataFetcherExceptionHandler    : Exception while fetching data (/deleteUser) : Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+
+java.lang.IllegalArgumentException: Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+	at com.fasterxml.jackson.databind.ObjectMapper._convert(ObjectMapper.java:3605) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.convertValue(ObjectMapper.java:3546) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.convertValue(ObjectMapper.java:3534) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.coxautodev.graphql.tools.MethodFieldResolver$createDataFetcher$$inlined$forEachIndexed$lambda$1.invoke(MethodFieldResolver.kt:81) ~[graphql-java-tools-5.1.0.jar:na]
+	at com.coxautodev.graphql.tools.MethodFieldResolver$createDataFetcher$$inlined$forEachIndexed$lambda$1.invoke(MethodFieldResolver.kt:19) ~[graphql-java-tools-5.1.0.jar:na]
+	at com.coxautodev.graphql.tools.MethodFieldResolverDataFetcher.get(MethodFieldResolver.kt:136) ~[graphql-java-tools-5.1.0.jar:na]
+	at graphql.execution.ExecutionStrategy.fetchField(ExecutionStrategy.java:255) [graphql-java-9.0.jar:na]
+	at graphql.execution.ExecutionStrategy.resolveFieldWithInfo(ExecutionStrategy.java:196) [graphql-java-9.0.jar:na]
+	at graphql.execution.ExecutionStrategy.resolveField(ExecutionStrategy.java:169) [graphql-java-9.0.jar:na]
+	at graphql.execution.AsyncSerialExecutionStrategy.lambda$execute$1(AsyncSerialExecutionStrategy.java:42) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Async.eachSequentiallyImpl(Async.java:74) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Async.eachSequentially(Async.java:63) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.AsyncSerialExecutionStrategy.execute(AsyncSerialExecutionStrategy.java:37) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Execution.executeOperation(Execution.java:158) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Execution.execute(Execution.java:100) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:558) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.parseValidateAndExecute(GraphQL.java:500) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.executeAsync(GraphQL.java:470) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:401) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:336) ~[graphql-java-9.0.jar:na]
+	at com.example.usersapi.service.UsersService.resolve(UsersService.java:27) ~[main/:na]
+	at com.example.usersapi.controller.GraphQLController.handle(GraphQLController.java:136) ~[main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_172]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_172]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_172]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_172]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110) ~[spring-boot-actuator-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106) ~[spring-boot-actuator-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_172]
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:270) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportMappingException(DeserializationContext.java:1234) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1122) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1075) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._parseLong(StdDeserializer.java:514) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:339) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:317) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper._convert(ObjectMapper.java:3600) ~[jackson-databind-2.8.10.jar:2.8.10]
+	... 87 common frames omitted
+
+2018-06-18 17:45:28.676  WARN 77 --- [http-nio-8085-exec-4] g.e.SimpleDataFetcherExceptionHandler    : Exception while fetching data (/deleteUser) : Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+
+java.lang.IllegalArgumentException: Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+	at com.fasterxml.jackson.databind.ObjectMapper._convert(ObjectMapper.java:3605) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.convertValue(ObjectMapper.java:3546) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.convertValue(ObjectMapper.java:3534) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.coxautodev.graphql.tools.MethodFieldResolver$createDataFetcher$$inlined$forEachIndexed$lambda$1.invoke(MethodFieldResolver.kt:81) ~[graphql-java-tools-5.1.0.jar:na]
+	at com.coxautodev.graphql.tools.MethodFieldResolver$createDataFetcher$$inlined$forEachIndexed$lambda$1.invoke(MethodFieldResolver.kt:19) ~[graphql-java-tools-5.1.0.jar:na]
+	at com.coxautodev.graphql.tools.MethodFieldResolverDataFetcher.get(MethodFieldResolver.kt:136) ~[graphql-java-tools-5.1.0.jar:na]
+	at graphql.execution.ExecutionStrategy.fetchField(ExecutionStrategy.java:255) [graphql-java-9.0.jar:na]
+	at graphql.execution.ExecutionStrategy.resolveFieldWithInfo(ExecutionStrategy.java:196) [graphql-java-9.0.jar:na]
+	at graphql.execution.ExecutionStrategy.resolveField(ExecutionStrategy.java:169) [graphql-java-9.0.jar:na]
+	at graphql.execution.AsyncSerialExecutionStrategy.lambda$execute$1(AsyncSerialExecutionStrategy.java:42) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Async.eachSequentiallyImpl(Async.java:74) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Async.eachSequentially(Async.java:63) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.AsyncSerialExecutionStrategy.execute(AsyncSerialExecutionStrategy.java:37) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Execution.executeOperation(Execution.java:158) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Execution.execute(Execution.java:100) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:558) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.parseValidateAndExecute(GraphQL.java:500) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.executeAsync(GraphQL.java:470) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:401) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:336) ~[graphql-java-9.0.jar:na]
+	at com.example.usersapi.service.UsersService.resolve(UsersService.java:27) ~[main/:na]
+	at com.example.usersapi.controller.GraphQLController.handle(GraphQLController.java:136) ~[main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_172]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_172]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_172]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_172]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110) ~[spring-boot-actuator-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106) ~[spring-boot-actuator-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_172]
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:270) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportMappingException(DeserializationContext.java:1234) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1122) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1075) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._parseLong(StdDeserializer.java:514) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:339) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:317) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper._convert(ObjectMapper.java:3600) ~[jackson-databind-2.8.10.jar:2.8.10]
+	... 87 common frames omitted
+
+2018-06-18 17:53:28.880  WARN 77 --- [http-nio-8085-exec-6] g.e.SimpleDataFetcherExceptionHandler    : Exception while fetching data (/deleteUser) : Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+
+java.lang.IllegalArgumentException: Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+	at com.fasterxml.jackson.databind.ObjectMapper._convert(ObjectMapper.java:3605) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.convertValue(ObjectMapper.java:3546) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.convertValue(ObjectMapper.java:3534) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.coxautodev.graphql.tools.MethodFieldResolver$createDataFetcher$$inlined$forEachIndexed$lambda$1.invoke(MethodFieldResolver.kt:81) ~[graphql-java-tools-5.1.0.jar:na]
+	at com.coxautodev.graphql.tools.MethodFieldResolver$createDataFetcher$$inlined$forEachIndexed$lambda$1.invoke(MethodFieldResolver.kt:19) ~[graphql-java-tools-5.1.0.jar:na]
+	at com.coxautodev.graphql.tools.MethodFieldResolverDataFetcher.get(MethodFieldResolver.kt:136) ~[graphql-java-tools-5.1.0.jar:na]
+	at graphql.execution.ExecutionStrategy.fetchField(ExecutionStrategy.java:255) [graphql-java-9.0.jar:na]
+	at graphql.execution.ExecutionStrategy.resolveFieldWithInfo(ExecutionStrategy.java:196) [graphql-java-9.0.jar:na]
+	at graphql.execution.ExecutionStrategy.resolveField(ExecutionStrategy.java:169) [graphql-java-9.0.jar:na]
+	at graphql.execution.AsyncSerialExecutionStrategy.lambda$execute$1(AsyncSerialExecutionStrategy.java:42) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Async.eachSequentiallyImpl(Async.java:74) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Async.eachSequentially(Async.java:63) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.AsyncSerialExecutionStrategy.execute(AsyncSerialExecutionStrategy.java:37) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Execution.executeOperation(Execution.java:158) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Execution.execute(Execution.java:100) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:558) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.parseValidateAndExecute(GraphQL.java:500) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.executeAsync(GraphQL.java:470) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:401) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:336) ~[graphql-java-9.0.jar:na]
+	at com.example.usersapi.service.UsersService.resolve(UsersService.java:27) ~[main/:na]
+	at com.example.usersapi.controller.GraphQLController.handle(GraphQLController.java:136) ~[main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_172]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_172]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_172]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_172]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110) ~[spring-boot-actuator-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106) ~[spring-boot-actuator-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_172]
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:270) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportMappingException(DeserializationContext.java:1234) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1122) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1075) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._parseLong(StdDeserializer.java:514) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:339) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:317) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper._convert(ObjectMapper.java:3600) ~[jackson-databind-2.8.10.jar:2.8.10]
+	... 87 common frames omitted
+
+2018-06-18 17:54:52.215  WARN 77 --- [http-nio-8085-exec-8] g.e.SimpleDataFetcherExceptionHandler    : Exception while fetching data (/deleteUser) : Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+
+java.lang.IllegalArgumentException: Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+	at com.fasterxml.jackson.databind.ObjectMapper._convert(ObjectMapper.java:3605) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.convertValue(ObjectMapper.java:3546) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.convertValue(ObjectMapper.java:3534) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.coxautodev.graphql.tools.MethodFieldResolver$createDataFetcher$$inlined$forEachIndexed$lambda$1.invoke(MethodFieldResolver.kt:81) ~[graphql-java-tools-5.1.0.jar:na]
+	at com.coxautodev.graphql.tools.MethodFieldResolver$createDataFetcher$$inlined$forEachIndexed$lambda$1.invoke(MethodFieldResolver.kt:19) ~[graphql-java-tools-5.1.0.jar:na]
+	at com.coxautodev.graphql.tools.MethodFieldResolverDataFetcher.get(MethodFieldResolver.kt:136) ~[graphql-java-tools-5.1.0.jar:na]
+	at graphql.execution.ExecutionStrategy.fetchField(ExecutionStrategy.java:255) [graphql-java-9.0.jar:na]
+	at graphql.execution.ExecutionStrategy.resolveFieldWithInfo(ExecutionStrategy.java:196) [graphql-java-9.0.jar:na]
+	at graphql.execution.ExecutionStrategy.resolveField(ExecutionStrategy.java:169) [graphql-java-9.0.jar:na]
+	at graphql.execution.AsyncSerialExecutionStrategy.lambda$execute$1(AsyncSerialExecutionStrategy.java:42) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Async.eachSequentiallyImpl(Async.java:74) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Async.eachSequentially(Async.java:63) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.AsyncSerialExecutionStrategy.execute(AsyncSerialExecutionStrategy.java:37) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Execution.executeOperation(Execution.java:158) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Execution.execute(Execution.java:100) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:558) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.parseValidateAndExecute(GraphQL.java:500) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.executeAsync(GraphQL.java:470) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:401) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:336) ~[graphql-java-9.0.jar:na]
+	at com.example.usersapi.service.UsersService.resolve(UsersService.java:27) ~[main/:na]
+	at com.example.usersapi.controller.GraphQLController.handle(GraphQLController.java:136) ~[main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_172]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_172]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_172]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_172]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110) ~[spring-boot-actuator-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106) ~[spring-boot-actuator-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_172]
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:270) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportMappingException(DeserializationContext.java:1234) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1122) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1075) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._parseLong(StdDeserializer.java:514) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:339) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:317) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper._convert(ObjectMapper.java:3600) ~[jackson-databind-2.8.10.jar:2.8.10]
+	... 87 common frames omitted
+
+2018-06-18 17:55:52.960  WARN 77 --- [http-nio-8085-exec-10] g.e.SimpleDataFetcherExceptionHandler    : Exception while fetching data (/deleteUser) : Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+
+java.lang.IllegalArgumentException: Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+	at com.fasterxml.jackson.databind.ObjectMapper._convert(ObjectMapper.java:3605) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.convertValue(ObjectMapper.java:3546) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper.convertValue(ObjectMapper.java:3534) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.coxautodev.graphql.tools.MethodFieldResolver$createDataFetcher$$inlined$forEachIndexed$lambda$1.invoke(MethodFieldResolver.kt:81) ~[graphql-java-tools-5.1.0.jar:na]
+	at com.coxautodev.graphql.tools.MethodFieldResolver$createDataFetcher$$inlined$forEachIndexed$lambda$1.invoke(MethodFieldResolver.kt:19) ~[graphql-java-tools-5.1.0.jar:na]
+	at com.coxautodev.graphql.tools.MethodFieldResolverDataFetcher.get(MethodFieldResolver.kt:136) ~[graphql-java-tools-5.1.0.jar:na]
+	at graphql.execution.ExecutionStrategy.fetchField(ExecutionStrategy.java:255) [graphql-java-9.0.jar:na]
+	at graphql.execution.ExecutionStrategy.resolveFieldWithInfo(ExecutionStrategy.java:196) [graphql-java-9.0.jar:na]
+	at graphql.execution.ExecutionStrategy.resolveField(ExecutionStrategy.java:169) [graphql-java-9.0.jar:na]
+	at graphql.execution.AsyncSerialExecutionStrategy.lambda$execute$1(AsyncSerialExecutionStrategy.java:42) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Async.eachSequentiallyImpl(Async.java:74) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Async.eachSequentially(Async.java:63) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.AsyncSerialExecutionStrategy.execute(AsyncSerialExecutionStrategy.java:37) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Execution.executeOperation(Execution.java:158) ~[graphql-java-9.0.jar:na]
+	at graphql.execution.Execution.execute(Execution.java:100) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:558) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.parseValidateAndExecute(GraphQL.java:500) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.executeAsync(GraphQL.java:470) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:401) ~[graphql-java-9.0.jar:na]
+	at graphql.GraphQL.execute(GraphQL.java:336) ~[graphql-java-9.0.jar:na]
+	at com.example.usersapi.service.UsersService.resolve(UsersService.java:27) ~[main/:na]
+	at com.example.usersapi.controller.GraphQLController.handle(GraphQLController.java:136) ~[main/:na]
+	at sun.reflect.GeneratedMethodAccessor127.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_172]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_172]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:661) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55) ~[spring-boot-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:110) ~[spring-boot-actuator-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:108) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106) ~[spring-boot-actuator-1.5.8.RELEASE.jar:1.5.8.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.12.RELEASE.jar:4.3.12.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) ~[na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-8.5.23.jar:8.5.23]
+	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_172]
+Caused by: com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of java.lang.Long out of START_OBJECT token
+ at [Source: N/A; line: -1, column: -1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:270) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportMappingException(DeserializationContext.java:1234) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1122) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1075) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer._parseLong(StdDeserializer.java:514) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:339) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.deser.std.NumberDeserializers$LongDeserializer.deserialize(NumberDeserializers.java:317) ~[jackson-databind-2.8.10.jar:2.8.10]
+	at com.fasterxml.jackson.databind.ObjectMapper._convert(ObjectMapper.java:3600) ~[jackson-databind-2.8.10.jar:2.8.10]
+	... 86 common frames omitted
+

@@ -71,6 +71,14 @@ const CREATE_USER = gql`
   }
 `;
 
+const DELETE_USER = gql `
+  mutation deleteUser($id: InputDeleteOneUser) {
+    deleteUser(input: $id) {
+      username
+    }
+  }
+`;
+
 const CREATE_POST = gql`
   mutation CreatePost($post: PostCreateInput!) {
     createPost(data: $post) {
