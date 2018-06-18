@@ -10,7 +10,7 @@ type User {
 
 type Mutation {
     createUser(input: InputCreateOneUser!): User!
-    deleteUser(input: ID!): User
+    deleteUser(input: ID!): Int!
 }
 
 input InputCreateOneUser {

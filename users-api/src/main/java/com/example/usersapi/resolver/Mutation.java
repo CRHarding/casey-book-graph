@@ -5,6 +5,8 @@ import com.example.usersapi.repository.UserRepository;
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Component
 public class Mutation implements GraphQLMutationResolver {
@@ -16,7 +18,8 @@ public class Mutation implements GraphQLMutationResolver {
         this.userRepository = userRepository;
     }
 
-    public User deleteUser(Long id) {
+    @Transactional(propagation = Propagation.REQUIRED)
+    public int deleteUser(Long id) {
         System.out.println("HERE IN DELETE USER--->" + id);
         return userRepository.deleteById(id);
     }
