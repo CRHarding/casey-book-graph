@@ -10,7 +10,18 @@ type User {
 
 type Mutation {
     createUser(input: InputCreateOneUser!): User!
+    updateUser(input: UpdateUserInput!): User!
     deleteUser(input: ID!): Int!
+}
+
+input UpdateUserInput {
+    id: ID!
+    username: String!
+    firstName: String!
+    lastName: String!
+    email: String!
+    aboutMe: String!
+    password: String!
 }
 
 input InputCreateOneUser {

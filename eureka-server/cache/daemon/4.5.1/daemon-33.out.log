@@ -1,59 +1,59 @@
-16:01:43.670 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [-XX:+HeapDumpOnOutOfMemoryError, -Xmx1024m, -Dfile.encoding=UTF-8, -Duser.country, -Duser.language=en, -Duser.variant]
-16:01:43.960 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=2c5918c9-9ce1-4fe9-a90e-a16f7fd1e8b6,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/eureka-server/cache/daemon,pid=33,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
-16:01:44.010 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface eth0
-16:01:44.014 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
-16:01:44.017 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? true
-16:01:44.020 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /172.18.0.2
-16:01:44.023 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote multicast interface eth0
-16:01:44.027 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
-16:01:44.030 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
-16:01:44.033 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? false
-16:01:44.037 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
-16:01:44.044 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [5b1d6d72-7b78-4e73-bbb5-f11b565ad69f port:45545, addresses:[/127.0.0.1]].
-16:01:44.055 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Fri Jun 15 16:01:44 GMT 2018, with address: [5b1d6d72-7b78-4e73-bbb5-f11b565ad69f port:45545, addresses:[/127.0.0.1]]
-16:01:44.058 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [5b1d6d72-7b78-4e73-bbb5-f11b565ad69f port:45545, addresses:[/127.0.0.1]]
-16:01:44.061 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=2c5918c9-9ce1-4fe9-a90e-a16f7fd1e8b6,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/eureka-server/cache/daemon,pid=33,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
-16:01:44.066 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [5b1d6d72-7b78-4e73-bbb5-f11b565ad69f port:45545, addresses:[/127.0.0.1]], context: DefaultDaemonContext[uid=2c5918c9-9ce1-4fe9-a90e-a16f7fd1e8b6,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/eureka-server/cache/daemon,pid=33,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
-16:01:44.092 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
-16:01:44.103 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
-16:01:44.215 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
-16:01:44.221 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
-16:01:44.234 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
-16:01:44.247 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
-16:01:44.252 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
-16:01:44.257 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
-16:01:44.280 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:37534 to /127.0.0.1:45545.
-16:01:44.569 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: received class org.gradle.launcher.daemon.protocol.Build
-16:01:44.573 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 15: Received non-IO message from client: Build{id=92a784bf-9831-4d22-abe1-90c27640a849.1, currentDir=/eureka-server}
-16:01:44.576 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=92a784bf-9831-4d22-abe1-90c27640a849.1, currentDir=/eureka-server}.
-16:01:44.580 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=92a784bf-9831-4d22-abe1-90c27640a849.1, currentDir=/eureka-server} with connection: socket connection from /127.0.0.1:45545 to /127.0.0.1:37534.
-16:01:44.595 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=92a784bf-9831-4d22-abe1-90c27640a849.1, currentDir=/eureka-server}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:45545 to /127.0.0.1:37534] after 0.0 minutes of idle
-16:01:44.599 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [5b1d6d72-7b78-4e73-bbb5-f11b565ad69f port:45545, addresses:[/127.0.0.1]]
-16:01:44.604 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [5b1d6d72-7b78-4e73-bbb5-f11b565ad69f port:45545, addresses:[/127.0.0.1]]
-16:01:44.616 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
-16:01:44.622 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
-16:01:44.672 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
-16:01:44.679 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
-16:01:44.682 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
-16:01:44.684 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=92a784bf-9831-4d22-abe1-90c27640a849.1, currentDir=/eureka-server}. Dispatching build started information...
-16:01:44.689 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
-16:01:44.715 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/jdk/bin, JAVA_JCE=unlimited, SPRING_PROFILES_ACTIVE=dev, JAVA_HOME=/opt/jdk, OLDPWD=/eureka-server, GLIBC_VERSION=2.27-r0, LANG=C.UTF-8, JAVA_VERSION_MAJOR=8, GRADLE_USER_HOME=cache, HOSTNAME=8652f6bea06b, GLIBC_REPO=https://github.com/sgerrand/alpine-pkg-glibc, JAVA_VERSION_MINOR=172, PWD=/eureka-server, JAVA_PACKAGE=jdk, JAVA_VERSION_BUILD=11, HOME=/root, SHLVL=1}
-16:01:44.751 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: received class org.gradle.launcher.daemon.protocol.CloseInput
-16:01:44.754 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 15: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@8ffceb8
-16:01:44.762 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
-16:01:44.768 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 33). The daemon log file: /eureka-server/cache/daemon/4.5.1/daemon-33.out.log
-16:01:44.775 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon [memory: 954.7 MB]
-16:01:44.781 [INFO] [org.gradle.launcher.daemon.server.exec.ForwardClientInput] Closing daemon's stdin at end of input.
-16:01:44.786 [INFO] [org.gradle.launcher.daemon.server.exec.ForwardClientInput] The daemon will no longer process any standard input.
-16:01:44.809 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
-16:01:44.823 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=2c5918c9-9ce1-4fe9-a90e-a16f7fd1e8b6,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/eureka-server/cache/daemon,pid=33,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+16:33:20.000 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [-XX:+HeapDumpOnOutOfMemoryError, -Xmx1024m, -Dfile.encoding=UTF-8, -Duser.country, -Duser.language=en, -Duser.variant]
+16:33:20.400 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=e43785de-3f08-4e8e-89c7-9fcec9d6efba,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/eureka-server/cache/daemon,pid=33,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+16:33:20.465 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface eth0
+16:33:20.470 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+16:33:20.475 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? true
+16:33:20.480 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /172.18.0.3
+16:33:20.486 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote multicast interface eth0
+16:33:20.491 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo
+16:33:20.495 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+16:33:20.499 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a multicast interface? false
+16:33:20.503 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+16:33:20.513 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [79094a9a-1c6c-4cd5-88e2-b885fc45466c port:39817, addresses:[/127.0.0.1]].
+16:33:20.528 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Tue Jun 19 16:33:20 GMT 2018, with address: [79094a9a-1c6c-4cd5-88e2-b885fc45466c port:39817, addresses:[/127.0.0.1]]
+16:33:20.536 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [79094a9a-1c6c-4cd5-88e2-b885fc45466c port:39817, addresses:[/127.0.0.1]]
+16:33:20.540 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=e43785de-3f08-4e8e-89c7-9fcec9d6efba,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/eureka-server/cache/daemon,pid=33,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+16:33:20.547 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [79094a9a-1c6c-4cd5-88e2-b885fc45466c port:39817, addresses:[/127.0.0.1]], context: DefaultDaemonContext[uid=e43785de-3f08-4e8e-89c7-9fcec9d6efba,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/eureka-server/cache/daemon,pid=33,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
+16:33:20.581 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+16:33:20.597 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+16:33:20.811 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+16:33:20.819 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+16:33:20.835 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+16:33:20.853 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+16:33:20.859 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+16:33:20.865 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+16:33:20.940 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:42192 to /127.0.0.1:39817.
+16:33:21.319 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: received class org.gradle.launcher.daemon.protocol.Build
+16:33:21.339 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 15: Received non-IO message from client: Build{id=e1b3a34d-25d3-4d89-be81-406d5119dff3.1, currentDir=/eureka-server}
+16:33:21.349 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=e1b3a34d-25d3-4d89-be81-406d5119dff3.1, currentDir=/eureka-server}.
+16:33:21.354 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=e1b3a34d-25d3-4d89-be81-406d5119dff3.1, currentDir=/eureka-server} with connection: socket connection from /127.0.0.1:39817 to /127.0.0.1:42192.
+16:33:21.370 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=e1b3a34d-25d3-4d89-be81-406d5119dff3.1, currentDir=/eureka-server}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:39817 to /127.0.0.1:42192] after 0.0 minutes of idle
+16:33:21.378 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [79094a9a-1c6c-4cd5-88e2-b885fc45466c port:39817, addresses:[/127.0.0.1]]
+16:33:21.384 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [79094a9a-1c6c-4cd5-88e2-b885fc45466c port:39817, addresses:[/127.0.0.1]]
+16:33:21.405 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+16:33:21.411 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+16:33:21.469 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+16:33:21.474 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+16:33:21.480 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+16:33:21.481 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=e1b3a34d-25d3-4d89-be81-406d5119dff3.1, currentDir=/eureka-server}. Dispatching build started information...
+16:33:21.489 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: dispatching class org.gradle.launcher.daemon.protocol.BuildStarted
+16:33:21.534 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/jdk/bin, JAVA_JCE=unlimited, SPRING_PROFILES_ACTIVE=dev, JAVA_HOME=/opt/jdk, OLDPWD=/eureka-server, GLIBC_VERSION=2.27-r0, LANG=C.UTF-8, JAVA_VERSION_MAJOR=8, GRADLE_USER_HOME=cache, HOSTNAME=786e1c7d8f27, GLIBC_REPO=https://github.com/sgerrand/alpine-pkg-glibc, JAVA_VERSION_MINOR=172, PWD=/eureka-server, JAVA_PACKAGE=jdk, JAVA_VERSION_BUILD=11, HOME=/root, SHLVL=1}
+16:33:21.593 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+16:33:21.605 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 33). The daemon log file: /eureka-server/cache/daemon/4.5.1/daemon-33.out.log
+16:33:21.601 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 15: received class org.gradle.launcher.daemon.protocol.CloseInput
+16:33:21.614 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon [memory: 954.7 MB]
+16:33:21.618 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 15: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@17d3db1
+16:33:21.677 [INFO] [org.gradle.launcher.daemon.server.exec.ForwardClientInput] Closing daemon's stdin at end of input.
+16:33:21.726 [INFO] [org.gradle.launcher.daemon.server.exec.ForwardClientInput] The daemon will no longer process any standard input.
+16:33:21.698 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+16:33:21.745 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=e43785de-3f08-4e8e-89c7-9fcec9d6efba,javaHome=/opt/jdk1.8.0_172,daemonRegistryDir=/eureka-server/cache/daemon,pid=33,idleTimeout=10800000,daemonOpts=-XX:+HeapDumpOnOutOfMemoryError,-Xmx1024m,-Dfile.encoding=UTF-8,-Duser.country,-Duser.language=en,-Duser.variant]
 :compileJava
 :processResources UP-TO-DATE
 :classes
 :bootRun
-2018-06-15 16:02:16.784  INFO 78 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41fbdac4: startup date [Fri Jun 15 16:02:16 GMT 2018]; root of context hierarchy
-2018-06-15 16:02:17.904  INFO 78 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2018-06-15 16:02:18.045  INFO 78 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3fdd8981] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-19 16:34:19.807  INFO 78 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@41fbdac4: startup date [Tue Jun 19 16:34:19 GMT 2018]; root of context hierarchy
+2018-06-19 16:34:20.874  INFO 78 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-06-19 16:34:21.050  INFO 78 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$12fab546] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -63,120 +63,28 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v1.5.8.RELEASE)
 
-2018-06-15 16:02:19.245  INFO 78 --- [           main] c.e.e.EurekaServerApplication            : The following profiles are active: dev
-2018-06-15 16:02:19.319  INFO 78 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@10cf09e8: startup date [Fri Jun 15 16:02:19 GMT 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@41fbdac4
-2018-06-15 16:02:22.880  INFO 78 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3b95f871-394e-35b7-b783-d7f350294431
-2018-06-15 16:02:22.936  INFO 78 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
-2018-06-15 16:02:23.117  INFO 78 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$55f02cc5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-06-15 16:02:23.128  INFO 78 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3fdd8981] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2018-06-15 16:02:24.384  INFO 78 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8761 (http)
-2018-06-15 16:02:24.441  INFO 78 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2018-06-15 16:02:24.475  INFO 78 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
-2018-06-15 16:02:25.724  INFO 78 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2018-06-15 16:02:25.725  INFO 78 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6406 ms
-2018-06-15 16:02:28.407  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
-2018-06-15 16:02:28.407  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
-2018-06-15 16:02:28.407  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
-2018-06-15 16:02:28.407  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
-2018-06-15 16:02:28.407  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
-2018-06-15 16:02:28.408  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestTraceFilter' to: [/*]
-2018-06-15 16:02:28.408  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'servletContainer' to urls: [/eureka/*]
-2018-06-15 16:02:28.408  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
-2018-06-15 16:02:28.408  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
-2018-06-15 16:02:28.864  INFO 78 --- [ost-startStop-1] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
-2018-06-15 16:02:29.072  INFO 78 --- [ost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2018-06-15 16:02:29.075  INFO 78 --- [ost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2018-06-15 16:02:29.451  INFO 78 --- [ost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2018-06-15 16:02:29.452  INFO 78 --- [ost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2018-06-15 16:02:31.893  WARN 78 --- [           main] o.s.c.n.a.ArchaiusAutoConfiguration      : No spring.application.name found, defaulting to 'application'
-2018-06-15 16:02:31.949  WARN 78 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2018-06-15 16:02:31.950  INFO 78 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2018-06-15 16:02:32.007  WARN 78 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2018-06-15 16:02:32.008  INFO 78 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2018-06-15 16:02:33.014  INFO 78 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@10cf09e8: startup date [Fri Jun 15 16:02:19 GMT 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@41fbdac4
-2018-06-15 16:02:33.628  INFO 78 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
-2018-06-15 16:02:33.637  INFO 78 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
-2018-06-15 16:02:33.645  INFO 78 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/lastn],methods=[GET]}" onto public java.lang.String org.springframework.cloud.netflix.eureka.server.EurekaController.lastn(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
-2018-06-15 16:02:33.650  INFO 78 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String org.springframework.cloud.netflix.eureka.server.EurekaController.status(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.Object>)
-2018-06-15 16:02:33.825  INFO 78 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-15 16:02:33.838  INFO 78 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-15 16:02:34.124  INFO 78 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
-2018-06-15 16:02:38.429  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health || /health.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(javax.servlet.http.HttpServletRequest,java.security.Principal)
-2018-06-15 16:02:38.441  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
-2018-06-15 16:02:38.443  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics || /metrics.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018-06-15 16:02:38.444  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans || /beans.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018-06-15 16:02:38.453  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/service-registry/instance-status],methods=[GET]}" onto public org.springframework.http.ResponseEntity org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.getStatus()
-2018-06-15 16:02:38.460  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/service-registry/instance-status],methods=[POST]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.cloud.client.serviceregistry.endpoint.ServiceRegistryEndpoint.setStatus(java.lang.String)
-2018-06-15 16:02:38.466  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings || /mappings.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018-06-15 16:02:38.551  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/refresh || /refresh.json],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
-2018-06-15 16:02:38.561  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig || /autoconfig.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018-06-15 16:02:38.563  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/auditevents || /auditevents.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.boot.actuate.endpoint.mvc.AuditEventsMvcEndpoint.findByPrincipalAndAfterAndType(java.lang.String,java.util.Date,java.lang.String)
-2018-06-15 16:02:38.715  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
-2018-06-15 16:02:38.716  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env || /env.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018-06-15 16:02:38.726  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/heapdump || /heapdump.json],methods=[GET],produces=[application/octet-stream]}" onto public void org.springframework.boot.actuate.endpoint.mvc.HeapdumpMvcEndpoint.invoke(boolean,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.IOException,javax.servlet.ServletException
-2018-06-15 16:02:38.751  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.get(java.lang.String)
-2018-06-15 16:02:38.759  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers/{name:.*}],methods=[POST],consumes=[application/vnd.spring-boot.actuator.v1+json || application/json],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.LoggersMvcEndpoint.set(java.lang.String,java.util.Map<java.lang.String, java.lang.String>)
-2018-06-15 16:02:38.760  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/loggers || /loggers.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018-06-15 16:02:38.761  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/archaius || /archaius.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018-06-15 16:02:38.762  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info || /info.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018-06-15 16:02:38.763  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace || /trace.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018-06-15 16:02:38.780  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump || /dump.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018-06-15 16:02:38.781  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops || /configprops.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018-06-15 16:02:38.782  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
-2018-06-15 16:02:38.782  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
-2018-06-15 16:02:38.784  INFO 78 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/features || /features.json],methods=[GET],produces=[application/vnd.spring-boot.actuator.v1+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
-2018-06-15 16:02:40.113  INFO 78 --- [           main] o.s.ui.freemarker.SpringTemplateLoader   : SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@10cf09e8: startup date [Fri Jun 15 16:02:19 GMT 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@41fbdac4] and template loader path [classpath:/templates/]
-2018-06-15 16:02:40.125  INFO 78 --- [           main] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
-2018-06-15 16:02:41.144  INFO 78 --- [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2018-06-15 16:02:41.453  INFO 78 --- [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2018-06-15 16:02:41.453  INFO 78 --- [           main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
-2018-06-15 16:02:41.905  INFO 78 --- [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1529078561904 with initial instances count: 0
-2018-06-15 16:02:42.373  INFO 78 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2018-06-15 16:02:42.395  INFO 78 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
-2018-06-15 16:02:43.443  INFO 78 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2018-06-15 16:02:43.443  INFO 78 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2018-06-15 16:02:43.443  INFO 78 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2018-06-15 16:02:43.443  INFO 78 --- [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2018-06-15 16:02:44.221  INFO 78 --- [           main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
-2018-06-15 16:02:44.368  INFO 78 --- [           main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2018-06-15 16:02:44.369  INFO 78 --- [           main] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2018-06-15 16:02:44.590  WARN 78 --- [           main] arterDeprecationWarningAutoConfiguration : spring-cloud-starter-eureka-server is deprecated as of Spring Cloud Netflix 1.4.0, please migrate to spring-cloud-starter-netflix-eureka-server
-2018-06-15 16:02:44.834  INFO 78 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
-2018-06-15 16:02:44.872  INFO 78 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'environmentManager' has been autodetected for JMX exposure
-2018-06-15 16:02:44.877  INFO 78 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
-2018-06-15 16:02:44.880  INFO 78 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
-2018-06-15 16:02:44.884  INFO 78 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'serviceRegistryEndpoint' has been autodetected for JMX exposure
-2018-06-15 16:02:44.887  INFO 78 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'refreshScope' has been autodetected for JMX exposure
-2018-06-15 16:02:44.903  INFO 78 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
-2018-06-15 16:02:45.033  INFO 78 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'serviceRegistryEndpoint': registering with JMX server as MBean [org.springframework.cloud.client.serviceregistry.endpoint:name=serviceRegistryEndpoint,type=ServiceRegistryEndpoint]
-2018-06-15 16:02:45.055  INFO 78 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
-2018-06-15 16:02:45.136  INFO 78 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=10cf09e8,type=ConfigurationPropertiesRebinder]
-2018-06-15 16:02:45.169  INFO 78 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.endpoint:name=refreshEndpoint,type=RefreshEndpoint]
-2018-06-15 16:02:46.189  INFO 78 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
-2018-06-15 16:02:46.190  INFO 78 --- [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application unknown with eureka with status UP
-2018-06-15 16:02:46.345  INFO 78 --- [      Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
-2018-06-15 16:02:46.352  INFO 78 --- [      Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka data center value eureka.datacenter is not set, defaulting to default
-2018-06-15 16:02:46.355  INFO 78 --- [      Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka environment value eureka.environment is not set, defaulting to test
-2018-06-15 16:02:46.504  INFO 78 --- [      Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2018-06-15 16:02:46.505  INFO 78 --- [      Thread-11] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2018-06-15 16:02:46.505  INFO 78 --- [      Thread-11] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2018-06-15 16:02:46.505  INFO 78 --- [      Thread-11] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2018-06-15 16:02:46.505  INFO 78 --- [      Thread-11] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2018-06-15 16:02:46.532  INFO 78 --- [      Thread-11] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2018-06-15 16:02:46.923  INFO 78 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8761 (http)
-2018-06-15 16:02:46.934  INFO 78 --- [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
-2018-06-15 16:02:46.947  INFO 78 --- [           main] c.e.e.EurekaServerApplication            : Started EurekaServerApplication in 32.069 seconds (JVM running for 34.981)
-2018-06-15 16:02:53.820  INFO 78 --- [nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
-2018-06-15 16:02:53.820  INFO 78 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
-2018-06-15 16:02:53.951  INFO 78 --- [nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 131 ms
-2018-06-15 16:02:55.598  INFO 78 --- [nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/e2e6cea167bb:api-gateway with status UP (replication=false)
-2018-06-15 16:02:56.387  INFO 78 --- [nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/e2e6cea167bb:api-gateway with status UP (replication=true)
-2018-06-15 16:03:02.484  INFO 78 --- [nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance USERS-API/8b158f6c92a0:users-api:8085 with status UP (replication=false)
-2018-06-15 16:03:03.000  INFO 78 --- [nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance USERS-API/8b158f6c92a0:users-api:8085 with status UP (replication=true)
-2018-06-15 16:03:46.514  INFO 78 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2018-06-15 16:04:46.514  INFO 78 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2018-06-15 16:05:46.515  INFO 78 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2018-06-15 16:06:46.517  INFO 78 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2018-06-15 16:07:46.519  INFO 78 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2018-06-15 16:08:46.520  INFO 78 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-thread 15: client disconnection detected, canceling the build
+2018-06-19 16:34:22.867  INFO 78 --- [           main] c.e.e.EurekaServerApplication            : The following profiles are active: dev
+2018-06-19 16:34:22.934  INFO 78 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5674e1f2: startup date [Tue Jun 19 16:34:22 GMT 2018]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@41fbdac4
+2018-06-19 16:34:27.143  INFO 78 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3b95f871-394e-35b7-b783-d7f350294431
+2018-06-19 16:34:27.197  INFO 78 --- [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-06-19 16:34:27.549  INFO 78 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration' of type [org.springframework.cloud.netflix.metrics.MetricsInterceptorConfiguration$MetricsRestTemplateConfiguration$$EnhancerBySpringCGLIB$$290d588a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-19 16:34:27.564  INFO 78 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$12fab546] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-06-19 16:34:28.337  INFO 78 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8761 (http)
+2018-06-19 16:34:28.364  INFO 78 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-19 16:34:28.365  INFO 78 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-06-19 16:34:29.627  INFO 78 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-19 16:34:29.628  INFO 78 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6694 ms
+2018-06-19 16:34:31.977  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'metricsFilter' to: [/*]
+2018-06-19 16:34:31.978  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-06-19 16:34:31.979  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-06-19 16:34:31.980  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-06-19 16:34:31.980  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-06-19 16:34:31.984  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'webRequestTraceFilter' to: [/*]
+2018-06-19 16:34:31.984  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'servletContainer' to urls: [/eureka/*]
+2018-06-19 16:34:31.986  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2018-06-19 16:34:31.989  INFO 78 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-06-19 16:34:32.413  INFO 78 --- [ost-startStop-1] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.1 03/11/2016 02:08 PM'
+2018-06-19 16:34:32.673  INFO 78 --- [ost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2018-06-19 16:34:32.679  INFO 78 --- [ost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2018-06-19 16:34:33.103  INFO 78 --- [ost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2018-06-19 16:34:33.105  INFO 78 --- [ost-startStop-1] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml

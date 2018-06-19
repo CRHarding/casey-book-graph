@@ -10,20 +10,6 @@ export default class AllUsers extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   UserServices
-  //     .getAllUsers()
-  //     .then(responseUsers => {
-  //       this.setState({
-  //         users: responseUsers.data,
-  //         userDataLoaded: true,
-  //       });
-  //     })
-  //     .catch(err => {
-  //       console.log('Error in component did mount userprofile users--->', err);
-  //     });
-  // }
-
   renderUsers() {
     return <div />;
   }

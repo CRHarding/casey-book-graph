@@ -32,6 +32,8 @@ import PostForm from './components/Partials/FormPartials/PostForm';
 import SignupForm from './components/Partials/FormPartials/SignupForm';
 import Posts from './components/Posts/AllPosts';
 import AllUsers from './components/Users/AllUsers';
+import EditUserForm from './components/Partials/FormPartials/EditUserForm';
+
 import Grid from '@material-ui/core/Grid';
 
 const client = new ApolloClient({
@@ -59,7 +61,7 @@ const USERS = gql`
 `;
 
 const CREATE_USER = gql`
-  mutation createUser($user: InputCreateOneUser) {
+  mutation createUser($user: InputCreateOneUser!) {
     createUser(input: $user) {
       username
       firstName
@@ -71,7 +73,20 @@ const CREATE_USER = gql`
   }
 `;
 
-const DELETE_USER = gql `
+const UPDATE_USER = gql`
+  mutation updateUser($user: UpdateUserInput!) {
+    updateUser(input: $user) {
+      username
+      firstName
+      lastName
+      email
+      aboutMe
+      password
+    }
+  }
+`;
+
+const DELETE_USER = gql`
   mutation deleteUser($id: InputDeleteOneUser) {
     deleteUser(input: $id) {
       username
@@ -97,7 +112,7 @@ class App extends React.Component {
       <ApolloProvider client={client}>
         <Grid>
           <h1>CURRENT USER: {this.state.user.username}</h1>
-        <Mutation
+          <Mutation
             mutation={CREATE_USER}
             update={(cache, { data }) => {
               this.setState({ user: data.createUser });
@@ -150,6 +165,27 @@ class App extends React.Component {
               />
             )}
           </Mutation>
+          <Mutation mutation={UPDATE_USER}>
+            {updateUser => (
+              <EditUserForm
+                user={this.state.user}
+                updateUser={({ username, firstName, lastName, email, aboutMe }) =>
+                  updateUser({
+                    variables: {
+                      user: {
+                        username,
+                        firstName,
+                        lastName,
+                        email,
+                        aboutMe,
+                      },
+                    },
+                    refetchQueries: [{ query: USERS }],
+                  })
+                }
+              />
+            )}
+          </Mutation>
           <Query query={POSTS}>
             {({ loading, error, data }) => {
               if (error) {
@@ -177,7 +213,6 @@ class App extends React.Component {
                 return <AllUsers users={data.findAllUsers} />;
               }
             }}
-
           </Query>
           <Posts posts={this.state.posts} />
         </Grid>

@@ -22,17 +22,16 @@ const styles = theme => ({
   },
 });
 
-class LoginForm extends Component {
+class EditUserForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      userId: this.props.userId,
+      username: this.props.username,
       firstName: '',
       lastName: '',
       email: '',
       aboutMe: '',
-      password: '',
-      repeatPassword: '',
       pristine: true,
       submitting: false,
     };
@@ -44,15 +43,15 @@ class LoginForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const UserCreateInput = {
-      username: this.state.username,
+      id: this.state.userId,
+      username: this.state.userName,
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       email: this.state.email,
       aboutMe: this.state.aboutMe,
-      password: this.state.password,
     };
 
-    this.props.createUser(UserCreateInput);
+    this.props.updateUser(UserCreateInput);
   }
 
   handleChange = name => event => {
@@ -64,13 +63,11 @@ class LoginForm extends Component {
 
   reset() {
     this.setState({
-      username: '',
+      userName: '',
       firstName: '',
       lastName: '',
       email: '',
       aboutMe: '',
-      password: '',
-      repeatPassword: '',
       pristine: true,
       submitting: false,
     });
@@ -81,21 +78,21 @@ class LoginForm extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <Typography variant="headline" component="h3">
-          Sign Up
+          Edit Your Information
         </Typography>
         <div>
           <TextField
-            id="username"
+            id="EditUserName"
             label="User Name"
             className={classes.textField}
-            value={this.state.username}
+            value={this.state.userName}
             margin="normal"
-            onChange={this.handleChange('username')}
+            onChange={this.handleChange('userName')}
           />
         </div>
         <div>
           <TextField
-            id="SignUpFirstName"
+            id="EditFirstName"
             label="First Name"
             className={classes.textField}
             value={this.state.firstName}
@@ -105,7 +102,7 @@ class LoginForm extends Component {
         </div>
         <div>
           <TextField
-            id="SignUpLastName"
+            id="EditLastName"
             label="Last Name"
             className={classes.textField}
             value={this.state.lastName}
@@ -115,7 +112,7 @@ class LoginForm extends Component {
         </div>
         <div>
           <TextField
-            id="SignUpEmail"
+            id="EditEmail"
             label="Email"
             className={classes.textField}
             value={this.state.email}
@@ -125,35 +122,12 @@ class LoginForm extends Component {
         </div>
         <div>
           <TextField
-            id="SignUpAboutMe"
+            id="EditAboutMe"
             label="About Me"
             multiline
             className={classes.textField}
             margin="normal"
             onChange={this.handleChange('aboutMe')}
-          />
-        </div>
-        <div>
-          <TextField
-            id="SignUpPassword"
-            label="Password"
-            name="password"
-            className={classes.textField}
-            type="password"
-            autoComplete="current-password"
-            margin="normal"
-            onChange={this.handleChange('password')}
-          />
-        </div>
-        <div>
-          <TextField
-            id="SignUpRepeatPassword"
-            label="Repeat Password"
-            name="repeatPassword"
-            className={classes.textField}
-            type="password"
-            margin="normal"
-            onChange={this.handleChange('repeatPassword')}
           />
         </div>
         <div>
@@ -177,4 +151,4 @@ class LoginForm extends Component {
   }
 }
 
-export default withStyles(styles)(LoginForm);
+export default withStyles(styles)(EditUserForm);
