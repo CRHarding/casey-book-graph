@@ -9,25 +9,35 @@ import org.springframework.stereotype.Component;
 
 import com.example.usersapi.model.User;
 import com.example.usersapi.repository.UserRepository;
+import com.example.usersapi.model.Post;
+import com.example.usersapi.repository.PostRepository;
 
 import java.util.List;
 
 @Component
 public class Query implements GraphQLQueryResolver {
     private final UserRepository userRepository;
+    private final PostRepository postRepository;
 
     @Autowired
-    public Query(UserRepository userRepository) {
+    public Query(UserRepository userRepository, PostRepository postRepository) {
+        this.postRepository = postRepository;
         this.userRepository = userRepository;
     }
 
     public Optional<User> findUserById(long id) {
-        System.out.println("Here in findUserbyId--->" + id);
-        return userRepository.findById(id);
+        return userRepository.findUserById(id);
     }
 
     public List<User> findAllUsers() {
-        System.out.println("Here in all users!");
         return userRepository.findAll();
+    }
+
+    public Optional<Post> findPostById(long id) {
+        return postRepository.findPostById(id);
+    }
+
+    public List<Post> findAllPosts() {
+        return postRepository.findAll();
     }
 }

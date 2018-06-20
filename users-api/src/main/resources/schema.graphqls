@@ -6,12 +6,59 @@ type User {
     lastName: String
     aboutMe: String
     password: String
+    posts: [Post]!
+}
+
+type Post {
+    id: ID!
+    title: String
+    postText: String
+    numberOfLikes: Int
+    numberOfComments: Int
+    ableToView: Int
+    userId: User!
 }
 
 type Mutation {
-    createUser(input: InputCreateOneUser!): User!
+    createUser(input: CreateUserInput!): User!
     updateUser(input: UpdateUserInput!): User!
     deleteUser(input: ID!): Int!
+
+    createPost(input: CreatePostInput!): Post!
+    updatePost(input: UpdatePostInput!): Post!
+    deletePost(input: ID!): Int!
+}
+
+type Query {
+    findAllUsers: [User]
+    findUserById(input: ID!): User
+
+    findAllPosts: [Post]
+    findPostById(input: ID!): Post
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+input UpdatePostInput {
+    id: ID!
+    title: String
+    postText: String
+    numberOfLikes: Int
+    numberOfComments: Int
+    ableToView: Int
+    posterId: Int
+}
+
+input CreatePostInput {
+    title: String
+    postText: String
+    numberOfLikes: Int
+    numberOfComments: Int
+    ableToView: Int
+    posterId: Int
 }
 
 input UpdateUserInput {
@@ -24,7 +71,7 @@ input UpdateUserInput {
     password: String!
 }
 
-input InputCreateOneUser {
+input CreateUserInput {
     username: String!
     firstName: String!
     lastName: String!
@@ -33,15 +80,6 @@ input InputCreateOneUser {
     password: String!
 }
 
-input InputDeleteOneUser {
+input DeleteUserInput {
     id: ID
-}
-
-type Query {
-    findAllUsers: [User]
-}
-
-schema {
-    query: Query
-    mutation: Mutation
 }

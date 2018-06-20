@@ -6,6 +6,15 @@ VALUES
     ('SSontag', '1234', 'Susan', 'Sontag', 's.sontag@gmail.com', 'New York, New York', 'Youve never heard of me, have you?'),
     ('SBeauvoir', '1234', 'Simone', 'De Beauvoir', 's.beauvoir@gmail.com', 'New York, New York', 'You dont even read, bro');
 
+INSERT INTO POSTS (USER_ID, TITLE, POST_TEXT)
+VALUES
+    (1, 'First Post!', 'This is my first post!'),
+    (2, 'Best...app..every!', 'I love this app!'),
+    (3, 'Hello world!', 'Friend me to find out more!'),
+    (1, 'I wish I were more interesting...', 'This is my second post!'),
+    (5, 'I really like this app!', 'One of the better social media apps that Ive encountered'),
+    (4, 'Ive seen better...', 'Seriously. What does everyone see in this app? Its a buncha fluff...');
+
 INSERT INTO FRIENDS (STATUS, FRIEND_SENT_REQUEST, FRIEND_RECEIVED_REQUEST)
 VALUES
     (2, 1, 2),

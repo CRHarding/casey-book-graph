@@ -2,6 +2,9 @@ package com.example.usersapi.model;
 
 import javax.persistence.*;
 import lombok.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Entity
@@ -11,6 +14,9 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @OneToMany(mappedBy = "userId", cascade=CascadeType.ALL)
+    private Set<Post> posts = new HashSet<> ();
 
     @Column(name = "username")
     private String username;

@@ -6,10 +6,10 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
-import com.example.usersapi.model.User;
+import com.example.usersapi.model.Post;
 
-public interface UserRepository extends CrudRepository<User, Long> {
+public interface PostRepository extends CrudRepository<Post, Long> {
     int deleteById(long id);
-    Optional<User> findUserById(long id);
-    List<User> findAll();
+    Optional<Post> findPostById(long id);
+    List<Post> findAll();
 }
