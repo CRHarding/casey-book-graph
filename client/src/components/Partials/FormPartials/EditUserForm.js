@@ -5,8 +5,6 @@ import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
-import UserServices from '../../../services/UserServices';
-
 const styles = theme => ({
   container: {
     display: 'flex',
@@ -27,7 +25,7 @@ class EditUserForm extends Component {
     super(props);
     this.state = {
       userId: this.props.userId,
-      username: this.props.username,
+      username: '',
       firstName: '',
       lastName: '',
       email: '',
@@ -43,12 +41,13 @@ class EditUserForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
     const UserCreateInput = {
-      id: this.state.userId,
-      username: this.state.userName,
+      id: 2,
+      username: this.state.username,
       firstName: this.state.firstName,
       lastName: this.state.lastName,
       email: this.state.email,
       aboutMe: this.state.aboutMe,
+      password: 'RockSocks',
     };
 
     this.props.updateUser(UserCreateInput);
@@ -82,12 +81,12 @@ class EditUserForm extends Component {
         </Typography>
         <div>
           <TextField
-            id="EditUserName"
-            label="User Name"
+            id="EditUsername"
+            label="Username"
             className={classes.textField}
-            value={this.state.userName}
+            value={this.state.username}
             margin="normal"
-            onChange={this.handleChange('userName')}
+            onChange={this.handleChange('username')}
           />
         </div>
         <div>

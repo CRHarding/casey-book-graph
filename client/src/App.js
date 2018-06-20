@@ -22,7 +22,6 @@
 // export default App;
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { ApolloProvider, Query, Mutation } from 'react-apollo';
 import ApolloClient from 'apollo-boost';
 import { HttpLink } from 'apollo-link-http';
@@ -76,6 +75,7 @@ const CREATE_USER = gql`
 const UPDATE_USER = gql`
   mutation updateUser($user: UpdateUserInput!) {
     updateUser(input: $user) {
+      id
       username
       firstName
       lastName
@@ -169,15 +169,17 @@ class App extends React.Component {
             {updateUser => (
               <EditUserForm
                 user={this.state.user}
-                updateUser={({ username, firstName, lastName, email, aboutMe }) =>
+                updateUser={({ id, username, firstName, lastName, email, aboutMe, password }) =>
                   updateUser({
                     variables: {
                       user: {
+                        id,
                         username,
                         firstName,
                         lastName,
                         email,
                         aboutMe,
+                        password,
                       },
                     },
                     refetchQueries: [{ query: USERS }],

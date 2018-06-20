@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import UserServices from '../../services/UserServices';
 
 export default class AllUsers extends Component {
   constructor(props) {
@@ -20,7 +19,11 @@ export default class AllUsers extends Component {
     return (
       <div>
         {users.map((user, key) => {
-          return <p>{user.username}: {user.firstName}: {user.password}: {user.aboutMe}</p>;
+          return (
+            <p key={key}>
+              {user.username}: {user.firstName}: {user.password}: {user.aboutMe}
+            </p>
+          );
         })}{' '}
       </div>
     );
