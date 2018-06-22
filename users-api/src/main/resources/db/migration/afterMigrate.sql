@@ -6,7 +6,7 @@ VALUES
     ('SSontag', '1234', 'Susan', 'Sontag', 's.sontag@gmail.com', 'New York, New York', 'Youve never heard of me, have you?'),
     ('SBeauvoir', '1234', 'Simone', 'De Beauvoir', 's.beauvoir@gmail.com', 'New York, New York', 'You dont even read, bro');
 
-INSERT INTO POSTS (USER_ID, TITLE, POST_TEXT)
+INSERT INTO POSTS (POSTER, TITLE, POST_TEXT)
 VALUES
     (1, 'First Post!', 'This is my first post!'),
     (2, 'Best...app..every!', 'I love this app!'),

@@ -15,7 +15,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "userId", cascade=CascadeType.ALL)
+    @OneToMany(mappedBy = "poster", cascade=CascadeType.ALL)
     private Set<Post> posts = new HashSet<> ();
 
     @Column(name = "username")

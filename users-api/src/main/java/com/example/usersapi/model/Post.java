@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 import java.util.List;
 import javax.persistence.*;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,8 +17,8 @@ public class Post {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="USER_ID")
-    private User userId;
+    @JoinColumn(name="POSTER")
+    private User poster;
 
     @Column(name = "TITLE")
     private String title;

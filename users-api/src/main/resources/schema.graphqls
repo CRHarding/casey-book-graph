@@ -16,7 +16,7 @@ type Post {
     numberOfLikes: Int
     numberOfComments: Int
     ableToView: Int
-    userId: User!
+    poster: User!
 }
 
 type Mutation {
@@ -24,7 +24,7 @@ type Mutation {
     updateUser(input: UpdateUserInput!): User!
     deleteUser(input: ID!): Int!
 
-    createPost(input: CreatePostInput!): Post!
+    createPost(title: String!, postText: String!, numberOfLikes: Int!, numberOfComments: Int!, ableToView: Int!, userId: ID!): Post!
     updatePost(input: UpdatePostInput!): Post!
     deletePost(input: ID!): Int!
 }
@@ -49,7 +49,7 @@ input UpdatePostInput {
     numberOfLikes: Int
     numberOfComments: Int
     ableToView: Int
-    posterId: Int
+    poster: ID!
 }
 
 input CreatePostInput {
@@ -58,7 +58,7 @@ input CreatePostInput {
     numberOfLikes: Int
     numberOfComments: Int
     ableToView: Int
-    posterId: Int
+    userId: ID!
 }
 
 input UpdateUserInput {

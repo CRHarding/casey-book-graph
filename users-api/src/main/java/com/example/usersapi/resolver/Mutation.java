@@ -63,7 +63,16 @@ public class Mutation implements GraphQLMutationResolver {
         return post;
     }
 
-    public Post createPost(Post post) {
-        return postRepository.save(post);
+    @Transactional
+    public Post createPost(String title, String postText, int numberOfLikes, int numberOfComments, int ableToView, long userId) {
+        Post newPost = new Post();
+        User postUser = userRepository.findUserById(userId).get();
+        newPost.setPoster(postUser);
+        newPost.setTitle(title);
+        newPost.setPostText(postText);
+        newPost.setNumberOfLikes(numberOfLikes);
+        newPost.setNumberOfComments(numberOfComments);
+        newPost.setAbleToView(ableToView);
+        return postRepository.save(newPost);
     }
 }
