@@ -4,7 +4,6 @@ export default class AllUsers extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: props.users,
       userDataLoaded: false,
     };
   }
@@ -14,15 +13,27 @@ export default class AllUsers extends Component {
   }
 
   render() {
-    const users = this.state.users;
-    console.log(users);
+    const users = this.props.users;
     return (
       <div>
         {users.map((user, key) => {
           return (
-            <p key={key}>
-              {user.username}: {user.firstName}: {user.password}: {user.aboutMe}
-            </p>
+            <div key={key}>
+              <p>
+                {user.username}: {user.firstName}: {user.password}
+              </p>{' '}
+              <p>{user.aboutMe}</p>
+              {user.posts
+                ? user.posts.map((post, key) => {
+                    return (
+                      <p key={key}>
+                        {post.title}
+                        {post.postText}
+                      </p>
+                    );
+                  })
+                : ''}
+            </div>
           );
         })}{' '}
       </div>

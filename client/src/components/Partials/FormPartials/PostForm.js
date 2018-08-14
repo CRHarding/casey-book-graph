@@ -31,22 +31,10 @@ class PostForm extends Component {
     this.state = {
       title: null,
       postText: null,
-      user: this.props.user,
       postId: null,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  componentDidMount() {
-    if (this.props.post) {
-      this.setState({
-        postId: 1,
-        title: this.props.post.title,
-        postText: this.props.post.text,
-        postId: this.props.post.id,
-      });
-    }
   }
 
   handleChange = name => event => {
@@ -57,12 +45,11 @@ class PostForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-
     const post = {
-      postId: this.state.postId,
       title: this.state.title,
       postText: this.state.postText,
     };
+    console.log(post);
 
     this.props.createPost(post);
   };

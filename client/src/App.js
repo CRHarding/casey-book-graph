@@ -1,26 +1,3 @@
-// import React, { Component } from 'react';
-// import './App.css';
-// import Home from './components/Home';
-// import UserProfile from './components/UserProfile';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
-//
-// require('dotenv').config();
-//
-// class App extends Component {
-//   render() {
-//     return (
-//       <Router>
-//         <div>
-//           <Route exact path = "/" component = {Home} />
-//           <Route exact path = "/users/:id" component = {UserProfile} />
-//         </div>
-//       </Router>
-//     );
-//   }
-// }
-//
-// export default App;
-
 import React from 'react';
 import { ApolloProvider, Query, Mutation } from 'react-apollo';
 import ApolloClient from 'apollo-boost';
@@ -39,22 +16,14 @@ const client = new ApolloClient({
   uri: 'http://localhost:8080/users-api/graphql',
 });
 
-const POSTS = gql`
-  {
-    posts {
-      title
-      postText
-      poster {
-        username
-      }
-    }
-  }
-`;
-
 const USERS = gql`
   {
     findAllUsers {
       username
+      posts {
+        title
+        postText
+      }
     }
   }
 `;
@@ -95,10 +64,8 @@ const DELETE_USER = gql`
 `;
 
 const CREATE_POST = gql`
-  mutation CreatePost($post: PostCreateInput!) {
-    createPost(data: $post) {
-      postId
-      title
+  mutation CreatePost($post: CreatePostInput!) {
+    createPost(input: $post) {
       postText
     }
   }
@@ -149,17 +116,19 @@ class App extends React.Component {
             {createPost => (
               <PostForm
                 user={this.state.user}
-                createPost={({ postId, title, postText }) =>
+                createPost={({ title, postText }) =>
                   createPost({
                     variables: {
                       post: {
-                        postId: 1,
                         title,
                         postText,
-                        poster: { connect: { id: this.state.user.userId } },
+                        numberOfLikes: 0,
+                        numberOfComments: 0,
+                        ableToView: 0,
+                        poster: 1,
                       },
                     },
-                    refetchQueries: [{ query: POSTS }],
+                    refetchQueries: [{ query: USERS }],
                   })
                 }
               />
@@ -169,7 +138,15 @@ class App extends React.Component {
             {updateUser => (
               <EditUserForm
                 user={this.state.user}
-                updateUser={({ id, username, firstName, lastName, email, aboutMe, password }) =>
+                updateUser={({
+                  id,
+                  username,
+                  firstName,
+                  lastName,
+                  email,
+                  aboutMe,
+                  password,
+                }) =>
                   updateUser({
                     variables: {
                       user: {
@@ -188,19 +165,6 @@ class App extends React.Component {
               />
             )}
           </Mutation>
-          <Query query={POSTS}>
-            {({ loading, error, data }) => {
-              if (error) {
-                return <div>Error : (</div>;
-              }
-
-              if (loading) {
-                return <div>Loading...</div>;
-              }
-
-              return <Posts posts={data.posts} />;
-            }}
-          </Query>
           <Query query={USERS}>
             {({ loading, error, data }) => {
               if (error) {

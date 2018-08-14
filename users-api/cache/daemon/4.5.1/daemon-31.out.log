@@ -202,3 +202,4 @@ Note: Recompile with -Xlint:unchecked for details.
 }
 '
 [2m2018-06-22 10:52:27.900[0;39m [32m INFO[0;39m [35m76[0;39m [2m---[0;39m [2m[nio-8085-exec-5][0;39m [36mo.h.h.i.QueryTranslatorFactoryInitiator [0;39m [2m:[0;39m HHH000397: Using ASTQueryTranslatorFactory
+[2m2018-06-22 10:53:32.318[0;39m [32m INFO[0;39m [35m76[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration

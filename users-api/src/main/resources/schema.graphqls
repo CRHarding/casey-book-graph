@@ -24,7 +24,7 @@ type Mutation {
     updateUser(input: UpdateUserInput!): User!
     deleteUser(input: ID!): Int!
 
-    createPost(title: String!, postText: String!, numberOfLikes: Int!, numberOfComments: Int!, ableToView: Int!, userId: ID!): Post!
+    createPost(input: CreatePostInput!): Post!
     updatePost(input: UpdatePostInput!): Post!
     deletePost(input: ID!): Int!
 }
@@ -58,7 +58,7 @@ input CreatePostInput {
     numberOfLikes: Int
     numberOfComments: Int
     ableToView: Int
-    userId: ID!
+    poster: ID!
 }
 
 input UpdateUserInput {
